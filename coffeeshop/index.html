@@ -110,33 +110,32 @@
 				<table border='0' cellspacing='0' cellpadding='0' width='100%'>
 					<tr><td class='sep' colspan='3'></td></tr>
 					<tr>
-						<td class='caption' width='60px'>Tamanho</td>
-						<td class='caption' width='220px'><input id='tamanho' name="tamanho" type='radio' value='P'>P <input id='tamanho' name="tamanho" type='radio' value='M'>M <input id='tamanho' name="tamanho" type='radio' value='G'>G</td>
+						<td class='caption' colspan='3' width='100%'><img src="images/caixa.png" width="276" height="134" style='display: block;margin-left: auto;margin-right: auto;'></td>
 					</tr>
 					<tr>
-						<td class='caption' width='60px'>Qtde</td>
-						<td class='caption' width='220px'><input id="qtde" name="qtde" type="number" min="0" max="10" step="1" value="1" size="6"></td>
+						<td class='caption' width='60px'>Valor:</td>
+						<td class='caption' width='220px'>R$ <span id='price'></span></td>
 					</tr>
 					<tr>
-						<td class='sep' colspan='2'></td>
+						<td class='caption' width='60px'>Senha</td>
+						<td class='caption' width='220px'><input id="senha" name="senha" type="password" value="" size=""></td>
 					</tr>
 				</table>
 			</form>
 		</div>
 
-
 	</div>
   <script>
 	var panel = { 
 		main : {name: 'Main', title: 'NewMob Coffee Shop', 	height: '1200px', actionRight: '', actionLeft: '', value: '', caption: '', parent: null}, 
-		coffee01 : {name: 'coffee01', title: 'Espresso', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '1', caption: '', parent: null}, 
-		coffee02 : {name: 'coffee02', title: 'Mochaccino', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '2', caption: 'PS', parent: null}, 
-		coffee03 : {name: 'coffee03', title: 'Ristretto', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3', caption: '', parent: null}, 
-		coffee04 : {name: 'coffee04', title: 'Ardenza', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '4', caption: '', parent: null}, 
-		coffee05 : {name: 'coffee05', title: 'Barista', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '5', caption: '', parent: null}, 
-		coffee06 : {name: 'coffee06', title: 'Matinal', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '6', caption: '', parent: null}, 
-		coffee07 : {name: 'coffee07', title: 'AuLait', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '7', caption: '', parent: null}, 
-		coffee08 : {name: 'coffee08', title: 'Peach', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '8', caption: '', parent: null}, 
+		coffee01 : {name: 'coffee01', title: 'Espresso', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,00', caption: '', parent: null}, 
+		coffee02 : {name: 'coffee02', title: 'Mochaccino', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '5,50', caption: '', parent: null}, 
+		coffee03 : {name: 'coffee03', title: 'Ristretto', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '6,00', caption: '', parent: null}, 
+		coffee04 : {name: 'coffee04', title: 'Ardenza', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee05 : {name: 'coffee05', title: 'Barista', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee06 : {name: 'coffee06', title: 'Matinal', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee07 : {name: 'coffee07', title: 'AuLait', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee08 : {name: 'coffee08', title: 'Peach', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
 	};
 	panel.coffee01.parent = panel.main;
 	panel.coffee02.parent = panel.main;
@@ -162,7 +161,7 @@
 		document.getElementById("coffee").style.left = '0';
 		document.getElementById('topMenuCenter').innerHTML = pn.title;
 		document.getElementById('topMenuRight').innerHTML = pn.actionRight;
-		document.getElementById('qtde').value = pn.value;
+		document.getElementById('price').innerHTML = pn.value;
 		if (pn.actionLeft != '') {
 			document.getElementById('topMenuLeft').innerHTML = pn.actionLeft;
 		} else {
