@@ -24,6 +24,7 @@
 		.icon{width:42px;height:50px;padding-top:5px;padding-left:5px;cursor:pointer}
 		.iconLast{width:42px;height:50px;padding-top:5px;padding-left:5px;border-bottom:1px solid #d0d3d4;cursor:pointer}
 		.caption{font-size:18px;color:#000;text-align:left;border-bottom:1px solid #d0d3d4;cursor:pointer;padding:10px 5px}
+		.desc{font-size:12px;color:#000;text-align:left}
 		.price{font-size:14px;color:red;text-align:left}
 		.value{font-size:18px;color:gray;text-align:right;border-bottom:1px solid #d0d3d4;cursor:pointer;padding:10px 5px}
 		.lbl{position:relative;display:block;text-align:center;font-size:19px;padding-top:3px;height:28px;width:64px;background:#898989;border-radius:100px;cursor:pointer;transition:all .3s ease}
@@ -67,43 +68,43 @@
 				<tr><td class='sep' colspan='3' style='line-height:32px;font-size:14px;color:dimgrey;padding-bottom:0px;padding-top:20px;text-align:center;vertical-align: bottom'>Escolha seu café</td></tr>
 				<tr onclick='show(panel.coffee01)'>
 					<td class='icon'><img src="images/cafe1.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Espresso</div><div class="price">R$5,00</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>AuLait</div><div class="desc">A combinação perfeita do café com leite.</div></td>
+					<td class='value'><div class="price">R$5,00</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee02)'>
 					<td class='icon'><img src="images/cafe2.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Mochaccino</div><div class="price">R$5,50</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Mocha</div><div class="desc">Combinação do leite cremoso, chocolate e um toque de café 100% Arábica.</div></td>
+					<td class='value'><div class="price">R$5,50</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee03)'>
 					<td class='icon'><img src="images/cafe3.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Ristretto</div><div class="price">R$6,00</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Ristretto</div><div class="desc">Um blend de grãos selecionados Arábica e Robusta com torra mais intensa.</div></td>
+					<td class='value'><div class="price">R$6,00</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee04)'>
 					<td class='icon'><img src="images/cafe4.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Ardenza</div><div class="price">R$3,80</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Ristretto Ardenza</div><div class="desc">Perfil intenso com notas de alcaçuz e leve toque picante.</div></td>
+					<td class='value'><div class="price">R$3,80</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee05)'>
 					<td class='icon'><img src="images/cafe5.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Barista</div><div class="price">R$3,80</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Barista</div><div class="desc">Café de alta torrefação de seus grãos Arábicas e Robusta, aroma aveludado e crema generosa, estilo café italiano.</div></td>
+					<td class='value'><div class="price">R$3,80</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee06)'>
 					<td class='icon'><img src="images/cafe6.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Matinal</div><div class="price">R$3,80</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Matinal</div><div class="desc">Café de torrefação média e agradável no paladar para ser o café de todas as manhãs.</div></td>
+					<td class='value'><div class="price">R$3,80</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee07)'>
 					<td class='icon'><img src="images/cafe7.jpg" width="120" height="120"></td>
-					<td class='caption'><div>AuLait</div><div class="price">R$3,80</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Espresso</div><div class="desc">O autêntico café Espresso: encorpado e com uma crema única.</div></td>
+					<td class='value'><div class="price">R$3,80</div></td>
 				</tr>
 				<tr onclick='show(panel.coffee08)'>
 					<td class='icon'><img src="images/cafe8.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Peach</div><div class="price">R$3,80</div></td>
-					<td class='value'>></td>
+					<td class='caption'><div>Peach</div><div class="desc">Chá refrescante com sabor pêssego e uma generosa camada de espuma.</div></td>
+					<td class='value'><div class="price">R$3,80</div></td>
 				</tr>
 			</table>
 		</div>
@@ -149,13 +150,13 @@
   <script>
 	var panel = { 
 		main : {name: 'Main', title: 'NewMob Coffee Shop', 	height: '1200px', actionRight: '', actionLeft: '', value: '', caption: '', parent: null}, 
-		coffee01 : {name: 'coffee01', title: 'Espresso', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,00', caption: '', parent: null}, 
-		coffee02 : {name: 'coffee02', title: 'Mochaccino', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,50', caption: '', parent: null}, 
+		coffee01 : {name: 'coffee01', title: 'AuLait', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,00', caption: '', parent: null}, 
+		coffee02 : {name: 'coffee02', title: 'Mocha', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,50', caption: '', parent: null}, 
 		coffee03 : {name: 'coffee03', title: 'Ristretto', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '6,00', caption: '', parent: null}, 
 		coffee04 : {name: 'coffee04', title: 'Ardenza', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
 		coffee05 : {name: 'coffee05', title: 'Barista', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
 		coffee06 : {name: 'coffee06', title: 'Matinal', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
-		coffee07 : {name: 'coffee07', title: 'AuLait', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee07 : {name: 'coffee07', title: 'Espresso', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
 		coffee08 : {name: 'coffee08', title: 'Peach', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
 		qcode    : {name: 'qcode',    title: 'QrCode', 		height: '600px', actionRight: '', actionLeft: 'Menu', value: '', caption: '', parent: null}, 
 	};
