@@ -1,21 +1,21 @@
 var dataCacheName = 'coffeeData-v1';
 var cacheName = 'coffeePWA-final-1';
 var filesToCache = [
-  '/coffeeshop',
-  '/coffeeshop/index.html',
-  '/coffeeshop/scripts/app.js',
-  '/coffeeshop/scripts/jquery.qrcode.min.js',
-  '/coffeeshop/scripts/jquery-3.3.1.js',
-  '/coffeeshop/images/caixa.png',
-  '/coffeeshop/images/cafe1.jpg',
-  '/coffeeshop/images/cafe2.jpg',
-  '/coffeeshop/images/cafe3.jpg',
-  '/coffeeshop/images/cafe4.jpg',
-  '/coffeeshop/images/cafe5.jpg',
-  '/coffeeshop/images/cafe6.jpg',
-  '/coffeeshop/images/cafe7.jpg',
-  '/coffeeshop/images/cafe8.jpg',
-  '/coffeeshop/images/icons/icon-192x192.png'
+  'https://newmob.github.io/coffeeshop',
+  'https://newmob.github.io/coffeeshop/index.html',
+  'https://newmob.github.io/coffeeshop/scripts/app.js',
+  'https://newmob.github.io/coffeeshop/scripts/jquery.qrcode.min.js',
+  'https://newmob.github.io/coffeeshop/scripts/jquery-3.3.1.js',
+  'https://newmob.github.io/coffeeshop/images/caixa.png',
+  'https://newmob.github.io/coffeeshop/images/cafe1.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe2.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe3.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe4.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe5.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe6.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe7.jpg',
+  'https://newmob.github.io/coffeeshop/images/cafe8.jpg',
+  'https://newmob.github.io/coffeeshop/images/icons/icon-192x192.png'
 ];
 
 self.addEventListener('install', function(e) {
