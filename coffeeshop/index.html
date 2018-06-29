@@ -8,6 +8,8 @@
 	<meta name='apple-mobile-web-app-capable' content='yes'>
 	<meta name='apple-mobile-web-app-status-bar-style' content='default'>
 	<link rel='apple-touch-icon' href='images/icon/icon-192x192.png'>
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="scripts/jquery.qrcode.min.js"></script>
 	<style>
 		body{font-family:-apple-system,BlinkMacSystemFont,system,'Helvetica Neue','Lucida Grande','Arial';margin:0 auto;width:325px;color:#000;background-color:#f0f3f4}
 		table{background-color:#fff;border-spacing:0;padding:0}
@@ -80,27 +82,27 @@
 				</tr>
 				<tr onclick='show(panel.coffee04)'>
 					<td class='icon'><img src="images/cafe4.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Lungo</div><div class="price">R$3,80</div></td>
+					<td class='caption'><div>Ardenza</div><div class="price">R$3,80</div></td>
 					<td class='value'>></td>
 				</tr>
 				<tr onclick='show(panel.coffee05)'>
 					<td class='icon'><img src="images/cafe5.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Lungo</div><div class="price">R$3,80</div></td>
+					<td class='caption'><div>Barista</div><div class="price">R$3,80</div></td>
 					<td class='value'>></td>
 				</tr>
 				<tr onclick='show(panel.coffee06)'>
 					<td class='icon'><img src="images/cafe6.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Lungo</div><div class="price">R$3,80</div></td>
+					<td class='caption'><div>Matinal</div><div class="price">R$3,80</div></td>
 					<td class='value'>></td>
 				</tr>
 				<tr onclick='show(panel.coffee07)'>
 					<td class='icon'><img src="images/cafe7.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Lungo</div><div class="price">R$3,80</div></td>
+					<td class='caption'><div>AuLait</div><div class="price">R$3,80</div></td>
 					<td class='value'>></td>
 				</tr>
 				<tr onclick='show(panel.coffee08)'>
 					<td class='icon'><img src="images/cafe8.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Lungo</div><div class="price">R$3,80</div></td>
+					<td class='caption'><div>Peach</div><div class="price">R$3,80</div></td>
 					<td class='value'>></td>
 				</tr>
 			</table>
@@ -124,18 +126,38 @@
 			</form>
 		</div>
 
+			<div id='qcode' class='slide'>
+				<div>&nbsp;</div>
+				<div style='line-height:40px;font-size:14px;color:dimgrey;padding-bottom:0px;padding-top:20px;text-align:center;vertical-align: bottom'>Apresente este código para o atendente</div>
+				  <span id="qrcode" style="display: block;margin-left:35px;margin-right:auto">
+				    <canvas width="256" height="256" style="display: block;margin-left:auto;margin-right:auto"></canvas>
+				  </span>
+				<div class="row" style="visibility: hidden">
+					<form class="col s12">
+						<input id="qrCodeMessage" type="text" class="validate">
+						<button id="buttonGenerate" type="button" name="button">&nbsp;</button>
+					</form>
+				</div>
+			</div>
+	  
+		
+
 	</div>
+
+	<script type="text/javascript" src="scripts/app.js"></script>
+
   <script>
 	var panel = { 
 		main : {name: 'Main', title: 'NewMob Coffee Shop', 	height: '1200px', actionRight: '', actionLeft: '', value: '', caption: '', parent: null}, 
 		coffee01 : {name: 'coffee01', title: 'Espresso', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,00', caption: '', parent: null}, 
-		coffee02 : {name: 'coffee02', title: 'Mochaccino', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '5,50', caption: '', parent: null}, 
-		coffee03 : {name: 'coffee03', title: 'Ristretto', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '6,00', caption: '', parent: null}, 
-		coffee04 : {name: 'coffee04', title: 'Ardenza', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
-		coffee05 : {name: 'coffee05', title: 'Barista', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
-		coffee06 : {name: 'coffee06', title: 'Matinal', 	height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
-		coffee07 : {name: 'coffee07', title: 'AuLait', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
-		coffee08 : {name: 'coffee08', title: 'Peach', 		height: '600px', actionRight: 'Ok', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee02 : {name: 'coffee02', title: 'Mochaccino', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '5,50', caption: '', parent: null}, 
+		coffee03 : {name: 'coffee03', title: 'Ristretto', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '6,00', caption: '', parent: null}, 
+		coffee04 : {name: 'coffee04', title: 'Ardenza', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee05 : {name: 'coffee05', title: 'Barista', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee06 : {name: 'coffee06', title: 'Matinal', 	height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee07 : {name: 'coffee07', title: 'AuLait', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		coffee08 : {name: 'coffee08', title: 'Peach', 		height: '600px', actionRight: 'Pagar', actionLeft: 'Cancel', value: '3,80', caption: '', parent: null}, 
+		qcode    : {name: 'qcode',    title: 'QrCode', 		height: '600px', actionRight: '', actionLeft: 'Menu', value: '', caption: '', parent: null}, 
 	};
 	panel.coffee01.parent = panel.main;
 	panel.coffee02.parent = panel.main;
@@ -148,13 +170,18 @@
 	var panelToHide = null;
 	var panelToShow = null;
 	var currentPanel = panel.main;
-	var alarmDW1 = 255;
-	var alarmDW2 = 255;
-	var alarmDW3 = 255;
-	var alarmDW4 = 255;
-	var currentAlarm = 1;
-	var byteDOW = 0;
+	function showQrCode() {
+		scroll(0, 0);
+		document.getElementById("qcode").style.left = '0';
+		document.getElementById('topMenuRight').innerHTML = "";
+		document.getElementById('topMenuLeft').innerHTML = "Menu";
+		panelToHide = panel.qcode;
+		currentPanel.parent = panel.main;
+
+	    //currentPanel = pn.parent;
+	}
 	function show(pn) {
+		pn.name = "coffee";
 		scroll(0, 0);
 		currentPanel = pn;
 		document.getElementById('divView').style.height = pn.height;
@@ -162,6 +189,8 @@
 		document.getElementById('topMenuCenter').innerHTML = pn.title;
 		document.getElementById('topMenuRight').innerHTML = pn.actionRight;
 		document.getElementById('price').innerHTML = pn.value;
+		document.getElementById('qrCodeMessage').value = "Dolce Gusto " + pn.title + " Pagamento efetivado R$ " + pn.value;
+		buttonGenerate.click();
 		if (pn.actionLeft != '') {
 			document.getElementById('topMenuLeft').innerHTML = pn.actionLeft;
 		} else {
@@ -172,8 +201,10 @@
 	function hide(pn) {
 		scroll(0, 0);
 		if (pn != null) {
-			//document.getElementById(pn.name).style.left = '100%';
-			document.getElementById("coffee").style.left = '100%';
+			document.getElementById(pn.name).style.left = '100%';
+			if (pn.name=="qcode") {
+				document.getElementById("coffee").style.left = '100%';
+			}
 			if ((pn.parent.actionLeft != '') || (pn.parent.name == 'Main')) {
 				document.getElementById('topMenuLeft').innerHTML = pn.parent.actionLeft;
 			} else {
@@ -187,13 +218,9 @@
 		}
 	}
 	function menuOk() {
-		showSpinner(true);
-		currentPanel.value = document.getElementById('qtde').value;
-        var c = document.getElementById(currentPanel.name + 'Caption'); 
-        if (c != null) {
-            c.innerHTML = currentPanel.caption;
-        } 
-        setTimeout(alertFunc, 2000);
+		//showSpinner(true);
+        //setTimeout(alertFunc, 2000);
+		showQrCode();
 	}
 	function alertFunc() {
 		hide(currentPanel);
@@ -224,4 +251,5 @@
 		}
 	}
 	</script>
+</body>
 </html>
