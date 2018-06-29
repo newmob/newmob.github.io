@@ -204,6 +204,7 @@
 			document.getElementById(pn.name).style.left = '100%';
 			if (pn.name=="qcode") {
 				document.getElementById("coffee").style.left = '100%';
+				pn.parent = panel.main;
 			}
 			if ((pn.parent.actionLeft != '') || (pn.parent.name == 'Main')) {
 				document.getElementById('topMenuLeft').innerHTML = pn.parent.actionLeft;
