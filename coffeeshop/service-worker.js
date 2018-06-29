@@ -1,21 +1,21 @@
 var dataCacheName = 'coffeeData-v1';
 var cacheName = 'coffeePWA-final-1';
 var filesToCache = [
-  '/',
-  'index.html',
-  'scripts/app.js',
-  'scripts/jquery.qrcode.min.js',
-  'scripts/jquery-3.3.1.js',
-  'images/caixa.png',
-  'images/cafe1.jpg',
-  'images/cafe2.jpg',
-  'images/cafe3.jpg',
-  'images/cafe4.jpg',
-  'images/cafe5.jpg',
-  'images/cafe6.jpg',
-  'images/cafe7.jpg',
-  'images/cafe8.jpg',
-  'images/icons/icon-192x192.png',
+  '/coffeeshop',
+  '/coffeeshop/index.html',
+  '/coffeeshop/scripts/app.js',
+  '/coffeeshop/scripts/jquery.qrcode.min.js',
+  '/coffeeshop/scripts/jquery-3.3.1.js',
+  '/coffeeshop/images/caixa.png',
+  '/coffeeshop/images/cafe1.jpg',
+  '/coffeeshop/images/cafe2.jpg',
+  '/coffeeshop/images/cafe3.jpg',
+  '/coffeeshop/images/cafe4.jpg',
+  '/coffeeshop/images/cafe5.jpg',
+  '/coffeeshop/images/cafe6.jpg',
+  '/coffeeshop/images/cafe7.jpg',
+  '/coffeeshop/images/cafe8.jpg',
+  '/coffeeshop/images/icons/icon-192x192.png',
 ];
 
 self.addEventListener('install', function(e) {
