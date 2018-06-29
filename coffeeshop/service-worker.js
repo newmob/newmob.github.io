@@ -15,7 +15,7 @@ var filesToCache = [
   '/coffeeshop/images/cafe6.jpg',
   '/coffeeshop/images/cafe7.jpg',
   '/coffeeshop/images/cafe8.jpg',
-  '/coffeeshop/images/icons/icon-192x192.png',
+  '/coffeeshop/images/icons/icon-192x192.png'
 ];
 
 self.addEventListener('install', function(e) {
