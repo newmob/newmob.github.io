@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="scripts/jquery.qrcode.min.js"></script>
+
+	</head>
+<!--
+http://zetcode.com/articles/javascriptjsonurl/
+https://stackoverflow.com/questions/6524920/looping-through-json-array-in-a-jquery-list
+-->
+
+<body>
+    <div class="mypanel" id='ul'></div>
+<!--
+    <script>
+    $.getJSON('data.json', function(data) {
+        
+        var text = `id: ${data[0].id}<br>
+                    tipo: ${data[0].tipo}<br>
+                    nome: ${data[0].nome}<br>
+                    desc: ${data[0].desc}<br>
+                    preco: ${data[0].preco}<br>
+                    img: ${data[0].img}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
+-->    
+	<br>
+	<hr>teste<br>
+	
+<script>
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
+}
+    fetch('products.json')
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      for(var i = 0; i < json.products.length; i++) {
+		    console.log(json.products[i].nome);
+			console.log(i.pad(3));
+	  }
+    });
+
+/*
+    fetch('products.json')
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      for(var i = 0; i < json.products.length; i++) {
+		    console.log(json.products[i].nome);
+	  }
+    });
+*/
+
+/*
+    var myList = document.querySelector('ul');
+    fetch('products.json')
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      for(var i = 0; i < json.products.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
+        listItem.innerHTML +=' can be found in ' + json.products[i].nome + '.';
+        listItem.innerHTML +=' Cost: <strong> R$' + json.products[i].preco + '</strong>';
+        myList.appendChild(listItem);
+      }
+    });
+*/
+</script>	
+	
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+"products": [
+   {
+      "id":"0001",
+      "tipo":1,
+      "nome":"AuLait",
+      "desc":"AuLait desc",
+      "preco":5.00,
+      "img":"cafe1.jpg"
+   },
+   {
+      "id":"0002",
+      "tipo":1,
+      "nome":"Mocha",
+      "desc":"Mocha desc",
+      "preco":5.50,
+      "img":"cafe2.jpg"
+   },
+   {
+      "id":"0003",
+      "tipo":1,
+      "nome":"Ristretto",
+      "desc":"Ristretto desc",
+      "preco":6.0,
+      "img":"cafe3.jpg"
+   }
+]
+}

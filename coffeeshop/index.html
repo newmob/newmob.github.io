@@ -61,6 +61,42 @@
 		.dropdown{width:100%;display:block}
 		#spinner{width:48px;height:48px;position:absolute;display:none;top:200px;left:45%;z-index:999;-webkit-animation:sweep 1s infinite linear;border-radius:40px;border-bottom:5px dotted #000;margin:10px auto}@-webkit-keyframes sweep {to{-webkit-transform:rotate(360deg)}}	
     </style>
+	
+<script>
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
+}
+
+    fetch('products.json')
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+	  var table = document.getElementById("mytable");
+      for(var i = 0; i < json.products.length; i++) {
+		//html+="<tr onclick='show(panel.coffee01)'>";
+		//html+="   <td class='icon'><img src='images/" + json.products[i].img + "' width='120' height='120'></td>";
+		//html+="   <td class='caption'><div>" + json.products[i].nome + "</div><div class='desc'>" + json.products[i].desc + "</div></td>";
+		//html+="   <td class='value'><div class='price'>R$" + json.products[i].preco + "</div></td>";
+		//html+="</tr>";
+		var row = table.insertRow();
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		cell1.class = "icon";
+		cell2.class = "caption";
+		cell3.class = "value";
+		//cell1.onclick = "show(panel.coffee0" + (i-1).pad(2) + ")";
+		cell1.onclick = function() {show(panel.coffee01);};
+		cell1.innerHTML = "<img src='images/" + json.products[i].img + "' width='120' height='120'>";
+		cell2.innerHTML = "<div>" + json.products[i].nome + "</div><div class='desc'>" + json.products[i].desc + "</div>";
+		cell3.innerHTML = "<div class='price'>R$" + json.products[i].preco + "</div>";
+	  }
+    });
+</script>
+
+
+	
 </head>
 <body>
 	<div id='spinner'></div>
@@ -76,46 +112,7 @@
 			<table border='0' cellspacing='0' cellpadding='0' width='100%'>
 				<tr><td class='sep' colspan='3'></td></tr>
 				<tr><td class='sep' colspan='3' style='line-height:32px;font-size:14px;color:dimgrey;padding-bottom:0px;padding-top:20px;text-align:center;vertical-align: bottom'>Escolha seu café</td></tr>
-				<tr onclick='show(panel.coffee01)'>
-					<td class='icon'><img src="images/cafe1.jpg" width="120" height="120"></td>
-					<td class='caption'><div>AuLait</div><div class="desc">A combinação perfeita do café com leite.</div></td>
-					<td class='value'><div class="price">R$5,00</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee02)'>
-					<td class='icon'><img src="images/cafe2.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Mocha</div><div class="desc">Combinação do leite cremoso, chocolate e um toque de café 100% Arábica.</div></td>
-					<td class='value'><div class="price">R$5,50</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee03)'>
-					<td class='icon'><img src="images/cafe3.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Ristretto</div><div class="desc">Um blend de grãos selecionados Arábica e Robusta com torra mais intensa.</div></td>
-					<td class='value'><div class="price">R$6,00</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee04)'>
-					<td class='icon'><img src="images/cafe4.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Ristretto Ardenza</div><div class="desc">Perfil intenso com notas de alcaçuz e leve toque picante.</div></td>
-					<td class='value'><div class="price">R$3,80</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee05)'>
-					<td class='icon'><img src="images/cafe5.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Barista</div><div class="desc">Café de alta torrefação de seus grãos Arábicas e Robusta, aroma aveludado e crema generosa, estilo café italiano.</div></td>
-					<td class='value'><div class="price">R$3,80</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee06)'>
-					<td class='icon'><img src="images/cafe6.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Matinal</div><div class="desc">Café de torrefação média e agradável no paladar para ser o café de todas as manhãs.</div></td>
-					<td class='value'><div class="price">R$3,80</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee07)'>
-					<td class='icon'><img src="images/cafe7.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Espresso</div><div class="desc">O autêntico café Espresso: encorpado e com uma crema única.</div></td>
-					<td class='value'><div class="price">R$3,80</div></td>
-				</tr>
-				<tr onclick='show(panel.coffee08)'>
-					<td class='iconLast'><img src="images/cafe8.jpg" width="120" height="120"></td>
-					<td class='caption'><div>Peach</div><div class="desc">Chá refrescante com sabor pêssego e uma generosa camada de espuma.</div></td>
-					<td class='value'><div class="price">R$3,80</div></td>
-				</tr>
+<p id="menu"></p>
 			</table>
 		</div>
 		<div id='coffee' class='slide'>
@@ -155,7 +152,9 @@
 
 	</div>
 
+	<!--
 	<script type="text/javascript" src="scripts/app.js"></script>
+	-->
 
   <script>
 	var panel = { 
