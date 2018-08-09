@@ -1,28 +1,68 @@
-{
+﻿{
 "products": [
    {
       "id":"0001",
       "tipo":1,
       "nome":"AuLait",
-      "desc":"AuLait desc",
-      "preco":5.00,
+      "desc":"A combinação perfeita do café com leite.",
+      "preco":4.50,
       "img":"cafe1.jpg"
    },
    {
       "id":"0002",
       "tipo":1,
       "nome":"Mocha",
-      "desc":"Mocha desc",
-      "preco":5.50,
+      "desc":"Combinação do leite cremoso, chocolate e um toque de café 100% Arábica.",
+      "preco":3.80,
       "img":"cafe2.jpg"
    },
    {
       "id":"0003",
       "tipo":1,
       "nome":"Ristretto",
-      "desc":"Ristretto desc",
-      "preco":6.0,
+      "desc":"Um blend de grãos selecionados Arábica e Robusta com torra mais intensa.",
+      "preco":4.70,
       "img":"cafe3.jpg"
+   },
+   {
+      "id":"0004",
+      "tipo":1,
+      "nome":"Ristretto Ardenza",
+      "desc":"Perfil intenso com notas de alcaçuz e leve toque picante.",
+      "preco":4.30,
+      "img":"cafe2.jpg"
+   },
+   {
+      "id":"0005",
+      "tipo":1,
+      "nome":"Barista",
+      "desc":"Café de alta torrefação de seus grãos Arábicas e Robusta, aroma aveludado e crema generosa, estilo café italiano.",
+      "preco":3.00,
+      "img":"cafe2.jpg"
+   },
+   {
+      "id":"0006",
+      "tipo":1,
+      "nome":"Matinal",
+      "desc":"Café de torrefação média e agradável no paladar para ser o café de todas as manhãs.",
+      "preco":4.20,
+      "img":"cafe2.jpg"
+   },
+   {
+      "id":"0007",
+      "tipo":1,
+      "nome":"Espresso",
+      "desc":"O autêntico café Espresso: encorpado e com uma crema única.",
+      "preco":5.00,
+      "img":"cafe2.jpg"
+   },
+   {
+      "id":"0008",
+      "tipo":1,
+      "nome":"Peach",
+      "desc":"Chá refrescante com sabor pêssego e uma generosa camada de espuma.",
+      "preco":5.50,
+      "img":"cafe2.jpg"
    }
 ]
 }

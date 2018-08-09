@@ -2,6 +2,7 @@ var dataCacheName = 'coffeeData-v1';
 var cacheName = 'coffeePWA-final-1';
 var filesToCache = [
   'https://newmob.github.io/coffeeshop/index.html',
+  'https://newmob.github.io/coffeeshop/products.json',
   'https://newmob.github.io/coffeeshop/scripts/app.js',
   'https://newmob.github.io/coffeeshop/scripts/jquery.qrcode.min.js',
   'https://newmob.github.io/coffeeshop/scripts/jquery-3.3.1.js',
