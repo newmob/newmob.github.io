@@ -30,7 +30,7 @@
       "nome":"Ristretto Ardenza",
       "desc":"Perfil intenso com notas de alcaçuz e leve toque picante.",
       "preco":4.30,
-      "img":"cafe2.jpg"
+      "img":"cafe4.jpg"
    },
    {
       "id":"0005",
@@ -38,7 +38,7 @@
       "nome":"Barista",
       "desc":"Café de alta torrefação de seus grãos Arábicas e Robusta, aroma aveludado e crema generosa, estilo café italiano.",
       "preco":3.00,
-      "img":"cafe2.jpg"
+      "img":"cafe5.jpg"
    },
    {
       "id":"0006",
@@ -46,7 +46,7 @@
       "nome":"Matinal",
       "desc":"Café de torrefação média e agradável no paladar para ser o café de todas as manhãs.",
       "preco":4.20,
-      "img":"cafe2.jpg"
+      "img":"cafe6.jpg"
    },
    {
       "id":"0007",
@@ -54,7 +54,7 @@
       "nome":"Espresso",
       "desc":"O autêntico café Espresso: encorpado e com uma crema única.",
       "preco":5.00,
-      "img":"cafe2.jpg"
+      "img":"cafe7.jpg"
    },
    {
       "id":"0008",
@@ -62,7 +62,7 @@
       "nome":"Peach",
       "desc":"Chá refrescante com sabor pêssego e uma generosa camada de espuma.",
       "preco":5.50,
-      "img":"cafe2.jpg"
+      "img":"cafe8.jpg"
    }
 ]
 }
