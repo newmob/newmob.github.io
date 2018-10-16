@@ -1,21 +1,12 @@
-var dataCacheName = 'coffeeData-v1';
-var cacheName = 'coffeePWA-final-1';
+var dataCacheName = 'lotxData-v1';
+var cacheName = 'lotxPWA-final-1';
 var filesToCache = [
-  'https://newmob.github.io/coffeeshop/index.html',
-  'https://newmob.github.io/coffeeshop/products.json',
-  'https://newmob.github.io/coffeeshop/scripts/app.js',
-  'https://newmob.github.io/coffeeshop/scripts/jquery.qrcode.min.js',
-  'https://newmob.github.io/coffeeshop/scripts/jquery-3.3.1.js',
-  'https://newmob.github.io/coffeeshop/images/caixa.png',
-  'https://newmob.github.io/coffeeshop/images/cafe1.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe2.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe3.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe4.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe5.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe6.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe7.jpg',
-  'https://newmob.github.io/coffeeshop/images/cafe8.jpg',
-  'https://newmob.github.io/coffeeshop/images/icons/icon-192x192.png'
+  'https://newmob.github.io/lotx/index.html',
+  'https://newmob.github.io/lotx/products.json',
+  'https://newmob.github.io/lotx/js/app.js',
+  'https://newmob.github.io/lotx/js/jquery.qrcode.min.js',
+  'https://newmob.github.io/lotx/js/jquery-3.3.1.js',
+  'https://newmob.github.io/lotx/img/icons/icon-192x192.png'
 ];
 
 self.addEventListener('install', function(e) {

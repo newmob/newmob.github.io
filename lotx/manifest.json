@@ -1,6 +1,6 @@
 {
-  "name": "newmob",
-  "short_name": "newmob",
+  "name": "Loterias Caixa",
+  "short_name": "LotX",
   "icons": [
     {
       "src": "images/icons/icon-192x192.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/coffeeshop/index.html?launcher=true",
+  "start_url": "/lotx/index.html?launcher=true",
   "display": "standalone",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2"
