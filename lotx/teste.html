@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>AppDeck</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<!-- AppDeck API -->
+	<script type="text/javascript" src="//appdata.static.appdeck.mobi/js/fastclick.js"></script>
+	<script type="text/javascript" src="//appdata.static.appdeck.mobi/js/appdeck.js"></script>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+
+
+
+	<script type="text/javascript">
+
+	function openBarCodeScanner()
+	{
+		app.barcode.show({}, function (code) {
+            app.vibrate();
+            app.barcode.hide();
+            $("#result").html(code);
+        });
+	}
+
+	</script>
+
+<body>
+
+<div data-role="page" data-theme="a">
+
+	<div data-role="content">
+
+<h1>Barcode</h1>
+
+<button class="ui-button" onClick="javascript:openBarCodeScanner();">Open BarCode Scanner</button>
+
+<h5>Last Barcode</h5>
+
+<pre id="result"></pre>
+
+	</div><!-- /content -->
+
+</div>
+
+</body>
+</html>
