@@ -125,7 +125,7 @@
             }
         }, false);
 
-        alert(isValidBarcode('780719712414062252264406014098'));
+        alert(isValidBarcode('780748153025420691160273017346'));
 
         function isValidBarcode(bc) {
             const bc_len = 30;
@@ -139,20 +139,17 @@
                 var i;
                 var m = 3;
                 var r = 0;
-                var x = 0;
                 var sm = 0;
                 var ck2 = -1;
                 for (i = ln-2; i >= 0; i--) {
                     dg = bc.substring(i, i+1);
                     r = parseInt(dg) * m;
-                    x = (r<10) ? r : (Math.trunc(r/10) + r%10);
-                    sm+=x;
+                    sm+=r;
                     m = (m==3) ? 1 : 3;
                 }
-                ck2 = 10 - (sm % 10);
+                ck2 = (sm % 10)==0 ? 0 : (10 - (sm % 10));
                 valid = (ck1==ck2);
             }
-
             return valid;
         }        
     </script>
