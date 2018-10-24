@@ -111,7 +111,14 @@
 
 
             Quagga.onDetected(function (result) {
-                console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
+                var barcode = result.codeResult.code;
+
+                if (isValidBarcode(barcode)) {
+                    console.log("Valid barcode : [" + barcode + "]", result);
+                    alert("Valid barcode : [" + barcode + "]");
+                } else {
+                    console.log("Invalid barcode : [" + barcode + "]", result);
+                }
             });
         }
 
@@ -125,7 +132,7 @@
             }
         }, false);
 
-        alert(isValidBarcode('780748153025420691160273017346'));
+        //alert(isValidBarcode('780748153025420691160273017346'));
 
         function isValidBarcode(bc) {
             const bc_len = 30;
