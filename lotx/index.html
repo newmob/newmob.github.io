@@ -115,6 +115,7 @@
 
                 if (isValidBarcode(barcode)) {
                     console.log("Valid barcode : [" + barcode + "]", result);
+                    window.navigator.vibrate(200);
                     alert("Valid barcode : [" + barcode + "]");
                 } else {
                     console.log("Invalid barcode : [" + barcode + "]", result);
