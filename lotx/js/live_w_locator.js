@@ -246,7 +246,7 @@ $(function() {
         if (App.lastResult !== code) {
             App.lastResult = code;
             if (isValidBarcode(code)) {
-                alert(code);
+                alert(code + " dg:" + xxx);
     
                 var $node = null, canvas = Quagga.canvas.dom.image;
 
