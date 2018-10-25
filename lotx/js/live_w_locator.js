@@ -205,7 +205,7 @@ $(function() {
             frequency: 10,
             decoder: {
                 readers : [{
-                    format: "code_128_reader",
+                    format: "i2of5_reader",
                     config: {}
                 }]
             },
