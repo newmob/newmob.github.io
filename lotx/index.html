@@ -145,19 +145,19 @@
         //alert(isValidBarcode('780748153025420691160273017346'));
 
         function isValidBarcode(bc) {
-            const bc_len = 30;
             bc = bc.trim();
+            const bc_len = 30;
             var valid = false;
             var ln = bc.length;
+            var ck1 = parseInt(bc.substring(ln-1, ln));
+            var dg = '';
+            var i;
+            var m = 3;
+            var r = 0;
+            var sm = 0;
+            var ck2 = -1;
 
             if (ln >= bc_len) {
-                var ck1 = parseInt(bc.substring(ln-1, ln));
-                var dg = '';
-                var i;
-                var m = 3;
-                var r = 0;
-                var sm = 0;
-                var ck2 = -1;
                 for (i = ln-2; i >= 0; i--) {
                     dg = bc.substring(i, i+1);
                     r = parseInt(dg) * m;
