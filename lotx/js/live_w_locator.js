@@ -243,9 +243,11 @@ $(function() {
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
 
-        alert(code);
-
         if (App.lastResult !== code) {
+            if (isValidBarcode(code)) {
+                alert(code);
+            }
+    
             App.lastResult = code;
             var $node = null, canvas = Quagga.canvas.dom.image;
 
@@ -256,3 +258,29 @@ $(function() {
         }
     });
 });
+
+function isValidBarcode(bc) {
+    bc = bc.trim();
+    const bc_len = 30;
+    var valid = false;
+    var ln = bc.length;
+    var ck1 = parseInt(bc.substring(ln-1, ln));
+    var dg = '';
+    var i;
+    var m = 3;
+    var r = 0;
+    var sm = 0;
+    var ck2 = -1;
+    if (ln >= bc_len) {
+        for (i = ln-2; i >= 0; i--) {
+            dg = bc.substring(i, i+1);
+            r = parseInt(dg) * m;
+            sm+=r;
+            m = (m==3) ? 1 : 3;
+        }
+        ck2 = (sm % 10)==0 ? 0 : (10 - (sm % 10));
+        valid = (ck1==ck2);
+    }
+    return valid;
+}        
+
