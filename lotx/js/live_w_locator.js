@@ -244,20 +244,22 @@ $(function() {
         var code = result.codeResult.code;
 
         if (App.lastResult !== code) {
+            App.lastResult = code;
             if (isValidBarcode(code)) {
                 alert(code);
-            }
     
-            App.lastResult = code;
-            var $node = null, canvas = Quagga.canvas.dom.image;
+                var $node = null, canvas = Quagga.canvas.dom.image;
 
-            $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
-            $node.find("img").attr("src", canvas.toDataURL());
-            $node.find("h4.code").html(code);
-            $("#result_strip ul.thumbnails").prepend($node);
+                $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
+                $node.find("img").attr("src", canvas.toDataURL());
+                $node.find("h4.code").html(code);
+                $("#result_strip ul.thumbnails").prepend($node);
+            }
         }
     });
 });
+
+var xxx=-1;
 
 function isValidBarcode(bc) {
     bc = bc.trim();
@@ -280,6 +282,7 @@ function isValidBarcode(bc) {
         }
         ck2 = (sm % 10)==0 ? 0 : (10 - (sm % 10));
         valid = (ck1==ck2);
+        xxx = ck2;
     }
     return valid;
 }        
