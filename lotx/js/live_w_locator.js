@@ -246,6 +246,7 @@ $(function() {
         //if (App.lastResult !== code) {
             App.lastResult = code;
             if (isValidBarcode(code)) {
+                window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 alert("Valido");
                 if (hashTable.search(code)==null) {
                     alert("hashAdd init");
@@ -344,3 +345,5 @@ for(var value in this.values) {
 }
 console.log(string.trim());
 };
+
+var hashTable = new HashTable(100);
