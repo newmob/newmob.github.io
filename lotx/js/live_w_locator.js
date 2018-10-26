@@ -246,9 +246,11 @@ $(function() {
         //if (App.lastResult !== code) {
             App.lastResult = code;
             if (isValidBarcode(code)) { 
+                console.log("valido: " + code);
                 window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 if (hashTable.search(code)==null) {
                     hashTable.add(code, 1);
+                    console.log("hash adicionado: " + code);
                 } else {
                     //window.navigator.vibrate(200);
                     window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
@@ -262,6 +264,8 @@ $(function() {
                 $node.find("img").attr("src", canvas.toDataURL());
                 $node.find("h4.code").html(code);
                 $("#result_strip ul.thumbnails").prepend($node);
+            } else {
+                console.log("código invalido");
             }
         //}
     });
