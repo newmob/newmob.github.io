@@ -299,6 +299,8 @@ function isValidBarcode(bc) {
     return valid;
 }        
 
+
+
 function HashTable(size) {
     this.values = {};
     this.numberOfValues = 0;
@@ -347,3 +349,12 @@ console.log(string.trim());
 };
 
 var hashTable = new HashTable(100);
+
+hashTable.add('second', 9);
+
+console.log('procura segundo:', hashTable.search('second')); // => 2
+if (hashTable.search('second')==null) {
+  console.log("é nulo");
+} else {
+  console.log("não é nulo");
+}
