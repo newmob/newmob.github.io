@@ -348,7 +348,7 @@ console.log(string.trim());
 var hashTable = new HashTable(100);
 
 hashTable.add('second', 9);
-alert('ok');
+
 console.log('procura segundo:', hashTable.search('second')); // => 2
 if (hashTable.search('second')==null) {
   console.log("é nulo");
