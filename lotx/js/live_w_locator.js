@@ -242,6 +242,7 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
+        document.getElementById('barcode').innerHTML = code;
 
         //if (App.lastResult !== code) {
             App.lastResult = code;
@@ -254,7 +255,8 @@ $(function() {
                 } else {
                     //window.navigator.vibrate(200);
                     window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
-                    alert(code + " dg:" + xxx);
+                    //alert(code + " dg:" + xxx);
+                    document.getElementById('barcode_valido').innerHTML = code;
                 }    
                 lastValid = code;
     
@@ -262,7 +264,7 @@ $(function() {
 
                 $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
                 $node.find("img").attr("src", canvas.toDataURL());
-                $node.find("h4.code").html(code);
+                $node.find("barcode").html(code);
                 $("#result_strip ul.thumbnails").prepend($node);
             } else {
                 console.log("código invalido");
