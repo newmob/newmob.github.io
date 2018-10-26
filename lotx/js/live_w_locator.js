@@ -246,6 +246,7 @@ $(function() {
         //if (App.lastResult !== code) {
             App.lastResult = code;
             if (isValidBarcode(code)) {
+                alert("Valido");
                 if (hashTable.search(code)==null) {
                     hashTable.add(code, 1);
                     alert("Adicionado");
