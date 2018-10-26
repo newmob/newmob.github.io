@@ -242,12 +242,12 @@ $(function() {
 
     Quagga.onDetected(function(result) {
         var code = result.codeResult.code;
-        document.getElementById('barcode').innerHTML = code;
 
         //if (App.lastResult !== code) {
             App.lastResult = code;
             if (isValidBarcode(code)) { 
-                console.log("valido: " + code);
+                document.getElementById('barcode').innerHTML = code;
+                console.log("barcode: " + code);
                 window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 if (hashTable.search(code)==null) {
                     hashTable.add(code, 1);
