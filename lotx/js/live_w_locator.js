@@ -358,6 +358,8 @@ hashTable.add('second', 9);
 console.log('procura segundo:', hashTable.search('second')); // => 2
 if (hashTable.search('second')==null) {
   console.log("é nulo");
+  document.getElementById('barcode').innerHTML = "é nulo";
 } else {
   console.log("não é nulo");
+  document.getElementById('barcode').innerHTML = "não é nulo";
 }
