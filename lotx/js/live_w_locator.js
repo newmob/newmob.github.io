@@ -255,17 +255,16 @@ $(function() {
                 } else {
                     //window.navigator.vibrate(200);
                     //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
-                    //alert(code + " dg:" + xxx);
                     document.getElementById('barcode_valido').innerHTML = code;
-                }    
-                lastValid = code;
-    
-                var $node = null, canvas = Quagga.canvas.dom.image;
+                    lastValid = code;
+        
+                    var $node = null, canvas = Quagga.canvas.dom.image;
 
-                $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
-                $node.find("img").attr("src", canvas.toDataURL());
-                $node.find("barcode").html(code);
-                $("#result_strip ul.thumbnails").prepend($node);
+                    $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
+                    $node.find("img").attr("src", canvas.toDataURL());
+                    $node.find("barcode").html(code);
+                    $("#result_strip ul.thumbnails").prepend($node);
+                }    
             } else {
                 console.log("código invalido");
             }
@@ -273,7 +272,6 @@ $(function() {
     });
 });
 
-var xxx=-1;
 var lastValid="";
 
 function isValidBarcode(bc) {
@@ -297,7 +295,6 @@ function isValidBarcode(bc) {
         }
         ck2 = (sm % 10)==0 ? 0 : (10 - (sm % 10));
         valid = (ck1==ck2);
-        xxx = ck2;
     }
     return valid;
 }        
