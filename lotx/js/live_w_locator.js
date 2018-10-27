@@ -248,13 +248,13 @@ $(function() {
             if (isValidBarcode(code)) { 
                 document.getElementById('barcode').innerHTML = code;
                 console.log("barcode: " + code);
-                window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
+                //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 if (hashTable.search(code)==null) {
                     hashTable.add(code, 1);
                     console.log("hash adicionado: " + code);
                 } else {
                     //window.navigator.vibrate(200);
-                    window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
+                    //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                     //alert(code + " dg:" + xxx);
                     document.getElementById('barcode_valido').innerHTML = code;
                 }    
