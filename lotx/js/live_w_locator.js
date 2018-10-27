@@ -356,6 +356,8 @@ var hashTable = new HashTable(100);
 hashTable.add('second', 9);
 
 console.log('procura segundo:', hashTable.search('second')); // => 2
+document.getElementById('barcode_valido').innerHTML = "procura segundo:"+hashTable.search('second');
+
 if (hashTable.search('second')==null) {
   console.log("é nulo");
   document.getElementById('barcode').innerHTML = "é nulo";
