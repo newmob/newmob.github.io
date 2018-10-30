@@ -321,6 +321,6 @@ function addCode(code) {
         }
     }
 
-    document.getElementById('barcode_valido').innerHTML = code + "fim";
+    document.getElementById('barcode_teste').innerHTML = code + "fim";
     return retVal;
 }
