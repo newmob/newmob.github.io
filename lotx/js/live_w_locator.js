@@ -248,7 +248,7 @@ $(function () {
         if (isValidBarcode(code)) {
             document.getElementById('barcode').innerHTML = code;
             if (addCode(code)==false) {
-                window.navigator.vibrate(200);
+                //window.navigator.vibrate(200);
                 //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 document.getElementById('barcode_valido').innerHTML = code;
 
