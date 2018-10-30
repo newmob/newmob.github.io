@@ -295,7 +295,7 @@ function isValidBarcode(bc) {
 function addCode(code) {
     var retVal = false;
     var n = -1;
-    document.getElementById('barcode_valido').innerHTML = code + "ini";
+    document.getElementById('barcode_teste').innerHTML = code + "ini";
 
     // inicializa o buffer
     if (typeof addCode.buffer == 'undefined') {
@@ -318,6 +318,6 @@ function addCode(code) {
         }
     }
 
-    document.getElementById('barcode_teste').innerHTML = code + "fim";
+    document.getElementById('barcode_teste').innerHTML = code + "end";
     return retVal; 
 }
