@@ -296,9 +296,9 @@ function isValidBarcode(bc) {
 }
 
 function addCode(code) {
-    alert(3);
     var retVal = false;
     var n = -1;
+    document.getElementById('barcode_valido').innerHTML = code + "ini";
 
     // inicializa o buffer
     if (typeof addCode.buffer == 'undefined') {
@@ -321,9 +321,6 @@ function addCode(code) {
         }
     }
 
+    document.getElementById('barcode_valido').innerHTML = code + "fim";
     return retVal;
 }
-
-alert(0);
-addCode("123");
-addCode("123");
