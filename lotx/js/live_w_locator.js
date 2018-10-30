@@ -246,9 +246,7 @@ $(function () {
         //if (App.lastResult !== code) {
         App.lastResult = code;
         if (isValidBarcode(code)) {
-            alert(1);
             document.getElementById('barcode').innerHTML = code;
-            alert(2);
             if (addCode(code)==false) {
                 alert(4);
                 //window.navigator.vibrate(200);
