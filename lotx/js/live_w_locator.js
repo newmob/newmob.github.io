@@ -246,8 +246,11 @@ $(function () {
         //if (App.lastResult !== code) {
         App.lastResult = code;
         if (isValidBarcode(code)) {
+            alert(1);
             document.getElementById('barcode').innerHTML = code;
+            alert(2);
             if (addCode(code)==false) {
+                alert(3);
                 //window.navigator.vibrate(200);
                 //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 document.getElementById('barcode_valido').innerHTML = code;
@@ -293,7 +296,6 @@ function isValidBarcode(bc) {
 }
 
 function addCode(code) {
-    alert(1);
     var retVal = false;
     var n = -1;
 
@@ -317,8 +319,6 @@ function addCode(code) {
             retVal = true;
         }
     }
-
-    alert(2);
 
     return retVal;
 }
