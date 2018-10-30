@@ -293,6 +293,7 @@ function isValidBarcode(bc) {
 }
 
 function addCode(code) {
+    alert(1);
     var retVal = false;
     var n = -1;
 
@@ -316,6 +317,8 @@ function addCode(code) {
             retVal = true;
         }
     }
+
+    alert(2);
 
     return retVal;
 }
