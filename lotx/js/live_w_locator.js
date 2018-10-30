@@ -324,5 +324,6 @@ function addCode(code) {
     return retVal;
 }
 
+alert(0);
 addCode("123");
 addCode("123");
