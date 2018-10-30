@@ -250,7 +250,7 @@ $(function () {
             document.getElementById('barcode').innerHTML = code;
             alert(2);
             if (addCode(code)==false) {
-                alert(3);
+                alert(4);
                 //window.navigator.vibrate(200);
                 //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 document.getElementById('barcode_valido').innerHTML = code;
@@ -296,6 +296,7 @@ function isValidBarcode(bc) {
 }
 
 function addCode(code) {
+    alert(3);
     var retVal = false;
     var n = -1;
 
