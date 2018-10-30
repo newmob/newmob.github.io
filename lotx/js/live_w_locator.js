@@ -319,5 +319,5 @@ function addCode(code) {
     }
 
     document.getElementById('barcode_teste').innerHTML = code + "fim";
-    return retVal;
+    return retVal; 
 }
