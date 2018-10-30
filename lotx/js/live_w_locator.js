@@ -323,3 +323,6 @@ function addCode(code) {
 
     return retVal;
 }
+
+addCode("123");
+addCode("123");
