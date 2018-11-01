@@ -14,18 +14,6 @@
     <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/pygment_trac.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script>
-        (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-56318310-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 </head>
 
 <body>
@@ -127,8 +115,9 @@
                 <div>Válido: <span id="barcode_valido" style="font-weight: bold">000000</span></div>
                 <div>Teste: <span id="barcode_teste" style="font-weight: bold">000000</span></div>
                 <div id="interactive" class="viewport"><video autoplay="true" preload="auto" src="" muted="true"
-                        playsinline="true"></video><canvas class="drawingBuffer" width="1280" height="720"></canvas><br
+                        playsinline="true"></video><canvas class="drawingBuffer" width="640" height="480"></canvas><br
                         clear="all"></div>
+                        <!-- 1280 / 720 -->
             </section>
 
             <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
