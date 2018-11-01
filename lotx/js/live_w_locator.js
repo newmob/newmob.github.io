@@ -199,7 +199,7 @@ $(function () {
             },
             locator: {
                 patchSize: "medium",
-                halfSample: true
+                halfSample: false
             },
             numOfWorkers: 2,
             frequency: 10,
@@ -226,16 +226,16 @@ $(function () {
                 result.boxes.filter(function (box) {
                     return box !== result.box;
                 }).forEach(function (box) {
-                    Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 2 });
+                    Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 5 });
                 });
             }
 
             if (result.box) {
-                Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 2 });
+                Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 5 });
             }
 
             if (result.codeResult && result.codeResult.code) {
-                Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
+                Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 5 });
             }
         }
     });
@@ -247,7 +247,7 @@ $(function () {
         App.lastResult = code;
         if (isValidBarcode(code)) {
             document.getElementById('barcode').innerHTML = code;
-            if (addCode(code)==false) {
+            if (addCode(code) == false) {
                 //window.navigator.vibrate(200);
                 //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 document.getElementById('barcode_valido').innerHTML = code;
@@ -317,5 +317,5 @@ function addCode(code) {
         }
     }
 
-    return retVal; 
+    return retVal;
 }

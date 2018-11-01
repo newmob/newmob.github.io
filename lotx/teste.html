@@ -14,16 +14,6 @@
     <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/pygment_trac.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script async="" src="QuaggaJS_arquivos/analytics.js"></script>
-    <script>
-        var host = "serratus.github.io";
-        if ((host == window.location.host) && (window.location.protocol != "https:")) {
-            window.location.protocol = "https";
-        }
-    </script>
     <script>
         (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -82,9 +72,9 @@
                             <span>Resolution (long side)</span>
                             <select name="input-stream_constraints">
                                 <option value="320x240">320px</option>
-                                <option value="640x480">640px</option>
+                                <option value="640x480" selected="selected">640px</option>
                                 <option value="800x600">800px</option>
-                                <option value="1280x720" selected="selected">1280px</option>
+                                <option value="1280x720">1280px</option>
                                 <option value="1600x960">1600px</option>
                                 <option value="1920x1080">1920px</option>
                             </select>
@@ -107,9 +97,9 @@
                             <span>Workers</span>
                             <select name="numOfWorkers">
                                 <option value="0">0</option>
-                                <option value="1">1</option>
+                                <option value="1" selected="selected">1</option>
                                 <option value="2">2</option>
-                                <option selected="selected" value="4">4</option>
+                                <option value="4">4</option>
                                 <option value="8">8</option>
                             </select>
                         </label>
