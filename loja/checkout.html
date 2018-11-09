@@ -6,6 +6,7 @@
     <META NAME="VIEWPORT" CONTENT="width=device-width">
     <TITLE>Mirror Fashion</TITLE>
     <LINK REL="STYLESHEET" HREF="css/bootstrap.css">
+    <LINK REL="STYLESHEET" HREF="css/open-iconic-bootstrap.css">
 </HEAD>
 
 <body>
@@ -44,18 +45,29 @@
                             <legend>Dados pessoais</legend>
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
-                                <input type="text" class="form-control" id="nome" name="nome">
+                                <input type="text" class="form-control" id="nome" name="nome" autofocus>
                             </div>
 
                             <div class="form-group">
-                                <label for="nome">Email</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com">
                             </div>
 
                             <div class="form-group">
-                                <label for="nome">CPF</label>
-                                <input type="text" class="form-control" id="cpf" name="cpf">
+                                <label for="email">Email</label>
+                                <div class=input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">email</span>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com">
+                                </div>
                             </div>
+
+                            <div class="form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
+                            </div>
+
                             <div class="form-group custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="newsletter" value="sim" checked>
                                 <label class="custom-control-label" for="newsletter">
@@ -72,7 +84,26 @@
                                 <label for="numero-cartao">Número - CVV</label>
                                 <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
                             </div>
+
+                            <div class="form-group">
+                                <label for="bandeira-cartao">Bandeira</label>
+                                <select class="custom-select" id="bandeira-cartao">
+                                    <option disabled selected>Selecione uma opção...</option>
+                                    <option value="master">MasterCard</option>
+                                    <option value="visa">VISA</option>
+                                    <option value="amex">American Express</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="validade-cartao">Validade</label>
+                                <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+                            </div>
                         </fieldset>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span class="oi oi-thumb-up"></span>
+                            Confirmar Pedido
+                        </button>
                     </form>
                 </div>
             </div>
