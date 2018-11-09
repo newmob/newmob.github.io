@@ -7,34 +7,57 @@ var cellHeight = carousel.offsetHeight;
 var isHorizontal = true;
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 var radius, theta;
-// console.log( cellWidth, cellHeight );
+console.log( cellWidth, cellHeight );
+
 
 function rotateCarousel() {
   var angle = theta * selectedIndex * -1;
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)';
+    console.log(radius, theta, rotateFn );
 }
 
-var prevButton = document.querySelector('.previous-button');
-prevButton.addEventListener( 'click', function() {
-  selectedIndex--;
-  rotateCarousel();
-});
+var startX = null;
+var moveX = null;
+document.querySelector('.carousel').addEventListener('touchstart', function(e){
+    startX = e.targetTouches[0].pageX;
 
-var nextButton = document.querySelector('.next-button');
-nextButton.addEventListener( 'click', function() {
-  selectedIndex++;
-  rotateCarousel();
-});
+    this.addEventListener('touchmove', function(e){
+        moveX = e.targetTouches[0].pageX - startX;
 
-var cellsRange = document.querySelector('.cells-range');
-cellsRange.addEventListener( 'change', changeCarousel );
-cellsRange.addEventListener( 'input', changeCarousel );
+        if(Math.abs(moveX)>=40){
+       
+        if(moveX>0){
+
+        //ESQUERDA
+
+            selectedIndex--;
+            rotateCarousel();
+        }else{
+        //DIREITA
+            selectedIndex++;
+            rotateCarousel();
+             }
+        }
+        
+        //this is how custom swipe is done...
+        e.preventDefault();
+        e.stopPropagation();
+
+    },false);
+
+
+        e.preventDefault();
+        e.stopPropagation();
+        //prevent or stop propagation according to your need
+
+}, false);
+
 
 
 
 function changeCarousel() {
-  cellCount = cellsRange.value;
+  cellCount = 9;
   theta = 360 / cellCount;
   var cellSize = isHorizontal ? cellWidth : cellHeight;
   radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
@@ -55,20 +78,6 @@ function changeCarousel() {
   rotateCarousel();
 }
 
-var orientationRadios = document.querySelectorAll('input[name="orientation"]');
-( function() {
-  for ( var i=0; i < orientationRadios.length; i++ ) {
-    var radio = orientationRadios[i];
-    radio.addEventListener( 'change', onOrientationChange );
-  }
-})();
-
-function onOrientationChange() {
-  var checkedRadio = document.querySelector('input[name="orientation"]:checked');
-  isHorizontal = checkedRadio.value == 'horizontal';
-  rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-  changeCarousel();
-}
 
 // set initials
-onOrientationChange();
+  changeCarousel();
