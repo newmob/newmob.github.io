@@ -6,4 +6,5 @@ function mostraTamanho() {
 }
 
 // atribui o ponteiro da função
-inputTamanho.oninput = mostraTamanho;
+//inputTamanho.oninput = mostraTamanho;
+inputTamanho.addEventListener("change", mostraTamanho);
