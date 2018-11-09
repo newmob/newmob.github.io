@@ -7,6 +7,7 @@
     <TITLE>Mirror Fashion</TITLE>
     <LINK REL="STYLESHEET" HREF="css/bootstrap.css">
     <LINK REL="STYLESHEET" HREF="css/open-iconic-bootstrap.css">
+
     <style>
         .form-control:invalid {
             border: 1px solid #cc0000;
@@ -26,7 +27,7 @@
                 <p>Obrigado por comprar na Mirror Fashion!
                     Preencha seus dados para efetivar a compra.
                 </p>
-                <div class="container">
+                <div class="col-md-4">
                     <div class="card mb-3">
                         <div class="card-header">
                             Sua compra
@@ -41,10 +42,24 @@
                                 <dt>Tamanho</dt>
                                 <dd>40</dd>
                                 <dt>Preço</dt>
-                                <dd>R$ 129,90</dd>
+                                <dd id="preco">R$ 129,90</dd>
                             </dl>
                         </div>
                     </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="qtd">Quantidade:</label>
+                                <input type="number" id="qtd" min="1" max="99" value="1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="total">Total:</label>
+                                <output id="total" class="form-control">R$ 129,90</output>
+                            </div>
+                        </div>
+                    </div>
+
                     <form>
                         <fieldset>
                             <legend>Dados pessoais</legend>
@@ -109,5 +124,5 @@
     <footer>
     </footer>
 </body>
-
+<SCRIPT TYPE="text/javascript" SRC="js/total.js"></SCRIPT>
 </HTML>
