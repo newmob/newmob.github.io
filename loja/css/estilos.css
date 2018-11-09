@@ -38,7 +38,7 @@
 }
 body {
     color: #333333;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'PT Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -162,6 +162,7 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'Poor Story', sans-serif;
 }
 
 .painel a {
@@ -172,7 +173,7 @@ header {
 }
 
 .novidades {
-    background-color: #dcdcdc;
+    background-color: #DCDCF5;
 }
 
 .mais-vendidos {
@@ -235,6 +236,36 @@ footer .container {
     width: 20px;
     height: 20px;
     text-indent: -9999px;
+}
+
+.painel li:nth-child(n+7) {
+    display: none;
+}
+
+.painel-aberto li:nth-child(n+7) {
+    display: inline-block;
+}
+
+.painel button {
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #333;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px rgba(30,30,30,0.5);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 1px 0 1px black;
+    transition: 0.3s;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.painel button:hover {
+    background-color: rgb(78, 78, 158);
+    box-shadow: 1px 0 20px rgba(200,200,120, 0.9);
 }
 
 @media (max-width: 939px) {
