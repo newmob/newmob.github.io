@@ -32,12 +32,10 @@ document.querySelector('.carousel').addEventListener('touchstart', function(e){
         //ESQUERDA
 
             selectedIndex--;
-            selectedIndex = 3;
             rotateCarousel();
         }else{
         //DIREITA
             selectedIndex++;
-            selectedIndex = 4;
             rotateCarousel();
              }
         }
