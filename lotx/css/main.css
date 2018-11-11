@@ -39,8 +39,8 @@ body {
 
 .titulo-destaque h2 {
     color: #FFFFFF;
-    font-family: 'Arial Black', 'Gadget', 'sans-serif';
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
     text-transform: lowercase;
     text-align: left;
     margin-left: 100px;
@@ -49,10 +49,9 @@ body {
 
 .titulo-resultado h2 {
     color: #FFFFFF;
-    font-family: 'Arial Black', 'Gadget', 'sans-serif';
     font-size: 18px;
-    text-transform: lowercase;
+    font-weight: normal; 
     text-align: left;
     margin-left: 95px;
-    margin-top: 27px;
+    margin-top: 10px;
 }
