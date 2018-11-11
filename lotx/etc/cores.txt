@@ -1,0 +1,11 @@
+mega-sena	#009B63	#00AB67	#008F5B
+mega da virada	#009B63	#00AB67	#008F5B
+lotofácil	#A53384	#BD3E96	#9B2B7A
+quina	#702A82	#803594	#642475
+lotomania	#DD8628	#FF9A2F	#DD8628
+timemania	#92B240	#A8CD4A	#92B240
+dupla-sena	#90214A	#A62A52	#7D1A3F
+loteca	#D30220	#F30025	#D30220
+lotogol	#009FC5	#00B7E3	#009FC5
+dia de sorte	#009B63	#00AB67	#008F5B
+fundo degrade de branco para RGB(213,224,227)
