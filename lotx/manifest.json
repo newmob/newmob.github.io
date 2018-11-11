@@ -1,10 +1,10 @@
 {
   "name": "Loterias Caixa",
-  "short_name": "LotX",
+  "short_name": "Loterias",
   "icons": [
     {
-      "src": "images/icons/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "img/icon-180x180.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ],
