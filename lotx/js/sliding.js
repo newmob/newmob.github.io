@@ -4,7 +4,8 @@ $(document).ready(function () {
     carousel = $("ul");
 
     carousel.itemslide({
-        duration: 1500
+        duration: 800,
+        swipe_sensitivity: 500 
     }); //initialize itemslide
 
     $(window).resize(function () {
