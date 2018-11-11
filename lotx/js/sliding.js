@@ -4,7 +4,7 @@ $(document).ready(function () {
     carousel = $("ul");
 
     carousel.itemslide({
-
+        duration: 1500
     }); //initialize itemslide
 
     $(window).resize(function () {
