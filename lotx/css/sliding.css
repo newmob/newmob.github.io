@@ -1,9 +1,9 @@
 /* Add to docs */
 #scrolling{/*frame*/
     position:fixed;
-    top:20;
+    top:10;
 
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255) , rgb(213, 224, 227));
+    background-image: linear-gradient(to bottom,#FFFFFF 1%,#D5E0E3 99%);
     height:100%;
     width:100%;
 
