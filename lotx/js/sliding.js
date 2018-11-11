@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     carousel.itemslide({
         duration: 800,
-        swipe_sensitivity: 100 
+        swipe_sensitivity: 50 
     }); //initialize itemslide
 
     $(window).resize(function () {
