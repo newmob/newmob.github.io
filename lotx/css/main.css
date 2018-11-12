@@ -1,7 +1,7 @@
 body {
     color: #333333;
     font-family: 'PT Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .container {
@@ -194,6 +194,20 @@ body {
     top: 80px;
     left: 8px;
     width: 95%;
+    bottom: 0;
+    position: absolute;
+    overflow: scroll;
+}
+
+.conteudo-resultado {
+    color: #FFFFFF;
+    align-content: center;
+    align-self: center;
+    font-size: 12px;
+    top: 40px;
+    left: 8px;
+    width: 95%;
+    height: 85%;
     bottom: 0;
     position: absolute;
     overflow: scroll;

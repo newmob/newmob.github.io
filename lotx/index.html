@@ -35,47 +35,75 @@
 	<script src="js/sliding.js"></script>
 
 
-    <script type="text/javascript">
-        $(window).load(function () {
-			
-            $(function () {
-                var expanded = true;
-                $('#resultado').click(function () {
-                    if (!expanded) {
-                        //$(this).animate({ 'left': '0px' }, { duration: 400 });
-                        $("#destaque").animate({ 'top': '40px' }, { duration: 400 });
-                        $("#resultado").animate({ 'width': '85%' }, { duration: 400 });
-                        expanded = true;
-                    }
-                    else {
-                        //$(this).animate({ 'left': '565px' }, { duration: 400 });
-                        $("#destaque").animate({ 'top': '87%' }, { duration: 400 });
-                        $("#resultado").animate({ 'width': '100%' }, { duration: 400 });
-                        expanded = false;
-                    }
-                });
-            });
+	<script type="text/javascript">
+		/*
+			$(window).load(function () {
+	
+				$(function () {
+					var expanded = true;
+					$('#titulo-resultado').click(function () {
+						if (!expanded) {
+							//$(this).animate({ 'left': '0px' }, { duration: 400 });
+							$("#destaque").animate({ 'top': '40px' }, { duration: 400 });
+							$("#resultado").animate({ 'width': '85%' }, { duration: 400 });
+							expanded = true;
+						}
+						else {
+							//$(this).animate({ 'left': '565px' }, { duration: 400 });
+							$("#destaque").animate({ 'top': '87%' }, { duration: 400 });
+							$("#resultado").animate({ 'width': '100%' }, { duration: 400 });
+							expanded = false;
+						}
+					});
+				});
+	
+			});
+		*/
 
-        });
-    </script>
+		var slides = 10;
+		var exp = [];
+		exp.length = slides;
+		for (i=0; i < exp.length; i++) {
+			exp[i] = true;
+		}
+
+		function expDiv() {
+			var n = carousel.getActiveIndex();
+
+			if (!exp[n]) {
+				$("#destaque_"+n).animate({ 'top': '40px' }, { duration: 400 });
+				$("#resultado_"+n).animate({ 'width': '85%' }, { duration: 400 });
+				exp[n] = true;
+			}
+			else {
+				$("#destaque_"+n).animate({ 'top': '87%' }, { duration: 400 });
+				$("#resultado_"+n).animate({ 'width': '100%' }, { duration: 400 });
+				exp[n] = false;
+			}
+		}
+	</script>
 
 
 </head>
 
 <body>
 	<main>
-		<section class="destaque">
+		<section>
 			<div id="scrolling">
 				<!--Slider--->
 				<ul>
 					<li>
 						<div class="container MEGA_SENA">
-							<div id="resultado" class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_0" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div id="destaque" class="destaque">
+							<div id="destaque_0" class="destaque">
 								<div class="titulo-destaque">
 									<h2>mega-sena</h2>
 									<div>logotipo</div>
@@ -89,12 +117,16 @@
 					</li>
 					<li>
 						<div class="container MEGA_SENA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_1" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_1" class="destaque">
 								<div class="titulo-destaque">
 									<h2>mega da virada</h2>
 									<div>logotipo</div>
@@ -111,12 +143,16 @@
 					</li>
 					<li>
 						<div class="container LOTOFACIL">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_2" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_2" class="destaque">
 								<div class="titulo-destaque">
 									<h2>lotofácil</h2>
 									<div>logotipo</div>
@@ -133,12 +169,16 @@
 					</li>
 					<li>
 						<div class="container QUINA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_3" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_3" class="destaque">
 								<div class="titulo-destaque">
 									<h2>quina</h2>
 									<div>logotipo</div>
@@ -155,12 +195,16 @@
 					</li>
 					<li>
 						<div class="container LOTOMANIA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_4" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_4" class="destaque">
 								<div class="titulo-destaque">
 									<h2>lotomania</h2>
 									<div>logotipo</div>
@@ -177,12 +221,16 @@
 					</li>
 					<li>
 						<div class="container TIMEMANIA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_5" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_5" class="destaque">
 								<div class="titulo-destaque">
 									<h2>timemania</h2>
 									<div>logotipo</div>
@@ -199,12 +247,16 @@
 					</li>
 					<li>
 						<div class="container DUPLA_SENA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_6" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_6" class="destaque">
 								<div class="titulo-destaque">
 									<h2>dupla-sena</h2>
 									<div>logotipo</div>
@@ -221,12 +273,16 @@
 					</li>
 					<li>
 						<div class="container LOTECA">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_7" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_7" class="destaque">
 								<div class="titulo-destaque">
 									<h2>loteca</h2>
 									<div>logotipo</div>
@@ -243,12 +299,16 @@
 					</li>
 					<li>
 						<div class="container LOTOGOL">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_8" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_8" class="destaque">
 								<div class="titulo-destaque">
 									<h2>lotogol</h2>
 									<div>logotipo</div>
@@ -265,12 +325,16 @@
 					</li>
 					<li>
 						<div class="container DIA_DE_SORTE">
-							<div class="resultado">
-								<div class="titulo-resultado">
+							<div id="resultado_9" class="resultado">
+								<div id="titulo-resultado" class="titulo-resultado" onclick="expDiv()">
 									<h2>Resultados</h2>
 								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque_9" class="destaque">
 								<div class="titulo-destaque">
 									<h2>dia de sorte</h2>
 									<div>logotipo</div>
