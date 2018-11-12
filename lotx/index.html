@@ -34,6 +34,30 @@
 	<!--Scripts--->
 	<script src="js/sliding.js"></script>
 
+
+    <script type="text/javascript">
+        $(window).load(function () {
+			
+            $(function () {
+                var expanded = true;
+                $('#resultado').click(function () {
+                    if (!expanded) {
+                        //$(this).animate({ 'left': '0px' }, { duration: 400 });
+                        $("#destaque").animate({ 'top': '40px' }, { duration: 400 });
+                        expanded = true;
+                    }
+                    else {
+                        //$(this).animate({ 'left': '565px' }, { duration: 400 });
+                        $("#destaque").animate({ 'top': '400px' }, { duration: 400 });
+                        expanded = false;
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
 </head>
 
 <body>
@@ -44,12 +68,12 @@
 				<ul>
 					<li>
 						<div class="container MEGA_SENA">
-							<div class="resultado">
+							<div id="resultado" class="resultado">
 								<div class="titulo-resultado">
 									<h2>Resultados</h2>
 								</div>
 							</div>
-							<div class="destaque">
+							<div id="destaque" class="destaque">
 								<div class="titulo-destaque">
 									<h2>mega-sena</h2>
 									<div>logotipo</div>
