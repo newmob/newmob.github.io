@@ -196,3 +196,22 @@ body {
     position: absolute;
 }
 
+p.acumulou {
+    font-family: Verdana, Geneva, sans-serif;
+    color: rgb(44, 43, 43);
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p.valor {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #00AB67;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
