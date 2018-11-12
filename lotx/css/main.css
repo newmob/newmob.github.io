@@ -194,6 +194,7 @@ body {
     width: 95%;
     bottom: 0;
     position: absolute;
+    overflow: scroll;
 }
 
 p.acumulou {
