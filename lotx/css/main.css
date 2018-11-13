@@ -1,6 +1,6 @@
 body {
     color: #333333;
-    font: 50% verdana, arial, geneva, tahoma, sans-serif;
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
 
 .titulo-destaque h2 {
     color: #FFFFFF;
-    font-size: 0.7em;
+    font-size: 0.5em;
     font-weight: bold;
     text-transform: lowercase;
     text-align: left;
@@ -52,7 +52,7 @@ body {
 
 .titulo-resultado h2 {
     color: #FFFFFF;
-    font-size: 0.7em;
+    font-size: 0.5em;
     font-weight: normal; 
     text-align: left;
     margin-left: 95px;
