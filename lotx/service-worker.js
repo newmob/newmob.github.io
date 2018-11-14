@@ -1,12 +1,9 @@
 var dataCacheName = 'lotxData-v1';
 var cacheName = 'lotxPWA-final-1';
 var filesToCache = [
-  'https://newmob.github.io/lotx/index.html',
-  'https://newmob.github.io/lotx/products.json',
   'https://newmob.github.io/lotx/js/app.js',
   'https://newmob.github.io/lotx/js/jquery.qrcode.min.js',
-  'https://newmob.github.io/lotx/js/jquery-3.3.1.js',
-  'https://newmob.github.io/lotx/img/icons/icon-192x192.png'
+  'https://newmob.github.io/lotx/js/jquery-3.3.1.js'
 ];
 
 self.addEventListener('install', function(e) {
