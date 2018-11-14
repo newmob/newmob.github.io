@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+
+
+
+
+<!--PEGAR JSON FETCH-->
+
+    <div id="modalidade">
+        <div id="detalhes">
+            <div id="maisdetalhes"> <!--pode ser lista, pra trazer  modalidadeDetalhada.valor , modalidadeDetalhada.descricao, modalidadeDetalhada.descricaoEspecial-->
+            </div>
+        </div>
+    </div>
+    
+
+
+<script>
+var tipo; //variavel global que vai dentro do fech
+
+
+var tipo;
+tipo = 1; //aqui ta simplicado, mas esse numero entra no array. o Array 0 é logol, 1 é loteca, 2, quina 
+
+modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar é la uma parse com o valor "tipo" da array
+                    
+
+    
+    function modalidade(tipo) {//funcao chama o fetch
+
+
+            fetch("destaque.json")
+                .then(response => response.json()) 
+                .then(result => {
+
+                    var _obj_modalidade = result.payload[tipo];//array de 0 a 8 que chama modalidades
+//constroi as Div, ou lista, inserindo texto e localizadno pelo ID
+                    document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
+                    document.getElementById("detalhes").textContent = _obj_modalidade.modalidadeDetalhada.valor;//aaqui é numero, to tratando como texto e ta dando erro. Tem que ve como tratar inteiros
+                   
+
+                    console.log(_obj_modalidade);
+
+                })
+                .catch(err => {
+                // trata se alguma das promises falhar
+                console.error('Failed retrieving information', err);
+  });
+
+
+}
+
+ 
+</script>
+
+
+
+    
+
+</body>
+</html>
