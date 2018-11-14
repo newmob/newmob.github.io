@@ -24,6 +24,26 @@
     </div>
     
 
+    <div id="modalidade">
+            <ul>
+                <li class="valor"></li>
+                <li class="descricao"></li>
+                <li class="descricaoEspecial"></li>
+                <li class="tipoConcurso"></li>
+                <li class="acumulou"></li>
+                <li class="estimativa"></li>
+                <li class="numero"></li>
+                <li class="dataFechamento"></li>
+                <li class="dataAbertura"></li>
+                <li class="dataHoraSorteio"></li>
+                <li class="valorApostaMinima"></li>
+            </ul>
+        </div>
+
+
+
+
+
 
 <script>
 var tipo; //variavel global que vai dentro do fech
@@ -44,12 +64,24 @@ modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar 
                 .then(result => {
 
                     var _obj_modalidade = result.payload[tipo];//array de 0 a 8 que chama modalidades
-//constroi as Div, ou lista, inserindo texto e localizadno pelo ID
-                    document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
-                    document.getElementById("detalhes").textContent = _obj_modalidade.modalidadeDetalhada.valor;//aaqui é numero, to tratando como texto e ta dando erro. Tem que ve como tratar inteiros
-                   
+                                                                //constroi as Div, ou lista, inserindo texto e localizadno pelo ID
 
-                    console.log(_obj_modalidade);
+                    //OS ELEMENTOS TIRADO DO ARRAY E MOSTRADO NA DIV E LI
+
+                    document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
+                    //document.getElementById("valor").textContent = _obj_modalidade.modalidadeDetalhada.valor
+                    document.getElementById("descricao").textContent = _obj_modalidade.modalidadeDetalhada.descricao
+                    document.getElementById("descricaoEspecial").textContent = _obj_modalidade.modalidadeDetalhada.descricaoEspecial
+                    subEl.document.getElementById("tipoConcurso").textContent = _obj_modalidade.tipoConcurso
+                    //document.getElementById("acumulou").textContent = _obj_modalidade.acumulou 
+                    //document.getElementById("estimativa").textContent = _obj_modalidade.estimativa
+                    document.getElementById("numero").textContent = _obj_modalidade.numero
+                    document.getElementById("dataFechamento").textContent = _obj_modalidade.dataFechamento
+                    document.getElementById("dataAbertura").textContent = _obj_modalidade.dataAbertura
+                    document.getElementById("dataHoraSorteio").textContent = _obj_modalidade.dataHoraSorteio
+                    //document.getElementById("valorApostaMinima").textContent = _obj_modalidade.valorApostaMinima
+
+                    console.log(_obj_modalidade.dataFechamento);
 
                 })
                 .catch(err => {
@@ -69,3 +101,9 @@ modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar 
 
 </body>
 </html>
+
+
+
+
+
+
