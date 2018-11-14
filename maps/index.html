@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Google Map</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+    body {
+      color: #333333;
+      font-family: 'PT Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    .nivel {
+      font-size: 20px;
+      text-align: center;
+    }
+    .score {
+      font-size: 20px;
+      text-align: center;
+    }
+    .final {
+      font-size: 25px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Encontre 10 agências da Caixa</h1>
+  <div class="nivel">Nível <span id="nivel">1 - Rio de Janeiro</span></div>
+  <div id="map"></div>
+  <script>
+    var curMap = 0;
+    var maps = [];
+    // Rio de Janeiro
+    maps[0] = { lat: -22.9040, lng: -43.1803 };
+    // São Paulo
+    maps[1] = { lat: -23.5419, lng: -46.6308 };
+    // Brasilia
+    maps[2] = { lat: -15.7993, lng: -47.8641 };
+
+    var zoomMap = [16, 17, 16];
+
+    var count = 0;
+
+    function initMap() {
+      // opcoes do mapa
+      var options = {
+        zoom: zoomMap[curMap],
+        center: maps[curMap],
+        disableDefaultUI: true,
+        zoomControl: false,
+        maxZoom: zoomMap[curMap],
+        minZoom: zoomMap[curMap]
+      }
+
+      // novo objeto de mapa
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Array de marcadores
+      var markers = [];
+      if (curMap == 0) {   // Rio de Janeiro
+        document.getElementById('nivel').innerHTML = "1 - Rio de Janeiro";
+        markers = [ { lat: -22.901401, lng: -43.178451 },
+                    { lat: -22.900108, lng: -43.193926 },
+                    { lat: -22.902227, lng: -43.180412 }, 
+                    { lat: -22.908445, lng: -43.180958 },
+                    { lat: -22.910457, lng: -43.184399 },
+                    { lat: -22.910640, lng: -43.186484 },
+                    { lat: -22.908644, lng: -43.193748 },
+                    { lat: -22.913792, lng: -43.182019 },
+                    { lat: -22.909699, lng: -43.203209 },
+                    { lat: -22.898866, lng: -43.216993 }
+                  ];
+      } else if (curMap == 1) {   // São Paulo
+        document.getElementById('nivel').innerHTML = "2 - São Paulo";
+        markers = [ { lat: -23.537694, lng: -46.631502 },
+                    { lat: -23.538468, lng: -46.635082 },
+                    { lat: -23.540622, lng: -46.636642 }, 
+                    { lat: -23.544645, lng: -46.633558 },
+                    { lat: -23.546816, lng: -46.634935 },
+                    { lat: -23.546850, lng: -46.638937 },
+                    { lat: -23.547694, lng: -46.641997 },
+                    { lat: -23.538341, lng: -46.641076 },
+                    { lat: -23.549003, lng: -46.632894 },
+                    { lat: -23.548437, lng: -46.632733 }
+                  ];
+      } else if (curMap == 2) {   // Brasilia
+        document.getElementById('nivel').innerHTML = "3 - Brasilia";
+        markers = [ { lat: -15.799504, lng: -47.952897 },
+                    { lat: -15.792920, lng: -47.931875 },
+                    { lat: -15.820970, lng: -47.924110 }, 
+                    { lat: -15.815046, lng: -47.911797 },
+                    { lat: -15.802390, lng: -47.899665 },
+                    { lat: -15.743079, lng: -47.896017 },
+                    { lat: -15.781578, lng: -47.888618 },
+                    { lat: -15.800986, lng: -47.880141 },
+                    { lat: -15.801047, lng: -47.861856 },
+                    { lat: -15.789523, lng: -47.878166 }
+                  ];
+      }
+
+      // Loop through markers
+      for (var i = 0; i < markers.length; i++) {
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(coords) {
+        var marker = new google.maps.Marker({
+          position: coords,
+          map: map,
+          icon: 'https://newmob.github.io/lotx/img/favicon.ico'
+        });
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: 'caixa'
+        });
+
+        marker.addListener('click', function () {
+          if (infoWindow.getContent() != "*") {
+            //infoWindow.open(map, marker);
+            infoWindow.setContent('*');
+            marker.setIcon({
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 10,
+              fillColor: "#00F",
+              fillOpacity: 0.8,
+              strokeWeight: 1
+            })
+            count++;
+            document.getElementById('encontradas').innerHTML = count;
+            if (count > 9) {
+              count = 0;
+              curMap++;
+              document.getElementById('encontradas').innerHTML = count;
+              if (curMap > 2) {
+                document.getElementById('final').innerHTML = "Parabéns você venceu!";
+              } {
+                initMap();
+              }
+            }
+
+          }
+        });
+      }
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1Tw7-0xxXbP9DI5bL0XGd-stswaORH_U&callback=initMap">
+  </script>
+
+  <div class="score">
+    Agências encontradas : <span id="encontradas">0</span>
+  </div>
+  <div class="score">
+      <span id="final"></span>
+  </div>
+  
+</body>
+
+</html>
