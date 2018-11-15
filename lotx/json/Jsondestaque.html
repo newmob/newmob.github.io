@@ -24,27 +24,20 @@
     </div>
     
 
-    <div id="modalidade">
-            <ul>
-                <li class="valor"></li>
-                <li class="descricao"></li>
-                <li class="descricaoEspecial"></li>
-                <li class="tipoConcurso"></li>
-                <li class="acumulou"></li>
-                <li class="estimativa"></li>
-                <li class="numero"></li>
-                <li class="dataFechamento"></li>
-                <li class="dataAbertura"></li>
-                <li class="dataHoraSorteio"></li>
-                <li class="valorApostaMinima"></li>
-            </ul>
-        </div>
-
-
-
-
-
-
+        <div id="modalidade"></div>
+        <div id="valor"></div>
+        <div id="descricao"></div>
+        <div id="descricaoEspecial"></div>
+        <div id="tipoConcurso"></div>
+        <div id="acumulou"></div>
+        <div id="estimativa"></div>
+        <div id="numero"></div>
+        <div id="dataFechamento"></div>
+        <div id="dataAbertura"></div>
+        <div id="dataHoraSorteio"></div>
+        <div id="valorApostaMinima"></div>
+ 
+  
 <script>
 var tipo; //variavel global que vai dentro do fech
 
@@ -57,6 +50,7 @@ modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar 
 
     
     function modalidade(tipo) {//funcao chama o fetch
+//.getElementById("li").textContent = _obj_modalidade.modalidadeDetalhada.descricao
 
 
             fetch("destaque.json")
@@ -67,21 +61,22 @@ modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar 
                                                                 //constroi as Div, ou lista, inserindo texto e localizadno pelo ID
 
                     //OS ELEMENTOS TIRADO DO ARRAY E MOSTRADO NA DIV E LI
+                   
 
-                    document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
-                    //document.getElementById("valor").textContent = _obj_modalidade.modalidadeDetalhada.valor
-                    document.getElementById("descricao").textContent = _obj_modalidade.modalidadeDetalhada.descricao
-                    document.getElementById("descricaoEspecial").textContent = _obj_modalidade.modalidadeDetalhada.descricaoEspecial
-                    subEl.document.getElementById("tipoConcurso").textContent = _obj_modalidade.tipoConcurso
-                    //document.getElementById("acumulou").textContent = _obj_modalidade.acumulou 
-                    //document.getElementById("estimativa").textContent = _obj_modalidade.estimativa
-                    document.getElementById("numero").textContent = _obj_modalidade.numero
-                    document.getElementById("dataFechamento").textContent = _obj_modalidade.dataFechamento
-                    document.getElementById("dataAbertura").textContent = _obj_modalidade.dataAbertura
-                    document.getElementById("dataHoraSorteio").textContent = _obj_modalidade.dataHoraSorteio
-                    //document.getElementById("valorApostaMinima").textContent = _obj_modalidade.valorApostaMinima
+                   document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
+                   document.getElementById("valor").textContent = _obj_modalidade.modalidadeDetalhada.valor
+                   document.getElementById("descricao").textContent = _obj_modalidade.modalidadeDetalhada.descricao
+                   document.getElementById("descricaoEspecial").textContent = _obj_modalidade.modalidadeDetalhada.descricaoEspecial
+                   document.getElementById("tipoConcurso").textContent = _obj_modalidade.tipoConcurso
+                   document.getElementById("acumulou").textContent = _obj_modalidade.acumulou 
+                   document.getElementById("estimativa").textContent = _obj_modalidade.estimativa
+                   document.getElementById("numero").textContent = _obj_modalidade.numero
+                   document.getElementById("dataFechamento").textContent = _obj_modalidade.dataFechamento
+                   document.getElementById("dataAbertura").textContent = _obj_modalidade.dataAbertura
+                   document.getElementById("dataHoraSorteio").textContent = _obj_modalidade.dataHoraSorteio
+                   document.getElementById("valorApostaMinima").textContent = _obj_modalidade.valorApostaMinima
 
-                    console.log(_obj_modalidade.dataFechamento);
+                    console.log(_obj_modalidade.dataHoraSorteio);
 
                 })
                 .catch(err => {
