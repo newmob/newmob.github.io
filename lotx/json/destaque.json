@@ -1,0 +1,181 @@
+﻿{
+   "versao": "2.023.0.00.000",
+   "payload":    [
+            {
+         "modalidade": "QUINA",
+         "modalidadeDetalhada":          {
+            "valor": 3,
+            "descricao": "Quina",
+            "descricaoEspecial": "Quina de São João"
+         },
+         "tipoConcurso": "ESPECIAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 5462,
+         "dataFechamento": "13/11/2018 15:50:00",
+         "dataAbertura": "07/11/2018 09:30:00",
+         "dataHoraSorteio": "13/11/2018 17:00:00",
+         "valorApostaMinima": 1.5
+      },
+            {
+         "modalidade": "MEGA_SENA",
+         "modalidadeDetalhada":          {
+            "valor": 2,
+            "descricao": "Mega-Sena",
+            "descricaoEspecial": "Mega da Virada"
+         },
+         "tipoConcurso": "ESPECIAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 4130,
+         "dataFechamento": "15/11/2018 15:50:00",
+         "dataAbertura": "31/10/2018 13:00:00",
+         "dataHoraSorteio": "15/11/2018 17:00:00",
+         "valorApostaMinima": 3.5
+      },
+            {
+         "modalidade": "QUINA",
+         "modalidadeDetalhada":          {
+            "valor": 3,
+            "descricao": "Quina",
+            "descricaoEspecial": "Quina de São João"
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 5461,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:30:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 1.5
+      },
+            {
+         "modalidade": "MEGA_SENA",
+         "modalidadeDetalhada":          {
+            "valor": 2,
+            "descricao": "Mega-Sena",
+            "descricaoEspecial": "Mega da Virada"
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 4127,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 3.5
+      },
+            {
+         "modalidade": "LOTOMANIA",
+         "modalidadeDetalhada":          {
+            "valor": 16,
+            "descricao": "Lotomania",
+            "descricaoEspecial": "Lotomania de Páscoa"
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 3661,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 1.5
+      },
+            {
+         "modalidade": "LOTOGOL",
+         "modalidadeDetalhada":          {
+            "valor": 14,
+            "descricao": "Lotogol",
+            "descricaoEspecial": ""
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 2720,
+         "dataFechamento": "13/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "14/11/2018 16:00:00",
+         "valorApostaMinima": 1
+      },
+            {
+         "modalidade": "TIMEMANIA",
+         "modalidadeDetalhada":          {
+            "valor": 20,
+            "descricao": "Timemania",
+            "descricaoEspecial": ""
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 1671,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+            {
+         "modalidade": "DIA_DE_SORTE",
+         "modalidadeDetalhada":          {
+            "valor": 11,
+            "descricao": "Dia de Sorte",
+            "descricaoEspecial": ""
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 116,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+            {
+         "modalidade": "DUPLA_SENA",
+         "modalidadeDetalhada":          {
+            "valor": 18,
+            "descricao": "Dupla Sena",
+            "descricaoEspecial": "Dupla de Páscoa"
+         },
+         "tipoConcurso": "ESPECIAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 3978,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "29/10/2018 11:50:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+            {
+         "modalidade": "LOTOFACIL",
+         "modalidadeDetalhada":          {
+            "valor": 8,
+            "descricao": "Lotofácil",
+            "descricaoEspecial": "Lotofácil da Independência"
+         },
+         "tipoConcurso": "ESPECIAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 102,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "29/10/2018 11:50:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+            {
+         "modalidade": "LOTECA",
+         "modalidadeDetalhada":          {
+            "valor": 19,
+            "descricao": "Loteca",
+            "descricaoEspecial": ""
+         },
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 2697,
+         "dataFechamento": "22/11/2018 15:50:00",
+         "dataAbertura": "25/10/2018 19:00:00",
+         "dataHoraSorteio": "23/11/2018 16:00:00",
+         "valorApostaMinima": 4
+      }
+   ]
+}
