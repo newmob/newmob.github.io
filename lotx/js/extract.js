@@ -27,7 +27,7 @@ fetch("destaque.json")
 
 
 
-        document.getElementById("modalidade_0").textContent = destaque_0.modalidade
+        document.getElementById("modalidade_0").textContent = destaque_0.modalidade.replace("MEGA_SENA", "MEGA SENA");
       //document.getElementById("valor_0").textContent = destaque_0.modalidadeDetalhada.valor;
       //document.getElementById("descricao_0").textContent = destaque_0.modalidadeDetalhada.descricao;
       //document.getElementById("descricaoEspecial_0").textContent = destaque_0.modalidadeDetalhada.descricaoEspecial;
@@ -70,7 +70,7 @@ fetch("destaque.json")
          acumulou_1 = "";
         }
 
-        document.getElementById("modalidade_1").textContent = destaque_1.modalidade
+        document.getElementById("modalidade_1").textContent = destaque_1.modalidade.replace("MEGA_SENA", "MEGA DA VIRADA");
       //document.getElementById("valor_1").textContent = destaque_1.modalidadeDetalhada.valor;
       //document.getElementById("descricao_1").textContent = destaque_1.modalidadeDetalhada.descricao;
       //document.getElementById("descricaoEspecial_1").textContent = destaque_1.modalidadeDetalhada.descricaoEspecial;
@@ -241,7 +241,11 @@ fetch("destaque.json")
          acumulou_5 = "";
         }
 
-        document.getElementById("modalidade_5").textContent = destaque_5.modalidade
+        
+ 
+        
+
+        document.getElementById("modalidade_5").textContent = destaque_5.modalidade.replace("DIA_DE_SORTE", "DIA DE SORTE");
       //document.getElementById("valor_5").textContent = destaque_5.modalidadeDetalhada.valor;
       //document.getElementById("descricao_5").textContent = destaque_5.modalidadeDetalhada.descricao;
       //document.getElementById("descricaoEspecial_5").textContent = destaque_5.modalidadeDetalhada.descricaoEspecial;
