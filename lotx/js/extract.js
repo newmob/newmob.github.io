@@ -33,7 +33,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_0").textContent = destaque_0.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_0").textContent = destaque_0.tipoConcurso;
       document.getElementById("acumulou_0").textContent = acumulou_0;
-      document.getElementById("estimativa_0").textContent = destaque_0.estimativa;
+      document.getElementById("estimativa_0").textContent = 'R$' + (destaque_0.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_0").textContent = destaque_0.numero;
       //document.getElementById("dataFechamento_0").textContent = destaque_0.dataFechamento;
       //document.getElementById("dataAbertura_0").textContent = destaque_0.dataAbertura;
@@ -42,6 +42,9 @@ fetch("destaque.json")
 
       document.getElementById("sorteio_data_0").textContent = 'Nº' + destaque_0.numero + '   ' + '|' + '   ' + destaque_0.dataHoraSorteio;
       document.getElementById("premio_estimado_0").textContent = 'Prêmio estimado do concurso' + destaque_0.numero;
+
+
+      
 
       //BOLINHAS
 
@@ -73,7 +76,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_1").textContent = destaque_1.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_1").textContent = destaque_1.tipoConcurso;
       document.getElementById("acumulou_1").textContent = acumulou_1;
-      document.getElementById("estimativa_1").textContent = destaque_1.estimativa;
+      document.getElementById("estimativa_1").textContent = 'R$' + (destaque_1.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_1").textContent = destaque_1.numero;
       //document.getElementById("dataFechamento_1").textContent = destaque_1.dataFechamento;
       //document.getElementById("dataAbertura_1").textContent = destaque_1.dataAbertura;
@@ -111,7 +114,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_2").textContent = destaque_2.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_2").textContent = destaque_2.tipoConcurso;
       document.getElementById("acumulou_2").textContent = acumulou_2;
-      document.getElementById("estimativa_2").textContent = destaque_2.estimativa;
+      document.getElementById("estimativa_2").textContent = 'R$' + (destaque_2.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_2").textContent = destaque_2.numero;
       //document.getElementById("dataFechamento_2").textContent = destaque_2.dataFechamento;
       //document.getElementById("dataAbertura_2").textContent = destaque_2.dataAbertura;
@@ -149,7 +152,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_3").textContent = destaque_3.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_3").textContent = destaque_3.tipoConcurso;
       document.getElementById("acumulou_3").textContent = acumulou_3;
-      document.getElementById("estimativa_3").textContent = destaque_3.estimativa;
+      document.getElementById("estimativa_3").textContent = 'R$' + (destaque_3.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_3").textContent = destaque_3.numero;
       //document.getElementById("dataFechamento_3").textContent = destaque_3.dataFechamento;
       //document.getElementById("dataAbertura_3").textContent = destaque_3.dataAbertura;
@@ -205,7 +208,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_4").textContent = destaque_4.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_4").textContent = destaque_4.tipoConcurso;
       document.getElementById("acumulou_4").textContent = acumulou_4;
-      document.getElementById("estimativa_4").textContent = destaque_4.estimativa;
+      document.getElementById("estimativa_4").textContent = 'R$' + (destaque_4.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_4").textContent = destaque_4.numero;
       //document.getElementById("dataFechamento_4").textContent = destaque_4.dataFechamento;
       //document.getElementById("dataAbertura_4").textContent = destaque_4.dataAbertura;
@@ -244,7 +247,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_5").textContent = destaque_5.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_5").textContent = destaque_5.tipoConcurso;
       document.getElementById("acumulou_5").textContent = acumulou_5;
-      document.getElementById("estimativa_5").textContent = destaque_5.estimativa;
+      document.getElementById("estimativa_5").textContent = 'R$' + (destaque_5.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_5").textContent = destaque_5.numero;
       //document.getElementById("dataFechamento_5").textContent = destaque_5.dataFechamento;
       //document.getElementById("dataAbertura_5").textContent = destaque_5.dataAbertura;
@@ -284,7 +287,7 @@ fetch("destaque.json")
       //document.getElementById("descricaoEspecial_6").textContent = destaque_6.modalidadeDetalhada.descricaoEspecial;
       //document.getElementById("tipoConcurso_6").textContent = destaque_6.tipoConcurso;
       document.getElementById("acumulou_6").textContent = acumulou_6;
-      document.getElementById("estimativa_6").textContent = destaque_6.estimativa;
+      document.getElementById("estimativa_6").textContent = 'R$' + (destaque_6.estimativa).toLocaleString('pt-BR');
       ///document.getElementById("numero_6").textContent = destaque_6.numero;
       //document.getElementById("dataFechamento_6").textContent = destaque_6.dataFechamento;
       //document.getElementById("dataAbertura_6").textContent = destaque_6.dataAbertura;
