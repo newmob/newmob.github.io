@@ -1,0 +1,131 @@
+﻿{
+   "versao": "2.023.0.00.000",
+   "payload": [
+      {
+         "modalidade": "MEGA_SENA",
+         "modalidadeDetalhada": {
+            "valor": 2,
+            "descricao": "Mega-Sena",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["09", "24", "28", "45", "49", "51"],
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 37000000.00,
+         "numero": 4127,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 3.5
+      },
+      {
+         "modalidade": "MEGA_SENA",
+         "modalidadeDetalhada": {
+            "valor": 2,
+            "descricao": "Mega-Sena",
+            "descricaoEspecial": "Mega da Virada"
+         },
+         "dezenasSorteadas": ["09", "24", "28", "45", "49", "51"],
+         "tipoConcurso": "ESPECIAL",
+         "acumulou": false,
+         "estimativa": 200000000.00,
+         "numero": 2110,
+         "dataFechamento": "31/12/2018 16:00:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "31/12/2018 19:00:00",
+         "valorApostaMinima": 3.5
+      },
+      {
+         "modalidade": "QUINA",
+         "modalidadeDetalhada": {
+            "valor": 3,
+            "descricao": "Quina",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["38", "42", "44", "46", "73"],
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 600000.00,
+         "numero": 5462,
+         "dataFechamento": "13/11/2018 15:50:00",
+         "dataAbertura": "07/11/2018 09:30:00",
+         "dataHoraSorteio": "13/11/2018 17:00:00",
+         "valorApostaMinima": 1.5
+      },
+      {
+         "modalidade": "LOTOMANIA",
+         "modalidadeDetalhada": {
+            "valor": 16,
+            "descricao": "Lotomania",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["01", "07", "26", "31", "35",
+                              "40", "44", "46", "47", "59",
+                              "64", "65", "67", "79", "83",
+                              "90", "92", "94", "95", "97"],
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 1000000.00,
+         "numero": 3661,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 1.5
+      },
+      {
+         "modalidade": "TIMEMANIA",
+         "modalidadeDetalhada": {
+            "valor": 20,
+            "descricao": "Timemania",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["21", "38", "47", "55", "59", "66", "76"],
+         "timeCoracao": "São Raimundo/AM",
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 2400000.00,
+         "numero": 1671,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+      {
+         "modalidade": "DIA_DE_SORTE",
+         "modalidadeDetalhada": {
+            "valor": 11,
+            "descricao": "Dia de Sorte",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["10", "15", "16", "21", "25", "26", "29"],
+         "mesSorte": "Outubro",
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 500000.00,
+         "numero": 116,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "30/10/2018 19:00:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      },
+      {
+         "modalidade": "LOTOFACIL",
+         "modalidadeDetalhada": {
+            "valor": 8,
+            "descricao": "Lotofácil",
+            "descricaoEspecial": ""
+         },
+         "dezenasSorteadas": ["02", "04", "05", "06", "10",
+                              "11", "12", "15", "16", "18",
+                              "19", "20", "22", "24", "25"],
+         "tipoConcurso": "NORMAL",
+         "acumulou": false,
+         "estimativa": 0,
+         "numero": 102,
+         "dataFechamento": "12/11/2018 15:50:00",
+         "dataAbertura": "29/10/2018 11:50:00",
+         "dataHoraSorteio": "12/11/2018 18:00:00",
+         "valorApostaMinima": 2
+      }
+   ]
+}

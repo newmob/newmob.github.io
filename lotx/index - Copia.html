@@ -1,0 +1,308 @@
+<!--
+ Caixa - CEDESSP
+ Prototipo LotX 2018
+ Equipe NewMob : André, Marcelo e Sergio
+-->
+<html>
+
+<head>
+	<title>Loterias</title>
+	<meta name="description" content="Loterias da Caixa Economica Federal" />
+	<meta charset="utf-8">
+	<meta name='author' content='LotX - NewMob'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://newmob.github.io/lotx/">
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
+	<meta name='apple-mobile-web-app-capable' content='yes'>
+	<meta name='apple-mobile-web-app-status-bar-style' content='default'>
+	<link rel='apple-touch-icon' href='img/icon-180x180.png'>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="manifest" href="manifest.json">
+
+	<!--CSS--->
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/sliding.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+
+	<!--Plugins--->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/itemslide.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+
+	<!--Scripts--->
+	<script src="js/sliding.js"></script>
+</head>
+
+<body>
+	<main>
+		<section>
+			<div id="scrolling">
+				<!--Slider--->
+				<ul>
+					<li>
+						<div class="container MEGA_SENA">
+							<div id="resultado_0" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_0" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>mega-sena</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<p class="acumulou">ACUMULOU!</p>
+									<p class="valor">R$ 33.000.000,00</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container MEGA_SENA">
+							<div id="resultado_1" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_1" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>mega da virada</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO1</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOFACIL">
+							<div id="resultado_2" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_2" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotofácil</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container QUINA">
+							<div id="resultado_3" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_3" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>quina</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOMANIA">
+							<div id="resultado_4" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_4" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotomania</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container TIMEMANIA">
+							<div id="resultado_5" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_5" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>timemania</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container DUPLA_SENA">
+							<div id="resultado_6" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_6" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>dupla-sena</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTECA">
+							<div id="resultado_7" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_7" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>loteca</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOGOL">
+							<div id="resultado_8" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_8" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotogol</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container DIA_DE_SORTE">
+							<div id="resultado_9" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_9" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>dia de sorte</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+	</main>
+</body>
+
+</html>
