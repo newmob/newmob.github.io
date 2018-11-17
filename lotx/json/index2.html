@@ -68,7 +68,7 @@
 				
 				
 										<div class="conteudo-resultado">
-												<p>Nº <h2 id="numero_0"></h2> <h2 id="dataHoraSorteio_0"></h2></p>
+												<p id="res_0"></p>
 												<p>Box Bolinhas</p>
 												<hr/>
 												<p>Premiados</p>
@@ -387,7 +387,14 @@
 								else{
 								 acumulou_0 = "";
 								}
-			
+
+var str1 = 'Nº';
+var str2 = destaque_0.numero;
+var str3 = '|';
+var str4 = destaque_0.dataHoraSorteio;
+var res = `${str1} ${str2} ${str3} ${str4}`;
+
+
 							  document.getElementById("modalidade_0").textContent = destaque_0.modalidade;
 							  document.getElementById("valor_0").textContent = destaque_0.modalidadeDetalhada.valor;
 							  //document.getElementById("descricao").textContent = destaque_0.modalidadeDetalhada.descricao;
@@ -395,7 +402,7 @@
 							  //document.getElementById("tipoConcurso").textContent = destaque_0.tipoConcurso;
 							  document.getElementById("acumulou_0").textContent = acumulou_0;
 							  //document.getElementById("estimativa").textContent = destaque_0.estimativa;
-							  document.getElementById("numero_0").textContent = destaque_0.numero;
+							  document.getElementById("numero_0").textContent = res;
 							  //document.getElementById("dataFechamento").textContent = destaque_0.dataFechamento;
 							  //document.getElementById("dataAbertura").textContent = destaque_0.dataAbertura;
 							  document.getElementById("dataHoraSorteio_0").textContent = destaque_0.dataHoraSorteio;

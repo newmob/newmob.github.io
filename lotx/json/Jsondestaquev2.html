@@ -1,24 +1,25 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<style type="text/css">
-
-    p, h1, h2, h3, h4{
-        font-family: "Times New Roman", Times, serif;
-        font-size:20px;
-        margin-inline-start: 
-
-    }
-  
+<!doctype html>
+<html lang="pt-br">
+  <head>
 
 
-</style>
+ 
 
+
+
+    <title>Bootstrap - Cartões</title>
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
 
+<body>
 
 
 
@@ -33,14 +34,14 @@
 
 
                         <div class="conteudo-resultado">
-                                <p style="text-align: left">Nº <h2 id="numero_0"></h2> | <h2 id="dataHoraSorteio_0"></h2></p>
+                                <p id="sorteio_data_0">AQUI</p>
                                 <p>Box Bolinhas</p>
                                 <hr/>
-                                <p>Premiados</p>
-                                <p>sena-ganhador</p>
-                                Ganhador 1 
-                                <p>quina-ganhador</p> 
-                                Ganhador 1
+                                <ul style="list-style-type:none">Premiados
+                                <li>Sena</li>
+                                <li>1 ganhador </li>
+                                <li>Quina</li> 
+                                <li>1 ganhador</li></ul>
                         </div>
                     </div>
 
@@ -49,21 +50,22 @@
                     <div id="destaque_0" class="destaque">
 
                         <div class="titulo-destaque" onclick="expDiv()">
-                                <h2 id="modalidade_0"></h2>
+                                <h2 id="modalidade_0" style="text-align : center"></h2>
                                 <div>logotipo</div>
                         </div>
 
                         <div class="conteudo-destaque">
                                 <p id="acumulou_0"></p>
                                 <p id="valor_0"></p>
-                                <h3>Prêmio estimado do concurso</h3> <h3 id="numero_0"></h3> 
+                                <h3 id="premio_estimado_0"></h3> 
                             
                             <footer>
                                 <hr/>
                                 <p>Sorteio</p>
                                 <h3 id="dataHoraSorteio_0"></h3>
-                                <p> Apostas encerram em </p>
-                                <h3 id="dataHoraSorteio_0"></h3>
+
+
+
                             </footer>
 
                         </div>
@@ -71,7 +73,6 @@
                     </div>
  
                 </div>
-
 
 
  
@@ -92,40 +93,47 @@ modalidade(); //aqui só to chamando a funçao, toda vez que ela for chamar é l
                 .then(result => {
 
                     var destaque_0 = result.payload[0];
-                    var destaque_1 = result.payload[1];
-                    var destaque_2 = result.payload[2];
-                    var destaque_3 = result.payload[3];
-                    var destaque_4 = result.payload[4];
-                    var destaque_5 = result.payload[5];
-                    var destaque_6 = result.payload[6];
-                    var destaque_7 = result.payload[7];
-                    var destaque_8 = result.payload[8];
+                    //var destaque_1 = result.payload[1];
+                    //var destaque_2 = result.payload[2];
+                    //var destaque_3 = result.payload[3];
+                    //var destaque_4 = result.payload[4];
+                    //var destaque_5 = result.payload[5];
+                    //var destaque_6 = result.payload[6];
+                    //var destaque_7 = result.payload[7];
+                    //var destaque_8 = result.payload[8];
 
                 //CARD 0                  
 
                     //objeto acumulou retorna true ou false. se true imprimir "ACUMULOU"
                   var acumulou_0 = destaque_0.acumulou;
-                    if (acumulou_0 == true) {
+                    if (acumulou_0 == false) {
                     acumulou_0 = "ACUMULOU";
                     }
                     else{
                      acumulou_0 = "";
                     }
 
+//<p style="text-align: left">Nº <h2 id="numero_0"></h2> | <h2 id="dataHoraSorteio_0"></h2></p>
 
-
-                  document.getElementById("modalidade_0").textContent = destaque_0.modalidade;
-                  document.getElementById("valor_0").textContent = destaque_0.modalidadeDetalhada.valor;
-                  //document.getElementById("descricao").textContent = destaque_0.modalidadeDetalhada.descricao;
-                  //document.getElementById("descricaoEspecial").textContent = destaque_0.modalidadeDetalhada.descricaoEspecial;
-                  //document.getElementById("tipoConcurso").textContent = destaque_0.tipoConcurso;
-                  document.getElementById("acumulou_0").textContent = acumulou_0;
-                  //document.getElementById("estimativa").textContent = destaque_0.estimativa;
-                  document.getElementById("numero_0").textContent = res;
-                  //document.getElementById("dataFechamento").textContent = destaque_0.dataFechamento;
-                  //document.getElementById("dataAbertura").textContent = destaque_0.dataAbertura;
+                  document.getElementById("modalidade_0").textContent = destaque_0.modalidade
+                  //document.getElementById("valor_0").textContent = destaque_0.modalidadeDetalhada.valor;
+                  //document.getElementById("descricao_0").textContent = destaque_0.modalidadeDetalhada.descricao;
+                  //document.getElementById("descricaoEspecial_0").textContent = destaque_0.modalidadeDetalhada.descricaoEspecial;
+                  //document.getElementById("tipoConcurso_0").textContent = destaque_0.tipoConcurso;
+                  //document.getElementById("acumulou_0").textContent = acumulou_0;
+                  //document.getElementById("estimativa_0").textContent = destaque_0.estimativa;
+                  ///document.getElementById("numero_0").textContent = destaque_0.numero;
+                  //document.getElementById("dataFechamento_0").textContent = destaque_0.dataFechamento;
+                  //document.getElementById("dataAbertura_0").textContent = destaque_0.dataAbertura;
                   document.getElementById("dataHoraSorteio_0").textContent = destaque_0.dataHoraSorteio;
-                  //document.getElementById("valorApostaMinima").textContent = destaque_0.valorApostaMinima;
+                  //document.getElementById("valorApostaMinima_0").textContent = destaque_0.valorApostaMinima;
+
+                  document.getElementById("sorteio_data_0").textContent = 'Nº' + destaque_0.numero + '   ' + '|' + '   ' + destaque_0.dataHoraSorteio;
+                  document.getElementById("premio_estimado_0").textContent = 'Prêmio estimado do concurso' + destaque_0.numero;
+
+
+
+                  
 
                 //CARD 1                 
 

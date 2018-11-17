@@ -3,6 +3,13 @@ body {
     font: 100% verdana, arial, geneva, tahoma, sans-serif;
 }
 
+p, h1, h3, h4{
+
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 12px;
+    text-align : center;
+    }
+
 .container {
     width: 100%;
     height: 100%;
