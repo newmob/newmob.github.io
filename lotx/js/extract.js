@@ -11,10 +11,7 @@ fetch("destaque.json")
         var destaque_4 = result.payload[4];
         var destaque_5 = result.payload[5];
         var destaque_6 = result.payload[6];
-        var destaque_7 = result.payload[7];
-        var destaque_8 = result.payload[8];
-        var destaque_9 = result.payload[9];
-        var destaque_10 = result.payload[10];
+
 
 
     //CARD 0                  
@@ -46,8 +43,17 @@ fetch("destaque.json")
       document.getElementById("sorteio_data_0").textContent = 'Nº' + destaque_0.numero + '   ' + '|' + '   ' + destaque_0.dataHoraSorteio;
       document.getElementById("premio_estimado_0").textContent = 'Prêmio estimado do concurso' + destaque_0.numero;
 
+      //BOLINHAS
 
 
+      document.getElementById("mega0").textContent = destaque_0.dezenasSorteadas[0];
+      document.getElementById("mega1").textContent = destaque_0.dezenasSorteadas[1];
+      document.getElementById("mega2").textContent = destaque_0.dezenasSorteadas[2];
+      document.getElementById("mega3").textContent = destaque_0.dezenasSorteadas[3];
+      document.getElementById("mega4").textContent = destaque_0.dezenasSorteadas[4];
+      document.getElementById("mega5").textContent = destaque_0.dezenasSorteadas[5];
+
+     
       
 
     //CARD 1                 
@@ -77,6 +83,17 @@ fetch("destaque.json")
       document.getElementById("sorteio_data_1").textContent = 'Nº' + destaque_1.numero + '   ' + '|' + '   ' + destaque_1.dataHoraSorteio;
       document.getElementById("premio_estimado_1").textContent = 'Prêmio estimado do concurso' + destaque_1.numero;
 
+
+      //BOLINHAS
+
+
+      document.getElementById("megaS0").textContent = destaque_1.dezenasSorteadas[0];
+      document.getElementById("megaS1").textContent = destaque_1.dezenasSorteadas[1];
+      document.getElementById("megaS2").textContent = destaque_1.dezenasSorteadas[2];
+      document.getElementById("megaS3").textContent = destaque_1.dezenasSorteadas[3];
+      document.getElementById("megaS4").textContent = destaque_1.dezenasSorteadas[4];
+      document.getElementById("megaS5").textContent = destaque_1.dezenasSorteadas[5];
+
        
     //CARD 2                 
 
@@ -103,6 +120,17 @@ fetch("destaque.json")
 
       document.getElementById("sorteio_data_2").textContent = 'Nº' + destaque_2.numero + '   ' + '|' + '   ' + destaque_2.dataHoraSorteio;
       document.getElementById("premio_estimado_2").textContent = 'Prêmio estimado do concurso' + destaque_2.numero;
+
+
+            //BOLINHAS
+
+
+            document.getElementById("quina0").textContent = destaque_2.dezenasSorteadas[0];
+            document.getElementById("quina1").textContent = destaque_2.dezenasSorteadas[1];
+            document.getElementById("quina2").textContent = destaque_2.dezenasSorteadas[2];
+            document.getElementById("quina3").textContent = destaque_2.dezenasSorteadas[3];
+            document.getElementById("quina4").textContent = destaque_2.dezenasSorteadas[4];
+          
 
 
     //CARD 3                 
@@ -132,6 +160,35 @@ fetch("destaque.json")
       document.getElementById("premio_estimado_3").textContent = 'Prêmio estimado do concurso' + destaque_3.numero;
 
 
+
+
+      //BOLINHAS
+
+
+      document.getElementById("mania0").textContent = destaque_3.dezenasSorteadas[0];
+      document.getElementById("mania1").textContent = destaque_3.dezenasSorteadas[1];
+      document.getElementById("mania2").textContent = destaque_3.dezenasSorteadas[2];
+      document.getElementById("mania3").textContent = destaque_3.dezenasSorteadas[3];
+      document.getElementById("mania4").textContent = destaque_3.dezenasSorteadas[4];
+      document.getElementById("mania5").textContent = destaque_3.dezenasSorteadas[5];
+      document.getElementById("mania6").textContent = destaque_3.dezenasSorteadas[6];
+      document.getElementById("mania7").textContent = destaque_3.dezenasSorteadas[7];
+      document.getElementById("mania8").textContent = destaque_3.dezenasSorteadas[8];
+      document.getElementById("mania9").textContent = destaque_3.dezenasSorteadas[9];
+      document.getElementById("mania10").textContent = destaque_3.dezenasSorteadas[10];
+      document.getElementById("mania11").textContent = destaque_3.dezenasSorteadas[11];
+      document.getElementById("mania12").textContent = destaque_3.dezenasSorteadas[12];
+      document.getElementById("mania13").textContent = destaque_3.dezenasSorteadas[13];
+      document.getElementById("mania14").textContent = destaque_3.dezenasSorteadas[14];
+      document.getElementById("mania15").textContent = destaque_3.dezenasSorteadas[15];
+      document.getElementById("mania16").textContent = destaque_3.dezenasSorteadas[16];
+      document.getElementById("mania17").textContent = destaque_3.dezenasSorteadas[17];
+      document.getElementById("mania18").textContent = destaque_3.dezenasSorteadas[18];
+      document.getElementById("mania19").textContent = destaque_3.dezenasSorteadas[19];
+
+
+
+
     //CARD 4                 
 
     var acumulou_4 = destaque_4.acumulou;
@@ -157,6 +214,18 @@ fetch("destaque.json")
 
       document.getElementById("sorteio_data_4").textContent = 'Nº' + destaque_4.numero + '   ' + '|' + '   ' + destaque_4.dataHoraSorteio;
       document.getElementById("premio_estimado_4").textContent = 'Prêmio estimado do concurso' + destaque_4.numero;
+
+
+
+      //BOLINHAS
+
+
+      document.getElementById("timania0").textContent = destaque_4.dezenasSorteadas[0];
+      document.getElementById("timania1").textContent = destaque_4.dezenasSorteadas[1];
+      document.getElementById("timania2").textContent = destaque_4.dezenasSorteadas[2];
+      document.getElementById("timania3").textContent = destaque_4.dezenasSorteadas[3];
+      document.getElementById("timania4").textContent = destaque_4.dezenasSorteadas[4];
+      document.getElementById("timania5").textContent = destaque_4.dezenasSorteadas[5];
 
     //CARD 5                  
 
@@ -184,6 +253,18 @@ fetch("destaque.json")
 
       document.getElementById("sorteio_data_5").textContent = 'Nº' + destaque_5.numero + '   ' + '|' + '   ' + destaque_5.dataHoraSorteio;
       document.getElementById("premio_estimado_5").textContent = 'Prêmio estimado do concurso' + destaque_5.numero;
+
+
+            //BOLINHAS
+
+
+            document.getElementById("diasorte0").textContent = destaque_4.dezenasSorteadas[0];
+            document.getElementById("diasorte1").textContent = destaque_4.dezenasSorteadas[1];
+            document.getElementById("diasorte2").textContent = destaque_4.dezenasSorteadas[2];
+            document.getElementById("diasorte3").textContent = destaque_4.dezenasSorteadas[3];
+            document.getElementById("diasorte4").textContent = destaque_4.dezenasSorteadas[4];
+            document.getElementById("diasorte5").textContent = destaque_4.dezenasSorteadas[5];
+      
 
 
 
@@ -214,114 +295,22 @@ fetch("destaque.json")
       document.getElementById("premio_estimado_6").textContent = 'Prêmio estimado do concurso' + destaque_6.numero;
 
 
-
-    //CARD 7                  
-
-
-      var acumulou_7 = destaque_7.acumulou;
-        if (acumulou_7 == true) {
-        acumulou_7 = "ACUMULOU";
-        }
-        else{
-         acumulou_7 = "";
-        }
-
-        document.getElementById("modalidade_7").textContent = destaque_7.modalidade
-      //document.getElementById("valor_7").textContent = destaque_7.modalidadeDetalhada.valor;
-      //document.getElementById("descricao_7").textContent = destaque_7.modalidadeDetalhada.descricao;
-      //document.getElementById("descricaoEspecial_7").textContent = destaque_7.modalidadeDetalhada.descricaoEspecial;
-      //document.getElementById("tipoConcurso_7").textContent = destaque_7.tipoConcurso;
-      document.getElementById("acumulou_7").textContent = acumulou_7;
-      document.getElementById("estimativa_7").textContent = destaque_7.estimativa;
-      ///document.getElementById("numero_7").textContent = destaque_7.numero;
-      //document.getElementById("dataFechamento_7").textContent = destaque_7.dataFechamento;
-      //document.getElementById("dataAbertura_7").textContent = destaque_7.dataAbertura;
-      document.getElementById("dataHoraSorteio_7").textContent = destaque_7.dataHoraSorteio;
-      //document.getElementById("valorApostaMinima_7").textContent = destaque_7.valorApostaMinima;
-
-      document.getElementById("sorteio_data_7").textContent = 'Nº' + destaque_7.numero + '   ' + '|' + '   ' + destaque_7.dataHoraSorteio;
-      document.getElementById("premio_estimado_7").textContent = 'Prêmio estimado do concurso' + destaque_7.numero;
-
-    //CARD 8                  
-
-
-    var acumulou_8 = destaque_8.acumulou;
-        if (acumulou_8 == true) {
-        acumulou_8 = "ACUMULOU";
-        }
-        else{
-         acumulou_8 = "";
-        }
-
-        document.getElementById("modalidade_8").textContent = destaque_8.modalidade
-      //document.getElementById("valor_8").textContent = destaque_8.modalidadeDetalhada.valor;
-      //document.getElementById("descricao_8").textContent = destaque_8.modalidadeDetalhada.descricao;
-      //document.getElementById("descricaoEspecial_8").textContent = destaque_8.modalidadeDetalhada.descricaoEspecial;
-      //document.getElementById("tipoConcurso_8").textContent = destaque_8.tipoConcurso;
-      document.getElementById("acumulou_8").textContent = acumulou_8;
-      document.getElementById("estimativa_8").textContent = destaque_8.estimativa;
-      ///document.getElementById("numero_8").textContent = destaque_8.numero;
-      //document.getElementById("dataFechamento_8").textContent = destaque_8.dataFechamento;
-      //document.getElementById("dataAbertura_8").textContent = destaque_8.dataAbertura;
-      document.getElementById("dataHoraSorteio_8").textContent = destaque_8.dataHoraSorteio;
-      //document.getElementById("valorApostaMinima_8").textContent = destaque_8.valorApostaMinima;
-
-      document.getElementById("sorteio_data_8").textContent = 'Nº' + destaque_8.numero + '   ' + '|' + '   ' + destaque_8.dataHoraSorteio;
-      document.getElementById("premio_estimado_8").textContent = 'Prêmio estimado do concurso' + destaque_8.numero;
-
-    //CARD 9                  
-
-
-    var acumulou_9 = destaque_9.acumulou;
-        if (acumulou_9 == true) {
-        acumulou_9 = "ACUMULOU";
-        }
-        else{
-         acumulou_9 = "";
-        }
-
-        document.getElementById("modalidade_9").textContent = destaque_9.modalidade
-      //document.getElementById("valor_9").textContent = destaque_9.modalidadeDetalhada.valor;
-      //document.getElementById("descricao_9").textContent = destaque_9.modalidadeDetalhada.descricao;
-      //document.getElementById("descricaoEspecial_9").textContent = destaque_9.modalidadeDetalhada.descricaoEspecial;
-      //document.getElementById("tipoConcurso_9").textContent = destaque_9.tipoConcurso;
-      document.getElementById("acumulou_9").textContent = acumulou_9;
-      document.getElementById("estimativa_9").textContent = destaque_9.estimativa;
-      ///document.getElementById("numero_9").textContent = destaque_9.numero;
-      //document.getElementById("dataFechamento_9").textContent = destaque_9.dataFechamento;
-      //document.getElementById("dataAbertura_9").textContent = destaque_9.dataAbertura;
-      document.getElementById("dataHoraSorteio_9").textContent = destaque_9.dataHoraSorteio;
-      //document.getElementById("valorApostaMinima_9").textContent = destaque_9.valorApostaMinima;
-
-      document.getElementById("sorteio_data_9").textContent = 'Nº' + destaque_9.numero + '   ' + '|' + '   ' + destaque_9.dataHoraSorteio;
-      document.getElementById("premio_estimado_9").textContent = 'Prêmio estimado do concurso' + destaque_9.numero;
-
-    //CARD 10                  
-
-
-    var acumulou_10 = destaque_10.acumulou;
-        if (acumulou_10 == true) {
-        acumulou_10 = "ACUMULOU";
-        }
-        else{
-         acumulou_10 = "";
-        }
-
-        document.getElementById("modalidade_10").textContent = destaque_10.modalidade
-      //document.getElementById("valor_10").textContent = destaque_10.modalidadeDetalhada.valor;
-      //document.getElementById("descricao_10").textContent = destaque_10.modalidadeDetalhada.descricao;
-      //document.getElementById("descricaoEspecial_10").textContent = destaque_10.modalidadeDetalhada.descricaoEspecial;
-      //document.getElementById("tipoConcurso_10").textContent = destaque_10.tipoConcurso;
-      document.getElementById("acumulou_10").textContent = acumulou_10;
-      document.getElementById("estimativa_10").textContent = destaque_10.estimativa;
-      ///document.getElementById("numero_10").textContent = destaque_10.numero;
-      //document.getElementById("dataFechamento_10").textContent = destaque_10.dataFechamento;
-      //document.getElementById("dataAbertura_10").textContent = destaque_10.dataAbertura;
-      document.getElementById("dataHoraSorteio_10").textContent = destaque_10.dataHoraSorteio;
-      //document.getElementById("valorApostaMinima_10").textContent = destaque_10.valorApostaMinima;
-
-      document.getElementById("sorteio_data_10").textContent = 'Nº' + destaque_10.numero + '   ' + '|' + '   ' + destaque_10.dataHoraSorteio;
-      document.getElementById("premio_estimado_10").textContent = 'Prêmio estimado do concurso' + destaque_10.numero;
+      document.getElementById("tfacil0").textContent = destaque_6.dezenasSorteadas[0];
+      document.getElementById("tfacil1").textContent = destaque_6.dezenasSorteadas[1];
+      document.getElementById("tfacil2").textContent = destaque_6.dezenasSorteadas[2];
+      document.getElementById("tfacil3").textContent = destaque_6.dezenasSorteadas[3];
+      document.getElementById("tfacil4").textContent = destaque_6.dezenasSorteadas[4];
+      document.getElementById("tfacil5").textContent = destaque_6.dezenasSorteadas[5];
+      document.getElementById("tfacil6").textContent = destaque_6.dezenasSorteadas[6];
+      document.getElementById("tfacil7").textContent = destaque_6.dezenasSorteadas[7];
+      document.getElementById("tfacil8").textContent = destaque_6.dezenasSorteadas[8];
+      document.getElementById("tfacil9").textContent = destaque_6.dezenasSorteadas[9];
+      document.getElementById("tfacil10").textContent = destaque_6.dezenasSorteadas[10];
+      document.getElementById("tfacil11").textContent = destaque_6.dezenasSorteadas[11];
+      document.getElementById("tfacil12").textContent = destaque_6.dezenasSorteadas[12];
+      document.getElementById("tfacil13").textContent = destaque_6.dezenasSorteadas[13];
+      document.getElementById("tfacil14").textContent = destaque_6.dezenasSorteadas[14];
+  
 
 
     })
