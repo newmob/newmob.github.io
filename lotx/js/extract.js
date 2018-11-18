@@ -40,8 +40,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_0").textContent = destaque_0.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_0").textContent = destaque_0.valorApostaMinima;
 
-      document.getElementById("sorteio_data_0").textContent = 'Nº' + destaque_0.numero + '   ' + '|' + '   ' + destaque_0.dataHoraSorteio;
-      document.getElementById("premio_estimado_0").textContent = 'Prêmio estimado do concurso' + destaque_0.numero;
+      document.getElementById("sorteio_data_0").textContent = 'Nº' + destaque_0.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_0.dataHoraSorteio;
+      document.getElementById("premio_estimado_0").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_0.numero;
 
 
       
@@ -83,8 +83,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_1").textContent = destaque_1.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_1").textContent = destaque_1.valorApostaMinima;
 
-      document.getElementById("sorteio_data_1").textContent = 'Nº' + destaque_1.numero + '   ' + '|' + '   ' + destaque_1.dataHoraSorteio;
-      document.getElementById("premio_estimado_1").textContent = 'Prêmio estimado do concurso' + destaque_1.numero;
+      document.getElementById("sorteio_data_1").textContent = 'Nº' + destaque_1.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_1.dataHoraSorteio;
+      document.getElementById("premio_estimado_1").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_1.numero;
 
 
       //BOLINHAS
@@ -121,8 +121,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_2").textContent = destaque_2.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_2").textContent = destaque_2.valorApostaMinima;
 
-      document.getElementById("sorteio_data_2").textContent = 'Nº' + destaque_2.numero + '   ' + '|' + '   ' + destaque_2.dataHoraSorteio;
-      document.getElementById("premio_estimado_2").textContent = 'Prêmio estimado do concurso' + destaque_2.numero;
+      document.getElementById("sorteio_data_2").textContent = 'Nº' + destaque_2.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_2.dataHoraSorteio;
+      document.getElementById("premio_estimado_2").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_2.numero;
 
 
             //BOLINHAS
@@ -159,8 +159,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_3").textContent = destaque_3.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_3").textContent = destaque_3.valorApostaMinima;
 
-      document.getElementById("sorteio_data_3").textContent = 'Nº' + destaque_3.numero + '   ' + '|' + '   ' + destaque_3.dataHoraSorteio;
-      document.getElementById("premio_estimado_3").textContent = 'Prêmio estimado do concurso' + destaque_3.numero;
+      document.getElementById("sorteio_data_3").textContent = 'Nº' + destaque_3.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_3.dataHoraSorteio;
+      document.getElementById("premio_estimado_3").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_3.numero;
 
 
 
@@ -215,8 +215,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_4").textContent = destaque_4.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_4").textContent = destaque_4.valorApostaMinima;
 
-      document.getElementById("sorteio_data_4").textContent = 'Nº' + destaque_4.numero + '   ' + '|' + '   ' + destaque_4.dataHoraSorteio;
-      document.getElementById("premio_estimado_4").textContent = 'Prêmio estimado do concurso' + destaque_4.numero;
+      document.getElementById("sorteio_data_4").textContent = 'Nº' + destaque_4.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_4.dataHoraSorteio;
+      document.getElementById("premio_estimado_4").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_4.numero;
 
 
 
@@ -258,8 +258,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_5").textContent = destaque_5.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_5").textContent = destaque_5.valorApostaMinima;
 
-      document.getElementById("sorteio_data_5").textContent = 'Nº' + destaque_5.numero + '   ' + '|' + '   ' + destaque_5.dataHoraSorteio;
-      document.getElementById("premio_estimado_5").textContent = 'Prêmio estimado do concurso' + destaque_5.numero;
+      document.getElementById("sorteio_data_5").textContent = 'Nº' + destaque_5.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_5.dataHoraSorteio;
+      document.getElementById("premio_estimado_5").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_5.numero;
 
 
             //BOLINHAS
@@ -298,8 +298,8 @@ fetch("destaque.json")
       document.getElementById("dataHoraSorteio_6").textContent = destaque_6.dataHoraSorteio;
       //document.getElementById("valorApostaMinima_6").textContent = destaque_6.valorApostaMinima;
 
-      document.getElementById("sorteio_data_6").textContent = 'Nº' + destaque_6.numero + '   ' + '|' + '   ' + destaque_6.dataHoraSorteio;
-      document.getElementById("premio_estimado_6").textContent = 'Prêmio estimado do concurso' + destaque_6.numero;
+      document.getElementById("sorteio_data_6").textContent = 'Nº' + destaque_6.numero + '\xa0\xa0\xa0\xa0' + '|' + '\xa0\xa0\xa0\xa0' + destaque_6.dataHoraSorteio;
+      document.getElementById("premio_estimado_6").textContent = 'Prêmio estimado do concurso' + '\xa0\xa0' + destaque_6.numero;
 
 
       document.getElementById("tfacil0").textContent = destaque_6.dezenasSorteadas[0];

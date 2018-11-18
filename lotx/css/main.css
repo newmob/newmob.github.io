@@ -9,7 +9,13 @@ p, h1, h3, h4{
     font-size: 12px;
     text-align : center;
     }
-
+footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 .bola {
     border-radius: 50%;
@@ -23,7 +29,7 @@ p, h1, h3, h4{
     text-align: center;
     vertical-align: top;
     
-    }    
+}    
 
 .container {
     width: 100%;
@@ -204,6 +210,50 @@ p, h1, h3, h4{
 }
 .DIA_DE_SORTE > div[class$="resultado"] {
     background-color: #008F5B;
+}
+
+/* Cor do valor estimimado */
+#estimativa_ {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00AB67;
+    background-color: #008F5B;
+}
+
+#estimativa_0 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00AB67; 
+}
+#estimativa_1 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00AB67;
+}
+#estimativa_2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #803594;
+}
+#estimativa_3 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #FF9A2F;
+}
+#estimativa_4 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #A8CD4A;
+}
+#estimativa_5 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00AB67;
+ }
+#estimativa_6 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #BD3E96;
 }
 
 
