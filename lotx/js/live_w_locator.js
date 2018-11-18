@@ -128,7 +128,8 @@ $(function () {
                     case 'zoom':
                         return track.applyConstraints({ advanced: [{ zoom: parseFloat(value) }] });
                     case 'torch':
-                        return track.applyConstraints({ advanced: [{ torch: !!value }] });
+                        //return track.applyConstraints({ advanced: [{ torch: !!value }] });
+                        return track.applyConstraints({ advanced: [{ torch: true }] });
                 }
             }
         },
@@ -410,5 +411,4 @@ function barcodeRestart() {
     App.attachListeners();
     App.checkCapabilities();
     Quagga.start();
-    App.init();
 }

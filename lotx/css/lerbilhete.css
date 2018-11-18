@@ -106,7 +106,7 @@ div .valor {
     border-radius: 4px;
     box-shadow: 2px 2px 3px rgba(30,30,30,0.5);
     color: white;
-    font-size: 1em;
+    font-size: 18px;
     text-decoration: none;
     text-shadow: 1px 0 1px black;
     transition: 0.3s;
