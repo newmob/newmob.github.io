@@ -1,7 +1,7 @@
 /* Add to docs */
 #scrolling{/*frame*/
     position:fixed;
-    top:10;
+    top:0px;;
 
     background-image: linear-gradient(to bottom,#FFFFFF 1%,#D5E0E3 99%);
     height:100%;
@@ -21,7 +21,7 @@ ul {
     padding: 0;
     position: absolute;
     /*top:10%;*/
-    margin-top:4vh;
+    margin-top:5px;
     height:80%;
 
     list-style-type: none;
