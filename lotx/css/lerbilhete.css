@@ -8,9 +8,10 @@ body {
 
 p {
     font: 100% verdana, arial, geneva, tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     text-align : left;
     color: white;
+    margin: 0 0 5px 0;
 }    
 
 h3 {
