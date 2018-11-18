@@ -273,7 +273,6 @@ p.valor {
     left: 10px;
     bottom: 0px;
     /*float: right;*/
-    /* retirando o texto da frente */
     text-align: center;
     background-color: Transparent;
     background-repeat: no-repeat;
@@ -281,8 +280,4 @@ p.valor {
     cursor:pointer;
     outline:none;   
     position: absolute;
-
-    display: table-cell;
-    vertical-align: bottom;
-    float: none;
 }
