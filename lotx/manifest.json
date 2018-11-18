@@ -9,7 +9,8 @@
     }
   ],
   "start_url": "/lotx/index.html?launcher=true",
-  "display": "standalone",
+  "display": "browser",
+  "orientation": "portrait",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2"
 }
