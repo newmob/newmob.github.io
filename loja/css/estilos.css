@@ -219,7 +219,7 @@ footer .container {
 
 
 .social a[href*="facebook.com"] {
-    background-image: url(../img/facebook.png);
+        background-image: url(../img/facebook.png);
 }
 
 .social a[href*="twitter.com"] {

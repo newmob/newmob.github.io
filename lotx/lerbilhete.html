@@ -8,9 +8,11 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/example.css">
     <link rel="stylesheet" href="css/pygment_trac.css">
+    <link rel="stylesheet" href="css/lerbilhete.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -24,7 +26,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1><img src="img/icons/icon-192x192.png"></h1>
+            <h1><img src="img/icon-180x180.pngs"></h1>
             <p>Teste de leitura de código de barras 1.0</p>
 
             <p>Tipo de código de barras:</p>
@@ -38,7 +40,12 @@
         <section>
 
             <section id="container" class="container">
-                <h3>Caixa NewMob Test</h3>
+                <h3>Resultado</h3>
+                <button class="closeButton" onclick="closeWindow()">close</button>
+                <p>
+                    Posicione a linha abaixo sobre o código de barras<br>
+                    e aguarde a focalização da câmera.
+                </p>
                 <div class="controls">
                     <fieldset class="input-group">
                         <button class="stop">Stop</button>
@@ -116,14 +123,16 @@
                 <div id="result_strip">
                     <ul class="thumbnails"></ul>
                 </div>
+                <div id="interactive" class="viewport"><video autoplay="true" preload="auto" src="" muted="true"
+                        playsinline="true"></video><canvas class="drawingBuffer" width="640" height="480"></canvas><br
+                        clear="all">
+                </div>
+                <div id="mascara" class="cameraMask"></div>
                 <div id="debugteste">
                     <div style="display:none">Lido: <span id="barcode">000000</span></div>
                     <div>Válido: <span id="barcode_valido" style="font-weight: bold">000000</span></div>
                     <div style="display:none">Teste: <span id="barcode_teste" style="font-weight: bold">000000</span></div>
                 </div>
-                <div id="interactive" class="viewport"><video autoplay="true" preload="auto" src="" muted="true"
-                        playsinline="true"></video><canvas class="drawingBuffer" width="640" height="480"></canvas><br
-                        clear="all"></div>
                 <!-- 1280 / 720  -->
             </section>
 

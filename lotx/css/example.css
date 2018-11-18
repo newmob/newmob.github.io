@@ -32,7 +32,8 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTAgNGg0djIwaC00ek02IDRoMnYyMGgtMnpNMTAgNGgydjIwaC0yek0xNiA0aDJ2MjBoLTJ6TTI0IDRoMnYyMGgtMnpNMzAgNGgydjIwaC0yek0yMCA0aDF2MjBoLTF6TTE0IDRoMXYyMGgtMXpNMjcgNGgxdjIwaC0xek0wIDI2aDJ2MmgtMnpNNiAyNmgydjJoLTJ6TTEwIDI2aDJ2MmgtMnpNMjAgMjZoMnYyaC0yek0zMCAyNmgydjJoLTJ6TTI0IDI2aDR2MmgtNHpNMTQgMjZoNHYyaC00eiI+PC9wYXRoPjwvc3ZnPg==);
-}
+    border: none;
+  }
 
 .overlay {
     overflow: hidden;
@@ -43,6 +44,7 @@
     right: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    border: none;
 }
 
 .overlay__content {
@@ -53,6 +55,7 @@
     width: 90%;
     max-height: 90%;
     max-width: 800px;
+    border: none;
 }
 
 .overlay__close {
@@ -76,7 +79,8 @@
 .overlay__content video {
     width: 100%;
     height: 100%;
-}
+    border: none;
+  }
 
 .overlay__content canvas {
     position: absolute;
@@ -84,7 +88,8 @@
     height: 100%;
     left: 0;
     top: 0;
-}
+    border: none;
+  }
 
 #interactive.viewport {
     position: relative;
@@ -93,13 +98,15 @@
 #interactive.viewport > canvas, #interactive.viewport > video {
     max-width: 100%;
     width: 100%;
-}
+    border: none;
+  }
 
 canvas.drawing, canvas.drawingBuffer {
     position: absolute;
     left: 0;
     top: 0;
-}
+    border: none;
+  }
 
 .controls {
   display: none;
@@ -126,18 +133,21 @@ canvas.drawing, canvas.drawingBuffer {
 /* line 28, ../sass/_viewport.scss */
 .controls .reader-config-group label {
   display: block;
+  border: none;
 }
 /* line 30, ../sass/_viewport.scss */
 .controls .reader-config-group label span {
   width: 9rem;
   display: inline-block;
   text-align: right;
+  border: none;
 }
 /* line 37, ../sass/_viewport.scss */
 .controls:after {
   content: '';
   display: block;
   clear: both;
+  border: none;
 }
 
 /* line 22, ../sass/_viewport.scss */
@@ -145,6 +155,7 @@ canvas.drawing, canvas.drawingBuffer {
   margin: 10px 0;
   border-top: 1px solid #EEE;
   border-bottom: 1px solid #EEE;
+  border: none;
   padding: 10px 0;
   display: none;
 }
@@ -152,6 +163,7 @@ canvas.drawing, canvas.drawingBuffer {
 #result_strip ul.thumbnails {
   padding: 0;
   margin: 0;
+  border: none;
   list-style-type: none;
   width: auto;
   overflow-x: auto;
@@ -184,21 +196,24 @@ canvas.drawing, canvas.drawingBuffer {
   word-wrap: break-word;
   height: 40px;
   margin: 0px;
+  border: none;
 }
 /* line 61, ../sass/_viewport.scss */
 #result_strip ul.thumbnails:after {
   content: "";
   display: table;
   clear: both;
+  border: none;
 }
 
 @media (max-width: 603px) {
   /* line 2, ../sass/phone/_core.scss */
   #container {
-    margin: 10px auto;
+    margin: 0;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+    border: none;
   }
 }
 @media (max-width: 603px) {
