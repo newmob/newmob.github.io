@@ -261,23 +261,18 @@ p.valor {
     font-weight: normal;
     text-align: center;
     padding-top: 66px;
-
     background-image: url(../img/icon-barcode.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: top center;
     background-color:none;
+    border: none;
+    position: absolute;
     height: 34px;
     width: 64px;
-    display: inline-block;
     left: 10px;
     bottom: 0px;
-    /*float: right;*/
-    text-align: center;
     background-color: Transparent;
     background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    outline:none;   
-    position: absolute;
+    z-index: 1;
 }
