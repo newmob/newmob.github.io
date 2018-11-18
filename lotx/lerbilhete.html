@@ -42,10 +42,18 @@
             <section id="container" class="container">
                 <h3>Resultado</h3>
                 <button class="closeButton" onclick="window.history.back()">close</button>
-                <p>
-                    Posicione a linha abaixo sobre o código de barras<br>
-                    e aguarde a focalização da câmera.
-                </p>
+                <div id="mensagem">
+                    <p>
+                        Posicione a câmera sobre o código de barras<br>
+                        e aguarde a focalização.
+                    </p>
+                </div>
+                <div id="resultado" class="resultado" style="display:none">
+                    <div id="modalidade" class="modalidade"></div>
+                    <div id="concurso" class="concurso"></div>
+                    <div id="descricao" class="descricao"></div>
+                    <div id="valor" class="valor"></div>
+                </div>
                 <div class="controls">
                     <fieldset class="input-group">
                         <button class="stop">Stop</button>
@@ -127,10 +135,9 @@
                         playsinline="true"></video><canvas class="drawingBuffer" width="640" height="480"></canvas><br
                         clear="all">
                 </div>
-                <div id="mascara" class="cameraMask"></div>
                 <div id="debugteste">
                     <div style="display:none">Lido: <span id="barcode">000000</span></div>
-                    <div>Válido: <span id="barcode_valido" style="font-weight: bold">000000</span></div>
+                    <div style="display:none">Válido: <span id="barcode_valido" style="font-weight: bold">000000</span></div>
                     <div style="display:none">Teste: <span id="barcode_teste" style="font-weight: bold">000000</span></div>
                 </div>
                 <!-- 1280 / 720  -->

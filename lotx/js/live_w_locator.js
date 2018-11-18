@@ -248,16 +248,15 @@ $(function () {
         if (isValidBarcode(code)) {
             document.getElementById('barcode').innerHTML = code;
             if (addCode(code) == false) {
-                //window.navigator.vibrate(200);
-                //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
                 document.getElementById('barcode_valido').innerHTML = code;
-
+                showResult(code);
+                /*
                 var $node = null, canvas = Quagga.canvas.dom.image;
-
                 $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
                 $node.find("img").attr("src", canvas.toDataURL());
                 $node.find("barcode").html(code);
                 $("#result_strip ul.thumbnails").prepend($node);
+                */
             }
         } else {
             console.log("código invalido");
@@ -318,4 +317,86 @@ function addCode(code) {
     }
 
     return retVal;
+}
+
+var arrResults = ["780719712414062252264406014098",
+    "780706100091344678939682011813",
+    "780732693343505383339387011583",
+    "780748153025420691160273017346",
+    "780751136291420607239275001888",
+    "780709341265343281301447000802"];
+
+function showResult(code) {
+    document.getElementById('mensagem').style.display = "none";
+    Quagga.stop();
+    document.getElementById('interactive').style.display = "none";
+    document.getElementById('resultado').style.display = "block";
+
+    // verifica se o codígo tem um arquivo json
+    if (arrResults.indexOf(code) != -1) {
+        var jsonFile = 'data/' + code + '.json';
+        fetch(jsonFile, { headers: { 'encoding': 'UTF-8' } })
+            .then(function (response) { return response.json(); })
+            .then(function (json) {
+                // ------ dados
+                var descricao = json.payload.situacao.descricao;
+                descricao = descricao.toUpperCase();
+                switch (descricao) {
+                    case "PREMIADA": {
+                        displayItem(true, false, true, true);
+                        var modalidade = json.payload.modalidade.descricaoEspecial == "" ? json.payload.modalidade.descricao : json.payload.modalidade.descricaoEspecial;
+                        var valor = "Valor líquido R$" + json.payload.premio.valorLiquido;
+                        document.getElementById('modalidade').innerHTML = modalidade;
+                        document.getElementById('descricao').innerHTML = "Aposta premiada";
+                        document.getElementById('valor').innerHTML = valor;
+                        break;
+                    }
+                    case "NÃO PREMIADA": {
+                        displayItem(false, false, true, false);
+                        document.getElementById('descricao').innerHTML = descricao;
+                        break;
+                    }
+                    case "PAGA": {
+                        displayItem(true, false, true, false);
+                        var modalidade = json.payload.modalidade.descricaoEspecial == "" ? json.payload.modalidade.descricao : json.payload.modalidade.descricaoEspecial;
+                        document.getElementById('modalidade').innerHTML = modalidade;
+                        document.getElementById('descricao').innerHTML = "Aposta premiada já paga";
+                        break;
+                    }
+                    default: {
+                        displayItem(false, false, true, false);
+                        document.getElementById('descricao').innerHTML = "Não foram encontrados dados para esse bilhete";
+                    }
+                }
+            });
+    } else {
+        displayItem(false, false, true, false);
+        document.getElementById('descricao').innerHTML = "Não foram encontrados dados para esse bilhete";
+    };
+}
+
+function displayItem(modalidade, concurso, descricao, valor) {
+    if (modalidade) {
+        document.getElementById('modalidade').style.display = "block";
+    } else {
+        document.getElementById('modalidade').style.display = "none";
+    }
+
+    if (descricao) {
+        document.getElementById('descricao').style.display = "block";
+    } else {
+        document.getElementById('descricao').style.display = "none";
+    }
+
+    if (concurso) {
+        document.getElementById('concurso').style.display = "block";
+    } else {
+        document.getElementById('concurso').style.display = "none";
+    }
+
+    if (valor) {
+        document.getElementById('valor').style.display = "block";
+    } else {
+        document.getElementById('valor').style.display = "none";
+    }
 }

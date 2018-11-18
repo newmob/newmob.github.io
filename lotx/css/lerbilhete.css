@@ -61,9 +61,38 @@ section {
     padding: 0px;
 }
 
-.xcameraMask {
-    height: 100px;
-    width: 100%;
-    background-color: blue;
-    position
+div .modalidade {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align : left;
+    color:rgb(233, 241, 156);
+    margin: 0 0 5px 0;
+}
+
+div .concurso {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align : left;
+    color:rgb(233, 241, 156);
+    margin: 0 0 5px 0;
+}
+
+div .descricao {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align : left;
+    color:rgb(111, 228, 107);
+    margin: 10px 0 10px 0;
+}
+
+div .valor {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align : left;
+    color:rgb(206, 100, 29);
+    margin: 0 0 5px 0;
 }
