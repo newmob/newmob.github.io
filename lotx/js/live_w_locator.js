@@ -400,3 +400,13 @@ function displayItem(modalidade, concurso, descricao, valor) {
         document.getElementById('valor').style.display = "none";
     }
 }
+
+function barcodeRestart() {
+    document.getElementById('mensagem').style.display = "block";
+    document.getElementById('interactive').style.display = "block";
+    document.getElementById('resultado').style.display = "none";
+    App.attachListeners();
+    App.checkCapabilities();
+    Quagga.start();
+    App.init();
+}
