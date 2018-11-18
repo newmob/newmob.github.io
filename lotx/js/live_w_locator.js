@@ -201,7 +201,7 @@ $(function () {
                 patchSize: "medium",
                 halfSample: false
             },
-            numOfWorkers: 4,
+            numOfWorkers: 2,
             frequency: 10,
             decoder: {
                 readers: [{
