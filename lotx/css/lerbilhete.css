@@ -97,3 +97,20 @@ div .valor {
     color:rgb(233, 235, 129);
     margin: 0 0 5px 0;
 }
+
+.resultado button {
+    float: center;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #333;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px rgba(30,30,30,0.5);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 1px 0 1px black;
+    transition: 0.3s;
+    position: relative;
+    margin-bottom: 10px;
+}
