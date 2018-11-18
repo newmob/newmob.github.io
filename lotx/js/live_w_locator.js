@@ -402,6 +402,8 @@ function displayItem(modalidade, concurso, descricao, valor) {
 }
 
 function barcodeRestart() {
+    location.reload(false);
+    return;
     document.getElementById('mensagem').style.display = "block";
     document.getElementById('interactive').style.display = "block";
     document.getElementById('resultado').style.display = "none";
