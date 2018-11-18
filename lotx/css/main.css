@@ -253,3 +253,36 @@ p.valor {
     text-align: center;
     margin-top: 20px;
 }
+
+.barcode {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    color: rgb(39, 56, 155);
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 66px;
+
+    background-image: url(../img/icon-barcode.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color:none;
+    height: 34px;
+    width: 64px;
+    display: inline-block;
+    left: 10px;
+    bottom: 0px;
+    /*float: right;*/
+    /* retirando o texto da frente */
+    text-align: center;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;   
+    position: absolute;
+
+    display: table-cell;
+    vertical-align: bottom;
+    float: none;
+}
