@@ -4,11 +4,11 @@ body {
 }
 
 p, h1, h3, h4{
-
     font: 100% verdana, arial, geneva, tahoma, sans-serif;
     font-size: 12px;
     text-align : center;
-    }
+}
+
 footer {
     width: 100%;
     height: 100px;
@@ -70,7 +70,7 @@ footer {
 
 .titulo-destaque h2 {
     color: #FFFFFF;
-    font-size: 0.5em;
+    font-size: 16px;
     font-weight: bold;
     text-transform: lowercase;
     text-align: left;
@@ -80,7 +80,7 @@ footer {
 
 .titulo-resultado h2 {
     color: #FFFFFF;
-    font-size: 0.5em;
+    font-size: 16px;
     font-weight: normal; 
     text-align: left;
     margin-left: 95px;
