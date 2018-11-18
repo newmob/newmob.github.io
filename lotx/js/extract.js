@@ -1,6 +1,6 @@
 /*ESTRAIR VALORES DO JSON*/
 
-fetch("destaque.json")
+fetch("data/destaque.json")
     .then(response => response.json()) 
     .then(result => {
 
