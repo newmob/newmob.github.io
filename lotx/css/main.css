@@ -260,9 +260,10 @@ p.valor {
     font-size: 0.9em;
     font-weight: normal;
     text-align: center;
-    padding-top: 66px;
+    text-decoration: none;
+    padding-top: 58px;
     background-image: url(../img/icon-barcode.png);
-    background-size: 64px 64px;
+    background-size: 56px 56px;
     background-repeat: no-repeat;
     background-position: top center;
     background-color:none;
