@@ -101,7 +101,7 @@ div .valor {
 .resultado button {
     display: block;
     padding: 10px;
-    background-color: #333;
+    background-color: rgb(88, 182, 150);
     border: 0;
     border-radius: 4px;
     box-shadow: 2px 2px 3px rgba(30,30,30,0.5);
