@@ -3,6 +3,8 @@ var cacheName = 'lotxPWA-final-1';
 var filesToCache = [
   'index.html',
   'lerbilhete.html',
+  'service-worker.js',
+  'manifest.json',
   'js/adapter-latest.js',
   'js/app.js',
   'js/extract.js',
