@@ -24,12 +24,12 @@ function expDiv() {
     var n = carousel.getActiveIndex();
 
     if (!exp[n]) {
-        $("#destaque_"+n).animate({ 'top': '40px' }, { duration: 800 });
-        $("#resultado_"+n).animate({ 'width': '98%' }, { duration: 400 });
+        $("#destaque_"+n).animate({ 'top': '40px' }, { duration: 400 });
+        $("#resultado_"+n).animate({ 'width': '85%' }, { duration: 400 });
         exp[n] = true;
     }
     else {
-        $("#destaque_"+n).animate({ 'top': '98%' }, { duration: 400 });
+        $("#destaque_"+n).animate({ 'top': '87%' }, { duration: 400 });
         $("#resultado_"+n).animate({ 'width': '100%' }, { duration: 400 });
         exp[n] = false;
     }
