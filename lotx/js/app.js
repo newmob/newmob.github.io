@@ -3,8 +3,10 @@
 
   window.onload = function() {
     let content = localStorage.getItem("qrCodeMessage") || 'QR Codes are great!';
+    /*
     $('#qrCodeMessage').val(content);
     $('#qrcode').qrcode(content);
+    */
   }
 
    $('#buttonGenerate').click(() => {
