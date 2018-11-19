@@ -1,4 +1,4 @@
-/*ESTRAIR VALORES DO JSON*/
+/*EXTRAIR VALORES DO JSON*/
 
 fetch("data/destaque.json")
     .then(response => response.json()) 

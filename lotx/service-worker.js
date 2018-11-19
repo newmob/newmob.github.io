@@ -1,9 +1,9 @@
 var dataCacheName = 'lotxData-v1';
 var cacheName = 'lotxPWA-final-1';
 var filesToCache = [
-  'https://newmob.github.io/lotx/index.html',
-  'https://newmob.github.io/lotx/lerbilhete.html',
-  'https://newmob.github.io/lotx/js/adapter-latest.js',
+  'index.html',
+  'lerbilhete.html',
+  'js/adapter-latest.js',
   'https://newmob.github.io/lotx/js/app.js',
   'https://newmob.github.io/lotx/js/extract.js',
   'https://newmob.github.io/lotx/js/itemslide.min.js',
