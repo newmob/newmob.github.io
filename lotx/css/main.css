@@ -350,4 +350,5 @@ p.valor {
     z-index: 1;
     transform: rotate(-45deg);
     text-shadow: 1px 1px 1px rgb(58, 56, 56);
+    float: right;
 }
