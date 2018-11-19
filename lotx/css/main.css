@@ -330,3 +330,24 @@ p.valor {
     background-repeat: no-repeat;
     z-index: 1;
 }
+
+.prototipo {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    color: rgb(207, 51, 12);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 58px;
+    border: none;
+    position: absolute;
+    height: 34px;
+    width: 64px;
+    right: 40px;
+    bottom: 15px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: rotate(-45deg);
+    text-shadow: 1px 1px 1px rgb(58, 56, 56);
+}
