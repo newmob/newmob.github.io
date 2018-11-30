@@ -72,16 +72,18 @@
 
 	<script>
 		function cloneCard(destaque) {
-			$clone = $("#card").clone();
-			$clone.find(".MEGA_SENA").removeClass('MEGA_SENA').addClass(destaque.modalidade);
+			if (destaque.numero > 0) {
+				console.log(destaque.numero);
+				$clone = $("#card:first").clone(true);
+				$clone.find(".container").removeClass('MEGA_SENA').addClass(destaque.modalidade);
 
-			$clone.find("#resultado_0").attr("resultado_0", "resultado_" + destaque.numero);
-			$clone.find("#destaque_0").attr("destaque_0", "destaque_" + destaque.numero);
+				$clone.children("#resultado_0").attr("resultado_0", "resultado_" + destaque.numero);
+				$clone.children("#destaque_0").attr("destaque_0", "destaque_" + destaque.numero);
 
-
-			$clone.appendTo("#ulCards");
-			carousel = $("ul");
-			carousel.itemslide();
+				$clone.appendTo("#ulCards");
+				carousel = $("ul");
+				carousel.itemslide();
+			}
 		}
 
 		function xcloneCard(destaque) {

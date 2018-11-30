@@ -22,7 +22,7 @@ for (i=0; i < exp.length; i++) {
 
 function expDiv() {
     var n = carousel.getActiveIndex();
-
+console.log($("#destaque_"+n));
     if (!exp[n]) {
         $("#destaque_"+n).animate({ 'top': '40px' }, { duration: 400 });
         $("#resultado_"+n).animate({ 'width': '85%' }, { duration: 400 });
