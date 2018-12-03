@@ -60,7 +60,6 @@
 								<div class="conteudo-destaque">
 									<p class="acumulou">ACUMULOU!</p>
 									<p class="valor">R$ 33.000.000,00</p>
-									<button onclick="cloneCard()">Clone</button>
 								</div>
 							</div>
 						</div>
@@ -72,14 +71,37 @@
 	</main>
 
 	<script>
-		function cloneCard(number, modalidade) {
+		function cloneCard(destaque) {
+			if (destaque.numero > 0) {
+				console.log(destaque.numero);
+				$clone = $("#card:first").clone(true);
+				$clone.find(".container").removeClass('MEGA_SENA').addClass(destaque.modalidade);
+
+				$clone.children("#resultado_0").attr("resultado_0", "resultado_" + destaque.numero);
+				$clone.children("#destaque_0").attr("destaque_0", "destaque_" + destaque.numero);
+
+				$clone.appendTo("#ulCards");
+				carousel = $("ul");
+				carousel.itemslide();
+			}
+		}
+
+		function xcloneCard(destaque) {
 			var li = document.getElementById("card");
 			var clone = li.cloneNode(true);
 
 			var div_container = clone.getElementsByClassName("container MEGA_SENA");
-			div_container[0].classList.add(modalidade);
+			div_container[0].classList.add(destaque.modalidade);
 			div_container[0].classList.remove("MEGA_SENA");
 
+			$(div_container[0]).attr("resultado_0", "resultado_" + destaque.numero);
+			$(div_container[0]).attr("destaque_0", "destaque_" + destaque.numero);
+			$div = $(div_container[0]);
+			$divDest = $div.find("titulo-destaque");
+			$h2 = $divDest.find("h2");
+			$h2.text("marcelo");
+
+			//document.getElementById("ulCards").appendChild(clone);
 			document.getElementById("ulCards").appendChild(clone);
 
 			carousel = $("ul");
@@ -98,20 +120,22 @@
 				//var ul = document.getElementById("ulCards");
 				var len = json.payload.length;
 				for (var i = 0; i < len; i++) {
+					var destaque = new Object();
 					// ------ dados
-					var modalidade = json.payload[i].modalidade;
-					var descricao = json.payload[i].modalidadeDetalhada.descricaoEspecial == "" ? json.payload[i].modalidadeDetalhada.descricao : json.payload[i].modalidadeDetalhada.descricaoEspecial;
-					var flag_acumulou = json.payload[i].acumulou;
-					var valorEstimativa = json.payload[i].estimativa;
-					var numeroUltConcurso = json.payload[i].numero - 1;
-					var numeroProxConcurso = json.payload[i].numero;
-					var dataHoraSorteio = json.payload[i].dataHoraSorteio;
-					var apostasEncerram = "8 dias e 5 horas";
-					var valorApostaMinima = "R$" + json.payload[i].valorApostaMinima.toFixed(2).replace(".", ",");
-					var dezenasSorteadas = json.payload[i].dezenasSorteadas;
+					destaque.numero = i;
+					destaque.modalidade = json.payload[i].modalidade;
+					destaque.descricao = json.payload[i].modalidadeDetalhada.descricaoEspecial == "" ? json.payload[i].modalidadeDetalhada.descricao : json.payload[i].modalidadeDetalhada.descricaoEspecial;
+					destaque.flag_acumulou = json.payload[i].acumulou;
+					destaque.valorEstimativa = json.payload[i].estimativa;
+					destaque.numeroUltConcurso = json.payload[i].numero - 1;
+					destaque.numeroProxConcurso = json.payload[i].numero;
+					destaque.dataHoraSorteio = json.payload[i].dataHoraSorteio;
+					destaque.apostasEncerram = "8 dias e 5 horas";
+					destaque.valorApostaMinima = "R$" + json.payload[i].valorApostaMinima.toFixed(2).replace(".", ",");
+					destaque.dezenasSorteadas = json.payload[i].dezenasSorteadas;
 					// -----------
 					//createCard(i, modalidade);
-					cloneCard(i, modalidade);
+					cloneCard(destaque);
 				}
 			});
 

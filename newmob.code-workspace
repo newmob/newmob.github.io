@@ -1,13 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "lotx"
-		},
-		{
 			"path": "loja"
 		},
 		{
-			"path": "coffeeshop"
+			"path": "lotx"
 		}
 	],
 	"settings": {}

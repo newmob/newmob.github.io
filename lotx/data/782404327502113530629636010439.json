@@ -1,0 +1,46 @@
+﻿{
+   "versao": "2.023.0.00.002R4",
+   "payload":    {
+      "situacao":       {
+         "valor": 100,
+         "descricao": "Premiada"
+      },
+      "locaisParaRecebimento": [      {
+         "id": 9770,
+         "descricao": "Agência",
+         "canal": "SIGEL"
+      }],
+      "premio":       {
+         "concursos": [         {
+            "concurso":             {
+               "numero": 4109,
+               "naoInicializado": false,
+               "aberto": false
+            },
+            "faixas":             [
+                              {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "SENA"
+               },
+                              {
+                  "numero": 2,
+                  "sorteio": 1,
+                  "nome": "QUINA"
+               },
+                              {
+                  "numero": 3,
+                  "sorteio": 1,
+                  "nome": "QUADRA"
+               }
+            ]
+         }],
+         "localPagamento": "Indisponível"
+      },
+      "modalidade":       {
+         "valor": 2,
+         "descricao": "Mega-Sena",
+         "descricaoEspecial": "Mega da Virada"
+      }
+   }
+}
