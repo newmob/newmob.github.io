@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "nodejs"
+		},
+		{
+			"path": "casadocodigo"
 		}
 	],
 	"settings": {}

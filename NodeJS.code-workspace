@@ -1,7 +1,17 @@
 {
 	"folders": [
 		{
+			"path": "loja"
+		},
+		{
+			"path": "lotx"
+		},
+		{
+			"path": "nodejs"
+		},
+		{
 			"path": "casadocodigo"
 		}
-	]
+	],
+	"settings": {}
 }
