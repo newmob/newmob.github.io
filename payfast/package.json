@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "post": "curl http://localhost:3000/pagamentos/pagamento -X POST -v -H 'Content-type: application/json' -d \"{\"forma_de_pagamento\":\"payfast\",\"valor\":10,\"moeda\":\"BRL\",\"descrição\":\"criando um pagamento\"}\"; echo"
   },
   "keywords": [
     "gateway",
@@ -15,6 +16,8 @@
   "author": "Marcelo Maximiano",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
     "express": "^4.16.4"
   }
 }
