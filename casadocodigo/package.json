@@ -10,13 +10,9 @@
   "author": "Marcelo Maximiano",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "express": "4.16.3"
-=======
     "express": "4.16.3",
     "marko": "4.13.4-1",
     "sqlite3": "4.0.2"
->>>>>>> 4741bc0a517a231c8a836e9f6871f8dc05e9f44f
   },
   "devDependencies": {
     "nodemon": "1.18.4"
