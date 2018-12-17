@@ -1,0 +1,25 @@
+{
+  "name": "payfast",
+  "version": "1.0.0",
+  "description": "Um gateway para pagamentos atraves de recursos HTTP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "post": "./post_test.sh"
+  },
+  "keywords": [
+    "gateway",
+    "pagamentos",
+    "api"
+  ],
+  "author": "Marcelo Maximiano",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.8",
+    "request": "^2.88.0"
+  }
+}
