@@ -7,7 +7,7 @@ module.exports = function() {
     app.use(bodyParser.json());
     
     consign()
-         .include('./controllers')
+        .include('./controllers')
         .into(app);
 
     return app;
