@@ -1,0 +1,46 @@
+.container.MEGA_SENA
+  #resultado_0.resultado
+    .titulo-resultado(onclick='expDiv()')
+      h2 Resultados
+    .conteudo-resultado
+      p#sorteio_data_0 AQUI
+      label
+        p
+        .bola
+          h2 01
+        .bola
+          h2 02
+        .bola
+          h2 03
+        p
+        p
+        .bola
+          h2 04
+        .bola
+          h2 05
+        .bola
+          h2 06
+        p
+      hr
+      p
+        b Sena
+      p Não houve acertador
+      p
+        b Quina
+      p 85 apostas ganhadoras
+      p
+        b Quadra
+      p 1450 apostas ganhadoras
+  #destaque_0.destaque
+    .titulo-destaque(onclick='expDiv()')
+      h2= modalidadeDetalhada.descricaoEspecial
+      div logotipo
+    .conteudo-destaque
+      p.acumulou acumulou
+      p.valor= estimativa
+      h3 Prêmio estimado do concurso 
+        span=numero
+      footer
+        hr
+        p Sorteio
+        h3#dataHoraSorteio_0= dataHoraSorteio

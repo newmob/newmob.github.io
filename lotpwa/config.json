@@ -1,0 +1,53 @@
+{
+  "env": "dev",
+  "dev": {
+    "apiDestaque": {
+      "method": "get",
+      "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
+      "resource": "/v1/parametros-simulacao/destaque",
+      "headers": {
+        "Disable-Crypto": "true",
+        "Content-Type": "application/json"
+      }
+    },
+    "apiConferirBilhete": {
+      "method": "post",
+      "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
+      "resource": "/v1/bilhetes/conferir-bilhete",
+      "headers": {
+        "Disable-Crypto": "true",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "prod": {
+    "apiDestaque": {
+      "method": "get",
+      "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
+      "resource": "/v1/parametros-simulacao/destaque",
+      "headers": {
+        "Disable-Crypto": "true",
+        "Content-Type": "application/json"
+      }
+    },
+    "apiConferirBilhete": {
+      "method": "post",
+      "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
+      "resource": "/v1/bilhetes/conferir-bilhete",
+      "headers": {
+        "Disable-Crypto": "true",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "templates": {
+    "MEGA_SENA": "./views/megasena.pug",
+    "DUPLA_SENA": "./views/megasena.pug",
+    "LOTOFACIL": "./views/quina.pug",
+    "LOTOMANIA": "./views/megasena.pug",
+    "LOTOGOL": "./views/megasena.pug",
+    "LOTECA": "./views/megasena.pug",
+    "TIMEMANIA": "./views/megasena.pug",
+    "DIA_DE_SORTE": "./views/megasena.pug"
+  }
+}
