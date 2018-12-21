@@ -1,6 +1,6 @@
 {
   "env": "dev",
-  "dev": {
+  "devx": {
     "apiDestaque": {
       "method": "get",
       "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
