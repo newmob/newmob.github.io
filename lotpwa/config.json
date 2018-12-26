@@ -1,6 +1,6 @@
 {
   "env": "dev",
-  "devx": {
+  "dev": {
     "apiDestaque": {
       "method": "get",
       "endPoint": "http://df7390sr029.corp.caixa.gov.br:8280/silce-servico-rest/rest",
@@ -17,6 +17,19 @@
       "headers": {
         "Disable-Crypto": "true",
         "Content-Type": "application/json"
+      }
+    },
+    "apiAccessToken": {
+      "method": "post",
+      "endPoint": "https://logindes.caixa.gov.br/auth/realms/internet/protocol/openid-connect/token",
+      "resource": "",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "body": {
+        "grant_type": "client_credentials",
+        "client_id": "cli-ser-bot",
+        "client_secret": "acec303f-998c-4cef-b172-36bedaabe76f"
       }
     }
   },
@@ -38,16 +51,29 @@
         "Disable-Crypto": "true",
         "Content-Type": "application/json"
       }
+    },
+    "apiAccessToken": {
+      "method": "post",
+      "endPoint": "https://logindes.caixa.gov.br/auth/realms/internet/protocol/openid-connect/token",
+      "resource": "",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "body": {
+        "grant_type": "client_credentials",
+        "client_id": "cli-ser-bot",
+        "client_secret": "acec303f-998c-4cef-b172-36bedaabe76f"
+      }
     }
   },
   "templates": {
     "MEGA_SENA": "./views/megasena.pug",
-    "DUPLA_SENA": "./views/megasena.pug",
-    "LOTOFACIL": "./views/quina.pug",
-    "LOTOMANIA": "./views/megasena.pug",
-    "LOTOGOL": "./views/megasena.pug",
-    "LOTECA": "./views/megasena.pug",
-    "TIMEMANIA": "./views/megasena.pug",
-    "DIA_DE_SORTE": "./views/megasena.pug"
+    "DUPLA_SENA": "./views/duplasena.pug",
+    "LOTOFACIL": "./views/lotofacil.pug",
+    "LOTOMANIA": "./views/lotomania.pug",
+    "LOTOGOL": "./views/lotogol.pug",
+    "LOTECA": "./views/loteca.pug",
+    "TIMEMANIA": "./views/timemania.pug",
+    "DIA_DE_SORTE": "./views/diadesorte.pug"
   }
 }
