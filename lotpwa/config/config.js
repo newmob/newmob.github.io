@@ -13,6 +13,7 @@ config.env = env;
 config.apiDestaque = {};
 config.apiConferirBilhete = {};
 config.apiAccessToken = {};
+config.logfile = configJSON.logfile;
 config.templates = {};
 config.errors = [];
 

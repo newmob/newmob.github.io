@@ -9,7 +9,7 @@ module.exports = {
             method: config.apiDestaque.method
         };
 
-        console.log("Acessando endPoint: " + config.apiDestaque.uri);
+        //console.log("Acessando endPoint: " + config.apiDestaque.uri);
 
         Request.get(header,
             (error, response, body) => {
@@ -18,7 +18,6 @@ module.exports = {
                 }
 
                 const info = JSON.parse(body);
-
                 procTemplates(config,info)
             });
 
@@ -33,7 +32,12 @@ function procTemplates(config,info) {
         const modalidade = info.payload[i].modalidade;
         const dados = info.payload[i];
         const template = config.templates[modalidade]
-        const html = pug.renderFile(template, dados); 
-        console.log(html);
+
+        if (template) {
+            const html = pug.renderFile(template, dados); 
+            console.log(html);
+        } else {
+            console.error("Template '" + modalidade + "' não configurado.");
+        }
     }
 }

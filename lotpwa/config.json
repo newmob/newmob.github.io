@@ -66,6 +66,7 @@
       }
     }
   },
+  "logfile": "./log/lotpwa.log",
   "templates": {
     "MEGA_SENA": "./views/megasena.pug",
     "DUPLA_SENA": "./views/duplasena.pug",
