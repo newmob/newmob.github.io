@@ -1,5 +1,10 @@
+console.log("config: "+ global.appDir);
+
 var configJSON = require('../config.json');
 var env = configJSON.env;
+
+// log
+var logger = require('../config/logger');
 
 console.log('\x1b[36m%s\x1b[0m', "Caixa - CEDESSP / Loterias");
 
@@ -89,9 +94,12 @@ for (var key in config.templates) {
 // erros
 // se houver erros de configuração, aborta a execução
 if (config.errors.length > 0) {
-    console.log("\x1b[33m", "Erros: verifique o arquivo de configuração 'config.json'");
+    console.log("\x1b[33m");
+    logger.log('error', 'verifique o arquivo de configuracao config.json');
+
     for (var err of config.errors) {
-        console.log("\x1b[31m", " - " + err)
+        console.log("\x1b[31m");
+        logger.log('error', err);
     }
     console.log("\x1b[0m");
     process.exit(1);
