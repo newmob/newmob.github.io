@@ -6,10 +6,11 @@ global.appDir = process.mainModule.paths[0].split('node_modules')[0].slice(0, -1
 
 const log4js = require('log4js');
 log4js.configure('./config/log4js.json');
-const logger = log4js.getLogger('default');
+const logger = log4js.getLogger('app');
 
-logger.error('Express server listening on port');
-
+logger.info('an info');
+logger.warn('a warning');
+logger.error('an error');
 // todo: gravar arquivo de log
 
 
