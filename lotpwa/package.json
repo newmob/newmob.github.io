@@ -15,7 +15,6 @@
   "author": "Marcelo Maximiano",
   "license": "ISC",
   "dependencies": {
-    "app-root-path": "^2.1.0",
     "express": "^4.16.4",
     "nodemon": "^1.18.8",
     "pug": "^2.0.3",
