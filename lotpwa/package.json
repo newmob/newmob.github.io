@@ -17,8 +17,6 @@
   "dependencies": {
     "app-root-path": "^2.1.0",
     "express": "^4.16.4",
-    "log4js": "^3.0.6",
-    "nodejslogger": "^1.2.3",
     "nodemon": "^1.18.8",
     "pug": "^2.0.3",
     "request": "^2.88.0",

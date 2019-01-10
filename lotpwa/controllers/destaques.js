@@ -1,3 +1,6 @@
+// log
+var logger = require('../config/logger');
+
 module.exports = {
 
     criaHTML: function (config) {
@@ -37,7 +40,7 @@ function procTemplates(config,info) {
             const html = pug.renderFile(template, dados); 
             console.log(html);
         } else {
-            console.error("Template '" + modalidade + "' não configurado.");
+            logger.log('error', "Template '" + modalidade + "' nao configurado.");
         }
     }
 }

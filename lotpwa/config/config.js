@@ -1,5 +1,3 @@
-console.log("config: "+ global.appDir);
-
 var configJSON = require('../config.json');
 var env = configJSON.env;
 
@@ -7,6 +5,7 @@ var env = configJSON.env;
 var logger = require('../config/logger');
 
 console.log('\x1b[36m%s\x1b[0m', "Caixa - CEDESSP / Loterias");
+logger.log('info', 'iniciado');
 
 // se não tiver a configuração de ambiente definido, assume como produção
 if (!env) {
@@ -82,12 +81,12 @@ if (config.errors.length == 0) {
 
 // templates
 config.templates = configJSON.templates;
-if (!config.templates) config.errors.push("templates HTML não configurados");
+if (!config.templates) config.errors.push("templates HTML nao configurados");
 
 for (var key in config.templates) {
     let value = config.templates[key];
     if (!fileExists(value)) {
-        config.errors.push("template " + key + ": arquivo não encontrado '" + value + "'");
+        config.errors.push("template " + key + ": arquivo nao encontrado '" + value + "'");
     }
 }
 
@@ -102,7 +101,7 @@ if (config.errors.length > 0) {
         logger.log('error', err);
     }
     console.log("\x1b[0m");
-    process.exit(1);
+    process.exitCode = 1;
 }
 
 function fileExists(fn) {

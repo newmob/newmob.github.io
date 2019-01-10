@@ -69,12 +69,12 @@
   "logfile": "./log/lotpwa.log",
   "templates": {
     "MEGA_SENA": "./views/megasena.pug",
-    "DUPLA_SENA": "./views/duplasena.pugx",
+    "DUPLA_SENA": "./views/duplasena.pug",
     "LOTOFACIL": "./views/lotofacil.pug",
-    "LOTOMANIA": "./views/lotomania.pugx",
-    "LOTOGOL": "./views/lotogol.pugx",
+    "LOTOMANIA": "./views/lotomania.pug",
+    "LOTOGOL": "./views/lotogol.pug",
     "LOTECA": "./views/loteca.pug",
-    "TIMEMANIA": "./views/timemania.pugx",
+    "TIMEMANIA": "./views/timemania.pug",
     "DIA_DE_SORTE": "./views/diadesorte.pug"
   }
 }
