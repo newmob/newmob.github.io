@@ -84,8 +84,9 @@ config.templates = configJSON.templates;
 if (!config.templates) config.errors.push("templates HTML nao configurados");
 
 for (var key in config.templates) {
-    let value = config.templates[key];
-    if (!fileExists(value)) {
+    const value = config.templates[key];
+    const fname = global.dir_views + "\\" + value;
+    if (!fileExists(fname)) {
         config.errors.push("template " + key + ": arquivo nao encontrado '" + value + "'");
     }
 }
