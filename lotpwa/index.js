@@ -16,7 +16,7 @@ logger.error('an error');
 
 
 
-process.exit(1);
+//process.exit(0);
 
 // custom express
 var app = require('./config/custom-express')();
