@@ -27,7 +27,6 @@
 // MongoDB - flexibilidade
 
 
-
 // cria variaveis globais com os caminhos utilizados pela aplicacao
 global.dir_root = process.mainModule.paths[0].split('node_modules')[0].slice(0, -1);
 global.dir_config = global.dir_root + "/config";
