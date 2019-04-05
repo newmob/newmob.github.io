@@ -44,8 +44,12 @@ function procTemplates(config, info) {
             const html = pug.renderFile(template_fname, dados);
             try {
                 const data = fs.writeFileSync(html_fname, html);
-            } catch (err) {
+            }
+            catch (err) {
                 logger.log('error', 'Erro na gravacao do arquivo ' + err)
+            }
+            finally {
+                logger.log('info', 'Arquivo gerado com sucesso: ' + html_fname)
             }
         } else {
             logger.log('error', "Template '" + modalidade + "' nao configurado.");
