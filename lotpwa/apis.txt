@@ -1,0 +1,24 @@
+[PROD]
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Mega-Sena?concurso=2142
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Lotofacil?concurso=1801
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Quina?concurso=4951
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Lotomania?concurso=1960
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Timemania?concurso=1318
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Dupla-Sena?concurso=1924
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Loteca?concurso=848
+https://api.caixa.gov.br:8443/loterias/v2/resultados/Lotogol?concurso=1047
+dia de sorte
+
+[DES]
+https://api.des.caixa:8443/loterias/v2/resultados/Mega-Sena?concurso=2144
+
+
+-QUINA
+-DUPLA_SENA
+-MEGA_SENA
+-LOTOMANIA
+-TIMEMANIA
+-DIA_DE_SORTE
+-LOTOFACIL
+-LOTECA
+-LOTOGOL

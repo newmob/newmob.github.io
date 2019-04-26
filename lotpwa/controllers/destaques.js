@@ -1,11 +1,11 @@
 // log
 var logger = require('../config/logger');
+var request = require("request");
+var config = require('../config/config');
 
 module.exports = {
 
-    criaHTML: function (config) {
-        var Request = require("request");
-
+    criaHTML: async function () {
         let header = {
             headers: config.apiDestaque.headers,
             uri: config.apiDestaque.uri,
@@ -14,7 +14,24 @@ module.exports = {
 
         //console.log("Acessando endPoint: " + config.apiDestaque.uri);
 
-        Request.get(header,
+        try {
+            console.log("call pegaToken");
+            var tokenAPI = await pegaToken();
+            var refreshToken = tokenAPI.refresh_token;
+            console.log("show pegaToken");
+            console.log(refreshToken);
+        } catch (err) {
+            if (err.message) {
+                logger.log('error', 'criaHTML abortado, erro na chamada da API de Token: ' + err.message)
+            } else {
+                errStr = JSON.stringify(err);
+                logger.log('error', 'criaHTML abortado, erro na chamada da API de Token: ' + errStr);
+            }
+            return false;
+        }
+
+        /*
+        request.get(header,
             (error, response, body) => {
                 if (error) {
                     return console.dir(error);
@@ -23,12 +40,12 @@ module.exports = {
                 const info = JSON.parse(body);
                 procTemplates(config, info)
             });
-
+        */
     }
 
 }
 
-function procTemplates(config, info) {
+async function procTemplates(config, info) {
     const pug = require('pug');
     const fs = require('fs');
 
@@ -38,7 +55,7 @@ function procTemplates(config, info) {
         const template = config.templates[modalidade];
         const template_fname = global.dir_views + "\\" + template;
         const html_fname = global.dir_html + "\\" + dados.modalidade.toLowerCase() + "_" + dados.tipoConcurso.toLowerCase() + ".html";
-        console.log(html_fname);
+        console.log(modalidade + " -> " + dados.tipoConcurso);
 
         if (template) {
             const html = pug.renderFile(template_fname, dados);
@@ -49,10 +66,30 @@ function procTemplates(config, info) {
                 logger.log('error', 'Erro na gravacao do arquivo ' + err)
             }
             finally {
-                logger.log('info', 'Arquivo gerado com sucesso: ' + html_fname)
+                //logger.log('info', 'Arquivo gerado com sucesso: ' + html_fname)
             }
         } else {
             logger.log('error', "Template '" + modalidade + "' nao configurado.");
         }
     }
+}
+
+async function pegaToken() {
+    var options = {
+        headers: config.apiAccessToken.headers,
+        url: config.apiAccessToken.uri,
+        method: config.apiAccessToken.method,
+        form: config.apiAccessToken.form
+    };
+
+    return new Promise((resolve, reject) => {
+
+        request.post(options, (err, response, body) => {
+            if (err) {
+                return reject(err);
+            } else {
+                resolve(JSON.parse(body));
+            }
+        })
+    });
 }

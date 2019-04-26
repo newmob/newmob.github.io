@@ -44,10 +44,7 @@ var logger = require('./config/logger');
 var app = require('./config/custom-express')();
 var destaques = require('./controllers/destaques');
 
-// config
-var config = require('./config/config');
-
 // se não há erros na configuração, processa os arquivos
 if (!process.exitCode) {
-    destaques.criaHTML(config);
+    destaques.criaHTML();
 }

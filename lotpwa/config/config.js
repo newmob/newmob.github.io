@@ -17,6 +17,7 @@ config.env = env;
 config.apiDestaque = {};
 config.apiConferirBilhete = {};
 config.apiAccessToken = {};
+config.apiLoterias = {};
 config.logfile = configJSON.logfile;
 config.templates = {};
 config.errors = [];
@@ -26,6 +27,7 @@ if (env == "prod") {
         config.apiDestaque = configJSON.prod.apiDestaque;
         config.apiConferirBilhete = configJSON.prod.apiConferirBilhete;
         config.apiAccessToken = configJSON.prod.apiAccessToken;
+        config.apiLoterias = configJSON.prod.apiLoterias;
     } catch (err) {
         config.errors.push("Erros na configuração das APIs de <prod>");
     }
@@ -34,6 +36,7 @@ if (env == "prod") {
         config.apiDestaque = configJSON.dev.apiDestaque;
         config.apiConferirBilhete = configJSON.dev.apiConferirBilhete;
         config.apiAccessToken = configJSON.dev.apiAccessToken;
+        config.apiLoterias = configJSON.dev.apiLoterias;
     } catch (err) {
         config.errors.push("Erros na configuração das APIs de <dev>");
     }
@@ -43,6 +46,7 @@ if (env == "prod") {
 if (!config.apiDestaque) config.errors.push("apiDestaque não configurada");
 if (!config.apiConferirBilhete) config.errors.push("apiConferirBilhete não configurada");
 if (!config.apiAccessToken) config.errors.push("apiAccessToken não configurada");
+if (!config.apiLoterias) config.errors.push("apiLoterias não configurada");
 
 // se houver erros de configuração, aborta a execução
 if (config.errors.length == 0) {
@@ -60,6 +64,10 @@ if (config.errors.length == 0) {
         config.apiAccessToken.endPoint = config.apiAccessToken.endPoint.slice(0, -1);
     }
 
+    if (config.apiLoterias.endPoint.endsWith("/")) {
+        config.apiLoterias.endPoint = config.apiLoterias.endPoint.slice(0, -1);
+    }
+
     // acrescenta, se não houver, uma barra no início do resource
     if (!config.apiDestaque.resource.startsWith("/")) {
         config.apiDestaque.resource = "/" + config.apiDestaque.resource;
@@ -73,10 +81,15 @@ if (config.errors.length == 0) {
         config.apiAccessToken.resource = "/" + config.apiAccessToken.resource.slice(0, -1);
     }
 
+    if (!config.apiLoterias.resource.startsWith("/")) {
+        config.apiLoterias.resource = "/" + config.apiLoterias.resource.slice(0, -1);
+    }
+
     // define as propriedades uri
     config.apiDestaque.uri = config.apiDestaque.endPoint + config.apiDestaque.resource;
     config.apiConferirBilhete.uri = config.apiConferirBilhete.endPoint + config.apiConferirBilhete.resource;
     config.apiAccessToken.uri = config.apiAccessToken.endPoint + config.apiAccessToken.resource;
+    config.apiLoterias.uri = config.apiLoterias.endPoint + config.apiLoterias.resource;
 }
 
 // templates

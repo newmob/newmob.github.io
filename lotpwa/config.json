@@ -26,10 +26,22 @@
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      "body": {
+      "form": {
         "grant_type": "client_credentials",
         "client_id": "cli-ser-bot",
         "client_secret": "acec303f-998c-4cef-b172-36bedaabe76f"
+      }
+    },
+    "apiLoterias": {
+      "method": "get",
+      "endPoint": "https://api.caixa.gov.br:8443/loterias",
+      "resource": "/v2/resultados",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "apikey": "l7xx1a2374e171694840aeefab7143784abe"
+      },
+      "parameters": {
+        "p1": "concurso"
       }
     }
   },
@@ -59,10 +71,22 @@
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      "body": {
+      "form": {
         "grant_type": "client_credentials",
         "client_id": "cli-ser-bot",
         "client_secret": "acec303f-998c-4cef-b172-36bedaabe76f"
+      }
+    },
+    "apiLoterias": {
+      "method": "get",
+      "endPoint": "https://api.caixa.gov.br:8443/loterias",
+      "resource": "/v2/resultados",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "apikey": "l7xx1a2374e171694840aeefab7143784abe"
+      },
+      "parameters": {
+        "p1": "concurso"
       }
     }
   },
