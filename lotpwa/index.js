@@ -33,6 +33,7 @@ global.dir_config = global.dir_root + "/config";
 global.dir_html = global.dir_root + "/html";
 global.dir_log = global.dir_root + "/log";
 global.dir_views = global.dir_root + "/views";
+global.dir_ssl = global.dir_root + "/ssl";
 
 // log
 var logger = require('./config/logger');

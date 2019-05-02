@@ -19,6 +19,7 @@ config.apiConferirBilhete = {};
 config.apiAccessToken = {};
 config.apiLoterias = {};
 config.logfile = configJSON.logfile;
+config.loterias = configJSON.loterias;
 config.templates = {};
 config.errors = [];
 
