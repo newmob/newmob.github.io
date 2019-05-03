@@ -41,6 +41,7 @@ var logger = require('./config/logger');
 // todo: gravar arquivo de log
 
 
+
 // custom express
 var app = require('./config/custom-express')();
 var destaques = require('./controllers/destaques');

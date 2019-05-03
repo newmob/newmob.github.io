@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "format-currency-to-br": "^1.0.0",
     "hashids": "^1.2.2",
     "nodemon": "^1.18.8",
     "pug": "^2.0.3",

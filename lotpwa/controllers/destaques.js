@@ -1,3 +1,4 @@
+// 03-05-2019 continuar acrescentando os campos da Megasena na complementaResultados
 var logger = require('../config/logger');
 var request = require("request");
 var config = require('../config/config');
@@ -27,10 +28,13 @@ module.exports = {
         config.apiLoterias.headers.Authorization = `Bearer ${refreshToken}`;
         // ----------------------------------------------------------------------------------------------
 
-        const teste = await criaDados();
-        console.log(teste);
+        var dados = await criaDados();
+        //console.log("---dados---");
+        //console.log(dados);
 
-        //const res = pegaJsonResultados();
+        console.log("---complementaResultados---");
+        const res = await complementaResultados(dados);
+        console.log(res);
 
     }
 
@@ -105,14 +109,11 @@ async function pegaResultadoLoteria(loteria) {
     });
 }
 
-async function pegaJsonResultados() {
+async function complementaResultados(dados) {
     var retJson = [];
 
-    // ----------------------------------------------------------------------------------------------
-    // faz a chamada da API de resultados, loteria por loteria
-    // Obs.: quando a nova API de loterias estiver pronta, deve substituir todo esse bloco
-    for (const key in config.loterias) {
-        let loteria = config.loterias[key];
+    for (i = 0; i < dados.length; i++) {
+        let loteria = config.loterias[dados[i].modalidade];
         var json = "";
         console.log(loteria);
 
@@ -132,36 +133,21 @@ async function pegaJsonResultados() {
         }
 
         if (json != "") {
-            console.log("------------------------------------");
-            console.log(json);
-            console.log("------------------------------------");
+            //console.log("------------------------------------");
+            //console.log(json);
+            //console.log("------------------------------------");
 
-            // dados de retorno
-            var dados = {};
-            dados.modalidade = key;
-            dados.descricao = "";
-            dados.tipoConcurso = "";
-            dados.concursoUltimo = "";
-            dados.concursoProximo = "";
-            dados.acumulou = "";
-            dados.dataUltimo = "";
-            dados.dataHoraSorteio = "";
-            dados.resultado = "";
-            dados.resultado2 = "";
-            dados.valorApostaMinima = 0;
-
-            switch (key) {
+            switch (dados[i].modalidade) {
                 case "MEGA_SENA":
-                    dados.descricao = loteria;
-                    dados.tipoConcurso = json.resultado.IC_CONCURSO_ESPECIAL;
-                    dados.concursoUltimo = json.resultado.concurso;
-                    dados.concursoProximo = parseInt(json.resultado.concurso, 10) + 1;
-                    dados.acumulou = json.resultado.acumulado;
-                    dados.dataUltimo = new Date(json.resultado.data);
-                    dados.dataHoraSorteio = new Date(json.resultado.DT_PROXIMO_CONCURSO);
-                    dados.resultado = json.resultado.resultado.split("-");
-                    dados.resultado2 = [];
-                    dados.valorApostaMinima = 3.50;   // hardcode - mudar quando tiver a nova API
+                    dados[i].tipoConcurso = json.resultado.IC_CONCURSO_ESPECIAL;
+                    dados[i].concursoUltimo = json.resultado.concurso;
+                    dados[i].concursoProximo = parseInt(json.resultado.concurso, 10) + 1;
+                    dados[i].acumulou = json.resultado.acumulado;
+                    dados[i].valorAcumulado = json.resultado.valor_acumulado.formatMoney();
+                    dados[i].valorEstimativa = json.resultado.VR_ESTIMATIVA.formatMoney();
+                    dados[i].dataUltimo = new Date(json.resultado.data).formatDateDMY();
+                    dados[i].resultado = json.resultado.resultado.split("-");
+                    dados[i].descEstimativa = dados[i].valorEstimativa != "" ? "Prêmio estimado para o concurso <b>" + dados[i].concursoProximo + "</b>" : "Ainda sem estimativa de prêmio";
                     break;
 
                 case "LOTOFACIL":
@@ -169,26 +155,11 @@ async function pegaJsonResultados() {
 
                 default:
                     break;
-            }
+            } // switch
+        } // if
+    } // for
 
-
-            retJson.push(dados);
-
-            /*
-                        var info = {};
-                        info.modalidade = key;
-                        info.concurso = json.concurso;   // concurso atual
-                        info.concurso_prox = info.concurso + 1;
-                        console.log(info);
-            */
-        }
-
-        break;  // remover
-
-    }
-
-    console.log(retJson);
-    return retJson;
+    return dados;
 }
 
 /* 
@@ -220,15 +191,8 @@ async function criaDados() {
             dados.modalidade = json.payload[i].modalidade;
             dados.descricao = json.payload[i].modalidadeDetalhada.descricao;
             dados.descricaoEspecial = json.payload[i].modalidadeDetalhada.descricaoEspecial;
-            dados.tipoConcurso = "";
-            dados.concursoUltimo = "";
-            dados.concursoProximo = "";
-            dados.acumulou = "";
-            dados.dataUltimo = "";
             dados.dataHoraSorteio = json.payload[i].dataHoraSorteio;
-            dados.resultado = "";
-            dados.resultado2 = "";
-            dados.valorApostaMinima = json.payload[i].valorApostaMinima;
+            dados.valorApostaMinima = json.payload[i].valorApostaMinima.formatMoney();;
             dest.push(dados);
         }
     }
@@ -252,4 +216,40 @@ async function pegaDestaques() {
             }
         })
     });
+}
+
+Object.prototype.formatMoney = function () {
+    number = this.valueOf();
+
+    if ((isNaN(number) == false) && (number != "")) {   // se for um número válido
+        number = parseFloat(number);
+
+        if (number != 0) {
+            retStr = number.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            const p_colon = retStr.indexOf(",");
+            const p_period = retStr.indexOf(".");
+
+            if (p_period > p_colon) {
+                retStr = retStr.replace(/\./g, "#");
+                retStr = retStr.replace(/\,/g, '.')
+                retStr = retStr.replace(/\#/g, ',')
+            }
+        } else {
+            retStr = "";
+        }
+    } else {
+        retStr = "";
+    }
+
+    return retStr;
+};
+
+Object.prototype.formatDateDMY = function () {
+    date = this;
+    console.log(date);
+    var strArray=['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    var d = date.getDate();
+    var m = strArray[date.getMonth()];
+    var y = date.getFullYear();
+    return '' + (d <= 9 ? '0' + d : d) + ' ' + m + ' ' + y;
 }
