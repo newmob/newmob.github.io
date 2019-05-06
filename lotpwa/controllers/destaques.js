@@ -139,18 +139,51 @@ async function complementaResultados(dados) {
 
             switch (dados[i].modalidade) {
                 case "MEGA_SENA":
-                    dados[i].tipoConcurso = json.resultado.IC_CONCURSO_ESPECIAL;
+                    dados[i].concursoEspecial = getBoolean(json.resultado.IC_CONCURSO_ESPECIAL);
+                    dados[i].titulo = (dados[i].concursoEspecial == true ? dados[i].descricaoEspecial : dados[i].descricao);
                     dados[i].concursoUltimo = json.resultado.concurso;
-                    dados[i].concursoProximo = parseInt(json.resultado.concurso, 10) + 1;
+                    dados[i].concursoProximo = parseInt(dados[i].concursoUltimo, 10) + 1;
                     dados[i].acumulou = json.resultado.acumulado;
                     dados[i].valorAcumulado = json.resultado.valor_acumulado.formatMoney();
                     dados[i].valorEstimativa = json.resultado.VR_ESTIMATIVA.formatMoney();
                     dados[i].dataUltimo = new Date(json.resultado.data).formatDateDMY();
                     dados[i].resultado = json.resultado.resultado.split("-");
                     dados[i].descEstimativa = dados[i].valorEstimativa != "" ? "Prêmio estimado para o concurso <b>" + dados[i].concursoProximo + "</b>" : "Ainda sem estimativa de prêmio";
+                    dados[i].dataHoraSorteio = mergeDataHora(json.resultado.DT_PROXIMO_CONCURSO, dados[i].dataHoraSorteio);
+                    dados[i].valorArrecadado = json.resultado.VR_ARRECADADO.formatMoney();
+                    dados[i].localSorteio = json.resultado.de_local_sorteio + " em " + json.resultado.no_cidade + ", " + json.resultado.sg_uf;
+                    // ganhadores
+                    ganhadores = [];
+                    ganhadores[0] = ["Sena - 6 números acertados", ganhadoresStr(json.resultado.ganhadores, json.resultado.valor)];
+                    ganhadores[1] = ["Quina - 5 números acertados", ganhadoresStr(json.resultado.ganhadores_quina, json.resultado.valor_quina)];
+                    ganhadores[2] = ["Quadra - 4 números acertados", ganhadoresStr(json.resultado.ganhadores_quadra, json.resultado.valor_quadra)];
+                    dados[i].ganhadores = ganhadores;
+                    console.log(dados[i].ganhadores);
                     break;
 
                 case "LOTOFACIL":
+                    dados[i].concursoEspecial = getBoolean(json.resultado.IC_CONCURSO_ESPECIAL);
+                    dados[i].titulo = (dados[i].concursoEspecial == true ? dados[i].descricaoEspecial : dados[i].descricao);
+                    dados[i].concursoUltimo = json.resultado.nu_concurso;
+                    dados[i].concursoProximo = parseInt(dados[i].concursoUltimo, 10) + 1;
+
+                    // continuar
+                    dados[i].acumulou = json.resultado.acumulado;
+                    dados[i].valorAcumulado = json.resultado.valor_acumulado.formatMoney();
+                    dados[i].valorEstimativa = json.resultado.VR_ESTIMATIVA.formatMoney();
+                    dados[i].dataUltimo = new Date(json.resultado.data).formatDateDMY();
+                    dados[i].resultado = json.resultado.resultado.split("-");
+                    dados[i].descEstimativa = dados[i].valorEstimativa != "" ? "Prêmio estimado para o concurso <b>" + dados[i].concursoProximo + "</b>" : "Ainda sem estimativa de prêmio";
+                    dados[i].dataHoraSorteio = mergeDataHora(json.resultado.DT_PROXIMO_CONCURSO, dados[i].dataHoraSorteio);
+                    dados[i].valorArrecadado = json.resultado.VR_ARRECADADO.formatMoney();
+                    dados[i].localSorteio = json.resultado.de_local_sorteio + " em " + json.resultado.no_cidade + ", " + json.resultado.sg_uf;
+                    // ganhadores
+                    ganhadores = [];
+                    ganhadores[0] = ["Sena - 6 números acertados", ganhadoresStr(json.resultado.ganhadores, json.resultado.valor)];
+                    ganhadores[1] = ["Quina - 5 números acertados", ganhadoresStr(json.resultado.ganhadores_quina, json.resultado.valor_quina)];
+                    ganhadores[2] = ["Quadra - 4 números acertados", ganhadoresStr(json.resultado.ganhadores_quadra, json.resultado.valor_quadra)];
+                    dados[i].ganhadores = ganhadores;
+                    console.log(dados[i].ganhadores);
                     break;
 
                 default:
@@ -246,10 +279,89 @@ Object.prototype.formatMoney = function () {
 
 Object.prototype.formatDateDMY = function () {
     date = this;
-    console.log(date);
-    var strArray=['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    var strArray = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
     var d = date.getDate();
     var m = strArray[date.getMonth()];
     var y = date.getFullYear();
     return '' + (d <= 9 ? '0' + d : d) + ' ' + m + ' ' + y;
+}
+
+
+function mergeDataHora(dt, hr) {
+    var data = new Date();
+    var now = new Date();
+    var d1 = new Date(dt);
+    var d2 = new Date(hr);
+
+    // cria uma data/hora pegando a data que veio da API de resultados
+    // e a hora da API de destaques
+    data.setDate(d1.getDate());
+    data.setMonth(d1.getMonth());
+    data.setFullYear(d1.getFullYear());
+    data.setHours(d2.getHours());
+    data.setMinutes(d2.getMinutes());
+    data.setSeconds(d2.getSeconds());
+
+    return data;
+}
+
+
+// Esta função deverá ser executada client-side
+function apostasEncerram(dt) {
+    var now = new Date();
+    var retStr = "";
+
+    var diff = dt - now;
+
+    if (diff > 0) {
+        var d, h, m, s;
+        s = Math.floor(diff / 1000);
+        m = Math.floor(s / 60);
+        s = s % 60;
+        h = Math.floor(m / 60);
+        m = m % 60;
+        d = Math.floor(h / 24);
+        h = h % 24;
+
+        d = 4;
+        h = 12;
+
+        if (d > 0) {
+            retStr = d + (d > 1 ? " dias " : " dia ");
+        }
+        if (h > 0) {
+            retStr = retStr + (d > 0 ? "e " : "");
+            retStr = retStr + h + (h > 1 ? " horas" : " hora");
+        }
+    }
+
+    return retStr;
+}
+
+function ganhadoresStr(num, valor) {
+    var retStr = "";
+
+    if (num > 0) {
+        retStr = num + (num > 1 ? " apostas ganhadoras, " : " aposta ganhadora, ") + valor.formatMoney();
+    } else {
+        retStr = "Não houve acertador";
+    }
+
+    return retStr;
+}
+
+function getBoolean(value) {
+    switch (value) {
+        case true:
+        case "true":
+        case "TRUE":
+        case "True":
+        case 1:
+        case "1":
+        case "on":
+        case "yes":
+            return true;
+        default:
+            return false;
+    }
 }
