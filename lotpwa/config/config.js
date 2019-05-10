@@ -20,6 +20,8 @@ config.apiAccessToken = {};
 config.apiLoterias = {};
 config.logfile = configJSON.logfile;
 config.loterias = configJSON.loterias;
+config.times = configJSON.times;
+config.meses = configJSON.meses;
 config.templates = {};
 config.errors = [];
 

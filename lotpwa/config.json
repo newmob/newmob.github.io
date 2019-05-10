@@ -1,5 +1,5 @@
 {
-  "env": "dev",
+  "env": "prod",
   "dev": {
     "apiDestaque": {
       "method": "get",
@@ -38,7 +38,7 @@
       "resource": "/v2/resultados",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
-        "apikey": "l7xx1a2374e171694840aeefab7143784abe",
+        "apikey": "l71402eaf2ac6c41919e6724d1434ba55a",
         "Authorization": "Bearer"
       },
       "parameters": {
@@ -67,7 +67,7 @@
     },
     "apiAccessToken": {
       "method": "post",
-      "endPoint": "https://logindes.caixa.gov.br/auth/realms/internet/protocol/openid-connect/token",
+      "endPoint": "https://login.caixa.gov.br/auth/realms/internet/protocol/openid-connect/token",
       "resource": "",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -75,7 +75,7 @@
       "form": {
         "grant_type": "client_credentials",
         "client_id": "cli-ser-bot",
-        "client_secret": "acec303f-998c-4cef-b172-36bedaabe76f"
+        "client_secret": "0872fe6d-5443-4728-87ec-6988eb93f442"
       }
     },
     "apiLoterias": {
@@ -84,7 +84,7 @@
       "resource": "/v2/resultados",
       "headers": {
         "Content-Type": "application/x-www-form-urlencoded",
-        "apikey": "l7xx1a2374e171694840aeefab7143784abe",
+        "apikey": "l71402eaf2ac6c41919e6724d1434ba55a",
         "Authorization": "Bearer"
       },
       "parameters": {
@@ -102,7 +102,7 @@
     "LOTOGOL": "Lotogol",
     "LOTECA": "Loteca",
     "FEDERAL": "Federal",
-    "DIA_DE_SORTE": "Dia_de_Sorte"
+    "DIA_DE_SORTE": "Dia de Sorte"
   },
   "templates": {
     "MEGA_SENA": "megasena.pug",
@@ -114,5 +114,118 @@
     "LOTECA": "loteca.pug",
     "TIMEMANIA": "timemania.pug",
     "DIA_DE_SORTE": "diadesorte.pug"
+  },
+  "meses": {
+    "1": "Janeiro",
+    "2": "Fevereiro",
+    "3": "Março",
+    "4": "Abril",
+    "5": "Maio",
+    "6": "Junho",
+    "7": "Julho",
+    "8": "Agosto",
+    "9": "Setembro",
+    "10": "Outubro",
+    "11": "Novembro",
+    "12": "Dezembro"
+  },
+  "times": {
+    "59"	: "ABC/RN",
+    "902"	: "ABC/RN",	
+    "13"	: "AMÉRICA/MG",	
+    "168"	: "AMÉRICA/RJ",	
+    "50"	: "AMÉRICA/RN",	
+    "159"	: "AMERICANO/RJ",	
+    "436"	: "ATLÉTICO/GO",	
+    "28"	: "ATLÉTICO/MG",	
+    "12"	: "ATLÉTICO/PR",	
+    "115"	: "AVAÍ/SC",	
+    "438"	: "AVAÍ/SC",	
+    "15"	: "BAHIA/BA",	
+    "161"	: "BANGU/RJ",	
+    "649"	: "BARUERI/SP",	
+    "278"	: "BOTAFOGO/PB",	
+    "3"		: "BOTAFOGO/RJ",	
+    "30"	: "BRAGANTINO/SP",	
+    "367"	: "BRASILIENSE/DF",	
+    "53"	: "CEARÁ/CE",	
+    "4"		: "CORINTHIANS/SP",	
+    "19"	: "CORITIBA/PR",	
+    "43"	: "CRB/AL",	
+    "42"	: "CRICIÚMA/SC",	
+    "11"	: "CRUZEIRO/MG",	
+    "152"	: "CSA/AL",	
+    "44"	: "DESPORTIVA/ES",	
+    "154"	: "FIGUEIRENSE/SC",	
+    "1"		: "FLAMENGO/RJ",	
+    "6"		: "FLAMENGO/RJ",	
+    "47"	: "FLUMINENSE/RJ",	
+    "232"	: "FORTALEZA/CE",	
+    "26"	: "GAMA/DF",	
+    "31"	: "GOIÁS/GO",	
+    "10"	: "GRÊMIO/RS",	
+    "22"	: "GUARANI/SP",	
+    "422"	: "INTERNACIONAL/RS",	
+    "201"	: "IPATINGA/MG",	
+    "163"	: "IPIRANGA/MG",	
+    "82"	: "ITUANO/SP",	
+    "801"	: "JI-PARANÁ/RO",	
+    "193"	: "JOINVILLE/SC",	
+    "9"		: "JUVENTUDE/RS",	
+    "148"	: "JUVENTUS/SP",	
+    "56"	: "LONDRINA/PR",	
+    "260"	: "MARÍLIA/SP",	
+    "261"	: "MIXTO/MT",	
+    "250"	: "MOTO CLUBE/MA",	
+    "505"	: "NACIONAL/AM",	
+    "181"	: "NÁUTICO/PE",	
+    "169"	: "OLARIA/RJ",	
+    "404"	: "OPERARIO/MS",	
+    "441"	: "PALMAS/TO",	
+    "25"	: "PALMEIRAS/SP",	
+    "18"	: "PARANÁ/PR",	
+    "525"	: "PAULISTA/SP",	
+    "526"	: "PAULISTA/SP",	
+    "359"	: "PAYSANDU/PA",	
+    "17"	: "PONTE PRETA/SP",	
+    "334"	: "PORTUGUESA DESPORTOS/SP",	
+    "49"	: "REMO/PA",	
+    "797"	: "RIO BRANCO/AC",	
+    "200"	: "RIO BRANCO/ES",	
+    "543"	: "RIVER/PI",	
+    "833"	: "RORAIMA/RR",	
+    "57"	: "SAMPAIO CORRÊA/MA",	
+    "16"	: "SANTA CRUZ/PE",	
+    "270"	: "SANTO ANDRE/SP",	
+    "109"	: "SANTO ANDRÉ/SP",	
+    "244"	: "SANTO ANDRÉ/SP",	
+    "21"	: "SANTOS/SP",	
+    "246"	: "SÃO CAETANO/SP",	
+    "24"	: "SÃO PAULO/SP",	
+    "504"	: "SÃO RAIMUNDO/AM",	
+    "348"	: "SERGIPE/SE",	
+    "424"	: "SPORT RECIFE/PE",	
+    "5"		: "SPORT/PE",	
+    "281"	: "TREZE/PB",	
+    "487"	: "TREZE/PB",	
+    "41"	: "TUNA LUSO/PA",	
+    "238"	: "UBERABA/MG",	
+    "164"	: "UBERLÂNDIA/MG",	
+    "524"	: "UNIÃO BARBARENSE/SP",	
+    "350"	: "UNIÃO S.JOÃO/SP",	
+    "32"	: "UNIÃO SÃO JOÃO/SP",	
+    "2"		: "VASCO DA GAMA/RJ",	
+    "423"	: "VASCO DA GAMA/RJ",	
+    "7"		: "VASCO/RJ",	
+    "58"	: "VILA NOVA/GO",	
+    "528"	: "VILLA NOVA/MG",	
+    "8"		: "VITÓRIA/BA",	
+    "52"	: "XV NOV. PIRACICABA/SP",	
+    "887"	: "XV PIRACICABA/SP",	
+    "802"	: "YPIRANGA/AP",	
+    "744"	: "YPIRANGA/PE"	
   }
 }
+
+
+
