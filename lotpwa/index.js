@@ -34,6 +34,7 @@ global.dir_html = global.dir_root + "/html";
 global.dir_log = global.dir_root + "/log";
 global.dir_views = global.dir_root + "/views";
 global.dir_ssl = global.dir_root + "/ssl";
+global.dir_json = global.dir_root + "/json";
 
 // log
 var logger = require('./config/logger');
@@ -44,9 +45,18 @@ var logger = require('./config/logger');
 
 // custom express
 var app = require('./config/custom-express')();
-var destaques = require('./controllers/destaques');
+var dadosDestaques = require('./models/dadosDestaques');
+var renderDestaques = require('./controllers/renderDestaques');
+var retDados = false;
+var retRender = false;
 
-// se não há erros na configuração, processa os arquivos
-if (!process.exitCode) {
-    destaques.criaHTML();
-}
+(async function(){
+    // se não há erros na configuração, processa os arquivos
+    if (!process.exitCode) {
+        //retDados = await dadosDestaques.criaJsonDestaques(); 
+        retDados = true;
+        if (retDados==true) {
+            retRender = await renderDestaques.criaHTML();
+        }
+    }
+  })();

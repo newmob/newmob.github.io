@@ -8,7 +8,7 @@ const logger = winston.createLogger({
             return `${info.timestamp}\t${info.level}:\t${info.message}`;
         })
     ),
-    transports: [   new winston.transports.File({ filename: global.dir_log + '/app.log', options: {flags: 'a+', encoding: 'utf8', mode: 0644} }),
+    transports: [   new winston.transports.File({ filename: global.dir_log + '/lotpwa.log', options: {flags: 'a+', encoding: 'utf8', mode: 0644} }),
                     new winston.transports.Console()
     ]
 });

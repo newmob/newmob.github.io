@@ -1,4 +1,12 @@
-// 03-05-2019 continuar acrescentando os campos da Megasena na complementaResultados
+/*
+    Caixa - CEDESSP042 - Loterias PWA
+    ----------------------------------
+    Módulo:     dadosDestaques.js
+    Objetivo:   Consolidar dados de loterias provenientes das APIs do SIWLO.
+    Obs:        Esse módulo deverá ser modificado para recuperar os dados da API do SISPL (atualmente em construção).
+    Autor:      c129426 - Marcelo de Araujo Maximiano
+    Data:       14/05/2019
+*/
 var logger = require('../config/logger');
 var request = require("request");
 var config = require('../config/config');
@@ -7,7 +15,7 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 module.exports = {
 
-    criaHTML: async function () {
+    criaJsonDestaques: async function () {
         var refreshToken = "";
 
         // ----------------------------------------------------------------------------------------------
@@ -17,10 +25,10 @@ module.exports = {
             refreshToken = tokenAPI.refresh_token;
         } catch (err) {
             if (err.message) {
-                logger.log('error', 'criaHTML abortado, erro na chamada da API de Token: ' + err.message)
+                logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de Token: ' + err.message)
             } else {
                 errStr = JSON.stringify(err);
-                logger.log('error', 'criaHTML abortado, erro na chamada da API de Token: ' + errStr);
+                logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de Token: ' + errStr);
             }
             return false;
         }
@@ -32,41 +40,21 @@ module.exports = {
         var dados = await criaDados();
         const resultados = await complementaResultados(dados);
 
-        for (i = 0; i < resultados.length; i++) {
-            console.log(resultados[i].modalidade + " : " + resultados[i].resultado);
+        //for (i = 0; i < resultados.length; i++) {
+        //    console.log(resultados[i].modalidade + " : " + resultados[i].resultado);
+        //}
+        //console.log(resultados);
+        try {
+            fs.writeFileSync(config.jsonDestaques, JSON.stringify(resultados));
+            logger.log('info', "criaJsonDestaques arquivo Json gravado com sucesso: '" + config.jsonDestaques + "'");
+        } catch (err) {
+            logger.log('error', "criaJsonDestaques erro na gravacao do arquivo jSON '" + config.jsonDestaques + "': " + err);
+            return false;
         }
-        console.log(resultados);
+
+        return true;
     }
 
-}
-
-async function procTemplates(config, info) {
-    const pug = require('pug');
-    const fs = require('fs');
-
-    for (i = 0; i < info.payload.length; i++) {
-        const modalidade = info.payload[i].modalidade;
-        const dados = info.payload[i];
-        const template = config.templates[modalidade];
-        const template_fname = global.dir_views + "\\" + template;
-        const html_fname = global.dir_html + "\\" + dados.modalidade.toLowerCase() + "_" + dados.tipoConcurso.toLowerCase() + ".html";
-        console.log(modalidade + " -> " + dados.tipoConcurso);
-
-        if (template) {
-            const html = pug.renderFile(template_fname, dados);
-            try {
-                const data = fs.writeFileSync(html_fname, html);
-            }
-            catch (err) {
-                logger.log('error', 'Erro na gravacao do arquivo ' + err)
-            }
-            finally {
-                //logger.log('info', 'Arquivo gerado com sucesso: ' + html_fname)
-            }
-        } else {
-            logger.log('error', "Template '" + modalidade + "' nao configurado.");
-        }
-    }
 }
 
 async function pegaToken() {
@@ -95,13 +83,13 @@ async function pegaToken() {
                    mas por uma característica da API, sempre deve ser passado em branco ("") para forçar
                    o a chamada da API com o parâmetro vazio. Isso porque a API tem um comportamento
                    diferente quando o parâmetro é passado em branco e quando não é passado.
-*/        
-async function pegaResultadoLoteria(loteria,concurso) {
+*/
+async function pegaResultadoLoteria(loteria, concurso) {
     var param = "";
 
     if (concurso != undefined) {
         param = "?concurso=" + concurso;
-    } 
+    }
 
     var options = {
         headers: config.apiLoterias.headers,
@@ -116,7 +104,7 @@ async function pegaResultadoLoteria(loteria,concurso) {
             var jsonBody = JSON.parse(body);
 
             if (err) {
-                console.log(err);
+                //console.log(err);
                 return reject(err);
             } else if (jsonBody.erro != undefined) {
                 return reject(jsonBody);
@@ -138,9 +126,9 @@ async function complementaResultados(dados) {
 
         // pega os dados da api de loterias
         try {
-            json = await pegaResultadoLoteria(loteria,"");
+            json = await pegaResultadoLoteria(loteria, "");
             if (json == "") {
-                logger.log('error', 'criaHTML sem resultado de ' + loteria)
+                logger.log('error', 'criaJsonDestaques sem resultado de ' + loteria)
             }
             // no caso específico da Lotogol, a API tem que ser chamada 2 vezes,
             // uma passando o parâmetro "concurso=" e outra sem parâmetro.
@@ -149,10 +137,10 @@ async function complementaResultados(dados) {
             }
         } catch (err) {
             if (err.message) {
-                logger.log('error', 'criaHTML abortado, erro na chamada da API de loterias (' + loteria + ') :' + err.message)
+                logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de loterias (' + loteria + ') :' + err.message)
             } else {
                 errStr = JSON.stringify(err);
-                logger.log('error', 'criaHTML abortado, erro na chamada da API de loterias (' + loteria + ') :' + errStr);
+                logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de loterias (' + loteria + ') :' + errStr);
             }
         }
 
@@ -394,10 +382,10 @@ async function complementaResultados(dados) {
                 } // switch
             } catch (err) {
                 if (err.message) {
-                    logger.log('error', 'criaHTML abortado, erro na chamada da API de loterias (' + dados[i].modalidade + '): ' + err.message)
+                    logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de loterias (' + dados[i].modalidade + '): ' + err.message)
                 } else {
                     errStr = JSON.stringify(err);
-                    logger.log('error', 'criaHTML abortado, erro na chamada da API de loterias (' + dados[i].modalidade + '): ' + errStr);
+                    logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de loterias (' + dados[i].modalidade + '): ' + errStr);
                 }
             }
         } // if
@@ -418,14 +406,14 @@ async function criaDados() {
     try {
         json = await pegaDestaques();
         if (json == "") {
-            logger.log('error', 'criaHTML erro ao acessar API destaques')
+            logger.log('error', 'criaJsonDestaques erro ao acessar API destaques')
         }
     } catch (err) {
         if (err.message) {
-            logger.log('error', 'criaHTML abortado, erro na chamada da API de destaques: ' + err.message)
+            logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de destaques: ' + err.message)
         } else {
             errStr = JSON.stringify(err);
-            logger.log('error', 'criaHTML abortado, erro na chamada da API de destaques: ' + errStr);
+            logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de destaques: ' + errStr);
         }
     }
 
@@ -454,7 +442,7 @@ async function pegaDestaques() {
     return new Promise((resolve, reject) => {
         request.get(options, (err, response, body) => {
             if (err) {
-                console.log(err);
+                //console.log(err);
                 return reject(err);
             } else {
                 resolve(JSON.parse(body));
@@ -490,7 +478,7 @@ Object.prototype.formatMoney = function () {
 };
 
 Object.prototype.formatDateDMY = function () {
-    date = this;
+    date = new Date(this);
     var strArray = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
     var d = date.getDate();
     var m = strArray[date.getMonth()];
@@ -500,11 +488,10 @@ Object.prototype.formatDateDMY = function () {
 
 
 function mergeDataHora(dt, hr) {
+    hr = "01/01/2000 " + hr.slice(-8);
     var data = new Date();
-    var now = new Date();
     var d1 = new Date(dt);
     var d2 = new Date(hr);
-
     // cria uma data/hora pegando a data que veio da API de resultados
     // e a hora da API de destaques
     data.setDate(d1.getDate());
@@ -515,39 +502,6 @@ function mergeDataHora(dt, hr) {
     data.setSeconds(d2.getSeconds());
 
     return data;
-}
-
-
-// Esta função deverá ser executada client-side
-function apostasEncerram(dt) {
-    var now = new Date();
-    var retStr = "";
-
-    var diff = dt - now;
-
-    if (diff > 0) {
-        var d, h, m, s;
-        s = Math.floor(diff / 1000);
-        m = Math.floor(s / 60);
-        s = s % 60;
-        h = Math.floor(m / 60);
-        m = m % 60;
-        d = Math.floor(h / 24);
-        h = h % 24;
-
-        d = 4;
-        h = 12;
-
-        if (d > 0) {
-            retStr = d + (d > 1 ? " dias " : " dia ");
-        }
-        if (h > 0) {
-            retStr = retStr + (d > 0 ? "e " : "");
-            retStr = retStr + h + (h > 1 ? " horas" : " hora");
-        }
-    }
-
-    return retStr;
 }
 
 function ganhadoresStr(num, valor) {
