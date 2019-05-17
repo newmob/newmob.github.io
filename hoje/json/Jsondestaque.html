@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+
+
+
+
+<!--PEGAR JSON FETCH-->
+
+    <div id="modalidade">
+        <div id="detalhes">
+            <div id="maisdetalhes"> <!--pode ser lista, pra trazer  modalidadeDetalhada.valor , modalidadeDetalhada.descricao, modalidadeDetalhada.descricaoEspecial-->
+            </div>
+        </div>
+    </div>
+    
+
+        <div id="modalidade"></div>
+        <div id="valor"></div>
+        <div id="descricao"></div>
+        <div id="descricaoEspecial"></div>
+        <div id="tipoConcurso"></div>
+        <div id="acumulou"></div>
+        <div id="estimativa"></div>
+        <div id="numero"></div>
+        <div id="dataFechamento"></div>
+        <div id="dataAbertura"></div>
+        <div id="dataHoraSorteio"></div>
+        <div id="valorApostaMinima"></div>
+ 
+  
+<script>
+var tipo; //variavel global que vai dentro do fech
+
+
+var tipo;
+tipo = 8; //aqui ta simplicado, mas esse numero entra no array. o Array 0 é logol, 1 é loteca, 2, quina 
+
+modalidade(tipo); //aqui só to chamando a funçao, toda vez que ela for chamar é la uma parse com o valor "tipo" da array
+                    
+
+    
+    function modalidade(tipo) {//funcao chama o fetch
+//.getElementById("li").textContent = _obj_modalidade.modalidadeDetalhada.descricao
+
+
+            fetch("destaque.json")
+                .then(response => response.json()) 
+                .then(result => {
+
+                    var _obj_modalidade = result.payload[tipo];//array de 0 a 8 que chama modalidades
+                                                                //constroi as Div, ou lista, inserindo texto e localizadno pelo ID
+
+                    //OS ELEMENTOS TIRADO DO ARRAY E MOSTRADO NA DIV E LI
+                   
+
+                   document.getElementById("modalidade").textContent = _obj_modalidade.modalidade;//monta a div modalidade
+                   document.getElementById("valor").textContent = _obj_modalidade.modalidadeDetalhada.valor
+                   document.getElementById("descricao").textContent = _obj_modalidade.modalidadeDetalhada.descricao
+                   document.getElementById("descricaoEspecial").textContent = _obj_modalidade.modalidadeDetalhada.descricaoEspecial
+                   document.getElementById("tipoConcurso").textContent = _obj_modalidade.tipoConcurso
+                   document.getElementById("acumulou").textContent = _obj_modalidade.acumulou 
+                   document.getElementById("estimativa").textContent = _obj_modalidade.estimativa
+                   document.getElementById("numero").textContent = _obj_modalidade.numero
+                   document.getElementById("dataFechamento").textContent = _obj_modalidade.dataFechamento
+                   document.getElementById("dataAbertura").textContent = _obj_modalidade.dataAbertura
+                   document.getElementById("dataHoraSorteio").textContent = _obj_modalidade.dataHoraSorteio
+                   document.getElementById("valorApostaMinima").textContent = _obj_modalidade.valorApostaMinima
+
+                    console.log(_obj_modalidade);
+
+                })
+                .catch(err => {
+                // trata se alguma das promises falhar
+                console.error('Failed retrieving information', err);
+  });
+
+
+}
+
+ 
+</script>
+
+
+
+    
+
+</body>
+</html>
+
+
+
+
+
+

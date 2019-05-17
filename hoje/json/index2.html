@@ -1,0 +1,630 @@
+<!--
+ Caixa - CEDESSP
+ Prototipo LotX 2018
+ Equipe NewMob : André, Marcelo e Sergio
+-->
+<html>
+
+<head>
+	<title>Loterias</title>
+	<meta name="description" content="Loterias da Caixa Economica Federal" />
+	<meta charset="utf-8">
+	<meta name='author' content='LotX - NewMob'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://newmob.github.io/lotx/">
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
+	<meta name='apple-mobile-web-app-capable' content='yes'>
+	<meta name='apple-mobile-web-app-status-bar-style' content='default'>
+	<link rel='apple-touch-icon' href='img/icon-180x180.png'>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="manifest" href="manifest.json">
+
+	<!--CSS--->
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/sliding.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+
+	<!--Plugins--->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/itemslide.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+
+	<!--Scripts--->
+	<script src="js/sliding.js"></script>
+	<style type="text/css">
+
+    p, h1, h2, h3, h4{
+        font-family: "Times New Roman", Times, serif;
+        font-size:20px;
+        margin-inline-start: 
+
+    }
+
+	
+	</style>
+
+
+
+
+
+</head>
+
+<body>
+	<main>
+		<section>
+			<div id="scrolling">
+				<!--Slider--->
+				<ul>
+					<li>
+							<div class="container MEGA_SENA">
+
+									<div id="resultado_0" class="resultado">
+				 
+										<div class="titulo-resultado" onclick="expDiv()">
+												<h2>Resultados</h2>
+										</div>
+				
+				
+										<div class="conteudo-resultado">
+												<p id="res_0"></p>
+												<p>Box Bolinhas</p>
+												<hr/>
+												<p>Premiados</p>
+												<p>sena-ganhador</p>
+												<h1>Ganhador 1 </h1>
+												<p>quina-ganhador</p> 
+												<h1>Ganhador 1</h1>
+										</div>
+									</div>
+				
+				
+				
+									<div id="destaque_0" class="destaque">
+				
+										<div class="titulo-destaque" onclick="expDiv()">
+												<h2 id="modalidade_0"></h2>
+												<div>logotipo</div>
+										</div>
+				
+										<div class="conteudo-destaque">
+												<p id="acumulou_0"></p>
+												<p id="valor_0"></p>
+												<h3>Prêmio estimado do concurso</h3> <h3 id="numero_0"></h3> 
+											
+											<footer>
+												<hr/>
+												<p>Sorteio</p>
+												<h3 id="dataHoraSorteio_0"></h3>
+												<p> apostas encerram em </p>
+												<h3 id="dataHoraSorteio_0"></h3>
+											</footer>
+				
+										</div>
+				
+									</div>
+				 
+								</div>
+                    </li>
+                    
+
+
+                    
+					<li>
+						<div class="container MEGA_SENA">
+							<div id="resultado_1" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_1" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>mega da virada</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO1</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOFACIL">
+							<div id="resultado_2" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_2" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotofácil</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container QUINA">
+							<div id="resultado_3" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_3" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>quina</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOMANIA">
+							<div id="resultado_4" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_4" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotomania</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container TIMEMANIA">
+							<div id="resultado_5" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_5" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>timemania</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container DUPLA_SENA">
+							<div id="resultado_6" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_6" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>dupla-sena</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTECA">
+							<div id="resultado_7" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_7" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>loteca</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container LOTOGOL">
+							<div id="resultado_8" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_8" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>lotogol</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container DIA_DE_SORTE">
+							<div id="resultado_9" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_9" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>dia de sorte</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+									<P>MEU TEXTO</P>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+	</main>
+
+
+	<script>
+
+
+			modalidade(); //aqui só to chamando a funçao, toda vez que ela for chamar é la uma parse com o valor "tipo" da array
+								
+			
+				
+				function modalidade() {//funcao chama o fetch
+			
+			
+			
+						fetch("destaque.json")
+							.then(response => response.json()) 
+							.then(result => {
+			
+								var destaque_0 = result.payload[0];
+								var destaque_1 = result.payload[1];
+								var destaque_2 = result.payload[2];
+								var destaque_3 = result.payload[3];
+								var destaque_4 = result.payload[4];
+								var destaque_5 = result.payload[5];
+								var destaque_6 = result.payload[6];
+								var destaque_7 = result.payload[7];
+								var destaque_8 = result.payload[8];
+			
+							//CARD 0                  
+			
+			
+							  var acumulou_0 = destaque_0.acumulou;
+								if (acumulou_0 == true) {
+								acumulou_0 = "ACUMULOU";
+								}
+								else{
+								 acumulou_0 = "";
+								}
+
+var str1 = 'Nº';
+var str2 = destaque_0.numero;
+var str3 = '|';
+var str4 = destaque_0.dataHoraSorteio;
+var res = `${str1} ${str2} ${str3} ${str4}`;
+
+
+							  document.getElementById("modalidade_0").textContent = destaque_0.modalidade;
+							  document.getElementById("valor_0").textContent = destaque_0.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_0.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_0.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_0.tipoConcurso;
+							  document.getElementById("acumulou_0").textContent = acumulou_0;
+							  //document.getElementById("estimativa").textContent = destaque_0.estimativa;
+							  document.getElementById("numero_0").textContent = res;
+							  //document.getElementById("dataFechamento").textContent = destaque_0.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_0.dataAbertura;
+							  document.getElementById("dataHoraSorteio_0").textContent = destaque_0.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_0.valorApostaMinima;
+			
+							//CARD 1                 
+			
+			
+							  var acumulou_1 = destaque_1.acumulou_1;
+								if (acumulou_1 == true) {
+								acumulou_1 = "ACUMULOU";
+								}
+								else{
+								 acumulou_1 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_1.modalidade;
+							  document.getElementById("valor").textContent = destaque_1.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_1.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_1.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_1.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_1;
+							  //document.getElementById("estimativa").textContent = destaque_1.estimativa;
+							  document.getElementById("numero").textContent = destaque_1.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_1.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_1.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_1.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_1.valorApostaMinima;
+			
+							   
+							//CARD 2                 
+			
+							var acumulou_2 = destaque_2.acumulou;
+								if (acumulou_2 == true) {
+								acumulou_2 = "ACUMULOU";
+								}
+								else{
+								 acumulou_2 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_2.modalidade;
+							  document.getElementById("valor").textContent = destaque_2.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_2.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_2.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_2.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_2;
+							  //document.getElementById("estimativa").textContent = destaque_2.estimativa;
+							  document.getElementById("numero").textContent = destaque_2.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_2.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_2.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_2.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_2.valorApostaMinima;
+			
+			
+			 
+							//CARD 3                 
+			
+							  var acumulou_3 = destaque_3.acumulou;
+								if (acumulou_3 == true) {
+								acumulou_3 = "ACUMULOU";
+								}
+								else{
+								 acumulou_3 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_3.modalidade;
+							  document.getElementById("valor").textContent = destaque_3.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_3.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_3.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_3.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_3;
+							  //document.getElementById("estimativa").textContent = destaque_3.estimativa;
+							  document.getElementById("numero").textContent = destaque_3.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_3.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_3.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_3.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_3.valorApostaMinima;
+			
+			
+			
+							//CARD 4                 
+			
+							var acumulou_4 = destaque_4.acumulou;
+								if (acumulou_4 == true) {
+								acumulou_4 = "ACUMULOU";
+								}
+								else{
+								 acumulou_4 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_4.modalidade;
+							  document.getElementById("valor").textContent = destaque_4.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_4.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_4.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_4.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_4;
+							  //document.getElementById("estimativa").textContent = destaque_4.estimativa;
+							  document.getElementById("numero").textContent = destaque_4.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_4.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_4.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_4.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_4.valorApostaMinima;
+			
+			
+			
+							//CARD 5                  
+			
+			
+							var acumulou_5 = destaque_5.acumulou;
+								if (acumulou_5 == true) {
+								acumulou_5 = "ACUMULOU";
+								}
+								else{
+								 acumulou_5 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_5.modalidade;
+							  document.getElementById("valor").textContent = destaque_5.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_5.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_5.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_5.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_5;
+							  //document.getElementById("estimativa").textContent = destaque_5.estimativa;
+							  document.getElementById("numero").textContent = destaque_5.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_5.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_5.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_5.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_5.valorApostaMinima;
+			
+			
+			
+							//CARD 6                  
+			
+							  var acumulou_6 = destaque_6.acumulou;
+								if (acumulou_6 == true) {
+								acumulou_6 = "ACUMULOU";
+								}
+								else{
+								 acumulou_6 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_6.modalidade;
+							  document.getElementById("valor").textContent = destaque_6.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_6.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_6.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_6.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_6;
+							  //document.getElementById("estimativa").textContent = destaque_6.estimativa;
+							  document.getElementById("numero").textContent = destaque_6.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_6.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_6.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_6.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_6.valorApostaMinima;
+			
+			
+			
+							//CARD 7                  
+			
+			
+							  var acumulou_7 = destaque_7.acumulou;
+								if (acumulou_7 == true) {
+								acumulou_7 = "ACUMULOU";
+								}
+								else{
+								 acumulou_7 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_7.modalidade;
+							  document.getElementById("valor").textContent = destaque_7.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_7.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_7.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_7.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_7;
+							  //document.getElementById("estimativa").textContent = destaque_7.estimativa;
+							  document.getElementById("numero").textContent = destaque_7.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_7.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_7.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_7.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_7.valorApostaMinima;
+			
+			
+							//CARD 8                  
+			
+			
+							   var acumulou_8 = destaque_8.acumulou;
+								if (acumulou_8 == true) {
+								acumulou_8 = "ACUMULOU";
+								}
+								else{
+								 acumulou_8 = "";
+								}
+			
+							  document.getElementById("modalidade").textContent = destaque_8.modalidade;
+							  document.getElementById("valor").textContent = destaque_8.modalidadeDetalhada.valor;
+							  //document.getElementById("descricao").textContent = destaque_8.modalidadeDetalhada.descricao;
+							  //document.getElementById("descricaoEspecial").textContent = destaque_8.modalidadeDetalhada.descricaoEspecial;
+							  //document.getElementById("tipoConcurso").textContent = destaque_8.tipoConcurso;
+							  document.getElementById("acumulou").textContent = acumulou_8;
+							  //document.getElementById("estimativa").textContent = destaque_8.estimativa;
+							  document.getElementById("numero").textContent = destaque_8.numero;
+							  //document.getElementById("dataFechamento").textContent = destaque_8.dataFechamento;
+							  //document.getElementById("dataAbertura").textContent = destaque_8.dataAbertura;
+							  document.getElementById("dataHoraSorteio").textContent = destaque_8.dataHoraSorteio;
+							  //document.getElementById("valorApostaMinima").textContent = destaque_8.valorApostaMinima;
+			
+			
+							})
+							.catch(err => {
+							// trata se alguma das promises falhar
+							console.error('Failed retrieving information', err);
+			  });
+			
+			
+			}
+			
+			 
+			</script>
+			
+
+
+
+
+</body>
+
+</html>

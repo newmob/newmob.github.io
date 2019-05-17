@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(150, 163, 173);
+	color: #333333;
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    margin: 10px;
+    padding: 0;
+}
+
+p {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 14px;
+    text-align : left;
+    color: white;
+    margin: 0 0 5px 0;
+}    
+
+h3 {
+    color: white;
+	font: 100% verdana, arial, geneva, tahoma, sans-serif;
+	font-size: 16px;
+    background-image: url(../img/icon-megasena.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    font-size: 18px;
+    text-align: left;
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 40px;
+    top: 0;
+    left: 0;    
+}
+
+.closeButton {
+    background-image: url(../img/icon-close.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-color:none;
+    height: 32px;
+    width: 32px;
+    margin-right: 0;
+    margin-left: auto;
+    display: inline-block;
+    float: right;
+    /* retirando o texto da frente */
+    text-indent: -9999px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;   
+}
+
+section {
+    margin: 0px;
+    padding: 0px;
+}
+
+div .modalidade {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align : center;
+    color:black;
+    margin: 0 0 5px 0;
+}
+
+div .concurso {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align : center;
+    color:rgb(233, 241, 156);
+    margin: 0 0 5px 0;
+}
+
+div .descricao {
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align : center;
+    color: white;
+    margin: 30px 0 10px 0;
+}
+
+div .valor {
+    font: 100% arial, geneva, tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align : center;
+    color:rgb(233, 235, 129);
+    margin: 0 0 5px 0;
+}
+
+.resultado button {
+    display: block;
+    padding: 10px;
+    background-color: rgb(88, 182, 150);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px rgba(30,30,30,0.5);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 1px 0 1px black;
+    transition: 0.3s;
+    margin: 40px auto;
+}

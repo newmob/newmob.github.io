@@ -1,0 +1,177 @@
+<!--
+ Caixa - CEDESSP
+ Prototipo LotX 2018
+ Equipe NewMob : André, Marcelo e Sergio
+-->
+<html>
+
+<head>
+	<title>Loterias</title>
+	<meta name="description" content="Loterias da Caixa Economica Federal" />
+	<meta charset="utf-8">
+	<meta name='author' content='LotX - NewMob'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://newmob.github.io/lotx/">
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
+	<meta name='apple-mobile-web-app-capable' content='yes'>
+	<meta name='apple-mobile-web-app-status-bar-style' content='default'>
+	<link rel='apple-touch-icon' href='img/icon-180x180.png'>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="manifest" href="manifest.json">
+
+	<!--CSS--->
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/sliding.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+
+	<!--Plugins--->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/itemslide.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+
+	<!--Scripts--->
+	<script src="js/sliding.js"></script>
+</head>
+
+<body>
+	<main>
+		<section>
+			<div id="scrolling">
+				<!--Slider--->
+				<ul id="ulCards">
+					<li id="card">
+						<div class="container MEGA_SENA">
+							<div id="resultado_0" class="resultado">
+								<div class="titulo-resultado" onclick="expDiv()">
+									<h2>Resultados</h2>
+								</div>
+								<div class="conteudo-resultado">
+									<p>texto resultado</p>
+									<p>texto resultado</p>
+								</div>
+							</div>
+							<div id="destaque_0" class="destaque">
+								<div class="titulo-destaque" onclick="expDiv()">
+									<h2>mega-sena</h2>
+									<div>logotipo</div>
+								</div>
+								<div class="conteudo-destaque">
+									<p class="acumulou">ACUMULOU!</p>
+									<p class="valor">R$ 33.000.000,00</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+	</main>
+
+	<script>
+		function cloneCard(destaque) {
+			if (destaque.numero > 0) {
+				console.log(destaque.numero);
+				$clone = $("#card:first").clone(true);
+				$clone.find(".container").removeClass('MEGA_SENA').addClass(destaque.modalidade);
+
+				$clone.children("#resultado_0").attr("resultado_0", "resultado_" + destaque.numero);
+				$clone.children("#destaque_0").attr("destaque_0", "destaque_" + destaque.numero);
+
+				$clone.appendTo("#ulCards");
+				carousel = $("ul");
+				carousel.itemslide();
+			}
+		}
+
+		function xcloneCard(destaque) {
+			var li = document.getElementById("card");
+			var clone = li.cloneNode(true);
+
+			var div_container = clone.getElementsByClassName("container MEGA_SENA");
+			div_container[0].classList.add(destaque.modalidade);
+			div_container[0].classList.remove("MEGA_SENA");
+
+			$(div_container[0]).attr("resultado_0", "resultado_" + destaque.numero);
+			$(div_container[0]).attr("destaque_0", "destaque_" + destaque.numero);
+			$div = $(div_container[0]);
+			$divDest = $div.find("titulo-destaque");
+			$h2 = $divDest.find("h2");
+			$h2.text("marcelo");
+
+			//document.getElementById("ulCards").appendChild(clone);
+			document.getElementById("ulCards").appendChild(clone);
+
+			carousel = $("ul");
+			carousel.itemslide();
+		}
+
+		Number.prototype.pad = function (size) {
+			var s = String(this);
+			while (s.length < (size || 2)) { s = "0" + s; }
+			return s;
+		}
+
+		fetch('data/destaque.json', { headers: { 'encoding': 'UTF-8' } })
+			.then(function (response) { return response.json(); })
+			.then(function (json) {
+				//var ul = document.getElementById("ulCards");
+				var len = json.payload.length;
+				for (var i = 0; i < len; i++) {
+					var destaque = new Object();
+					// ------ dados
+					destaque.numero = i;
+					destaque.modalidade = json.payload[i].modalidade;
+					destaque.descricao = json.payload[i].modalidadeDetalhada.descricaoEspecial == "" ? json.payload[i].modalidadeDetalhada.descricao : json.payload[i].modalidadeDetalhada.descricaoEspecial;
+					destaque.flag_acumulou = json.payload[i].acumulou;
+					destaque.valorEstimativa = json.payload[i].estimativa;
+					destaque.numeroUltConcurso = json.payload[i].numero - 1;
+					destaque.numeroProxConcurso = json.payload[i].numero;
+					destaque.dataHoraSorteio = json.payload[i].dataHoraSorteio;
+					destaque.apostasEncerram = "8 dias e 5 horas";
+					destaque.valorApostaMinima = "R$" + json.payload[i].valorApostaMinima.toFixed(2).replace(".", ",");
+					destaque.dezenasSorteadas = json.payload[i].dezenasSorteadas;
+					// -----------
+					//createCard(i, modalidade);
+					cloneCard(destaque);
+				}
+			});
+
+		function createCard(number, modalidade) {
+			// acrescenta item na lista
+			var li = document.createElement('LI');
+
+			// cria a div container
+			var div_container = document.createElement("div");
+			div_container.setAttribute("class", "container " + modalidade);
+			li.appendChild(div_container);
+
+			// cria a div resultado
+			var div_resultado = document.createElement("div");
+			div_resultado.setAttribute("id", "resultado_" + number);
+			div_resultado.setAttribute("class", "resultado");
+			div_container.appendChild(div_resultado);
+
+			// cria a div destaque
+			var div_destaque = document.createElement("div");
+			div_destaque.setAttribute("id", "destaque_" + number);
+			div_destaque.setAttribute("class", "destaque");
+			div_container.appendChild(div_destaque);
+
+			document.getElementById("ulCards").appendChild(li);
+
+			//li.innerHTML = li.innerHTML + array[i];
+			//row.setAttribute("onclick", "show(panel.coffee" + (i + 1).pad(2) + ")");
+			carousel = $("ul");
+			carousel.itemslide();
+
+		}
+
+		// inicializa o carrousel
+	</script>
+
+</body>
+
+</html>

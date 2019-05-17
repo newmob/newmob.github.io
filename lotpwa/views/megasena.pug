@@ -3,44 +3,32 @@
     .titulo-resultado(onclick='expDiv()')
       h2 Resultados
     .conteudo-resultado
-      p#sorteio_data_0 AQUI
+      h2 N&ordm; #{concursoUltimo} | #{dataUltimo}
       label
-        p
-        .bola
-          h2 01
-        .bola
-          h2 02
-        .bola
-          h2 03
-        p
-        p
-        .bola
-          h2 04
-        .bola
-          h2 05
-        .bola
-          h2 06
-        p
+        - var count = 0;
+          for dezena in resultado
+            .circle= dezena
+            - count++;
+            if count >= 3
+              - count = 0
+              <br> 
       hr
-      p
-        b Sena
-      p Não houve acertador
-      p
-        b Quina
-      p 85 apostas ganhadoras
-      p
-        b Quadra
-      p 1450 apostas ganhadoras
+      h3 Premiados
+      for faixa in ganhadores
+        h4 #{faixa[0]}
+        p #{faixa[1]}
+      h3 Arrecadação total
+      p !{valorArrecadado}
   #destaque_0.destaque
     .titulo-destaque(onclick='expDiv()')
-      h2= titulo
+      h2#modalidade #{titulo}
       div logotipo
     .conteudo-destaque
-      p.acumulou acumulado
-      p.valor= valorEstimativa
-      h3 Prêmio estimado do concurso 
-        span=concursoProximo
+      if acumulado===true
+        p#acumulou.acumulou Acumulou!
+      p.estimativa.estimativa_0 !{valorEstimativa}
+      p !{descEstimativa}
       footer
         hr
         p Sorteio
-        h3#dataHoraSorteio_0= dataHoraSorteio
+        h3#dataHoraSorteio #{dataHoraSorteio}

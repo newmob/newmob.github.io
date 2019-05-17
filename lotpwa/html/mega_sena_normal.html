@@ -1,1 +1,55 @@
-<div class="container MEGA_SENA"><div class="resultado" id="resultado_0"><div class="titulo-resultado" onclick="expDiv()"><h2>Resultados</h2></div><div class="conteudo-resultado"><p id="sorteio_data_0">AQUI</p><label><p></p><div class="bola"><h2>01</h2></div><div class="bola"><h2>02</h2></div><div class="bola"><h2>03</h2></div><p></p><p></p><div class="bola"><h2>04</h2></div><div class="bola"><h2>05</h2></div><div class="bola"><h2>06</h2></div><p></p></label><hr/><p><b>Sena</b></p><p>Não houve acertador</p><p><b>Quina</b></p><p>85 apostas ganhadoras</p><p><b>Quadra</b></p><p>1450 apostas ganhadoras</p></div></div><div class="destaque" id="destaque_0"><div class="titulo-destaque" onclick="expDiv()"><h2>Mega-Sena</h2><div>logotipo</div></div><div class="conteudo-destaque"><p class="acumulou">acumulado</p><p class="valor">R$ 3.000.000,00</p><h3>Prêmio estimado do concurso <span>2151</span></h3><footer><hr/><p>Sorteio</p><h3 id="dataHoraSorteio_0">2019-05-15T21:00:00.866Z</h3></footer></div></div></div>
+<div class="container MEGA_SENA">
+    <div class="resultado" id="resultado_0">
+        <div class="titulo-resultado" onclick="expDiv()">
+            <h2>Resultados</h2>
+        </div>
+        <div class="conteudo-resultado">
+            <h2>N&ordm; 2151 | 15 mai 2019</h2><label>
+                <div class="circle">02</div>
+                <div class="circle">14</div>
+                <div class="circle">18</div><br>
+                <div class="circle">29</div>
+                <div class="circle">36</div>
+                <div class="circle">38</div><br>
+            </label>
+            <hr />
+            <h3>Premiados</h3>
+            <h4>Sena - 6 números acertados</h4>
+            <p>Não houve acertador</p>
+            <h4>Quina - 5 números acertados</h4>
+            <p>80 apostas ganhadoras, R$ 23.556,59</p>
+            <h4>Quadra - 4 números acertados</h4>
+            <p>5236 apostas ganhadoras, R$ 514,16</p>
+            <h3>Arrecadação total</h3>
+            <p>R$ 32.686.528,00</p>
+        </div>
+    </div>
+    <div class="destaque" id="destaque_0">
+        <div class="titulo-destaque" onclick="expDiv()">
+            <h2 id="modalidade">Mega-Sena</h2>
+            <div>logotipo</div>
+        </div>
+        <div class="conteudo-destaque">
+            <p class="acumulou" id="acumulou">Acumulou!</p>
+            <p class="estimativa estimativa_0">R$ 7.000.000,00</p>
+            <p>Prêmio estimado para o concurso <b>2152</b></p>
+            <footer>
+                <hr />
+                <p>Sorteio</p>
+                <h3 id="dataHoraSorteio">2019-05-18T21:00:00.280Z</h3>
+                <h3 id="minhaData"></h3>
+                <script type="text/javascript">
+                    var dt = new Date();
+                    dt.setDate(18);
+                    dt.setMonth(4);
+                    dt.setFullYear(2019);
+                    dt.setHours(19);
+                    dt.setMinutes(0);
+                    alert(dt);
+                    document.getElementById('minhaData').innerHTML = apostasEncerram(dt);
+                </script>
+                </p>
+            </footer>
+        </div>
+    </div>
+</div>

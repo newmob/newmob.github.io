@@ -1,0 +1,16 @@
+{
+  "name": "Loterias Caixa",
+  "short_name": "Loterias",
+  "icons": [
+    {
+      "src": "img/icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/lotx/index.html?launcher=true",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
+}

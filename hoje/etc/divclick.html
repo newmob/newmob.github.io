@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+    <style type="text/css">
+        #mainContainer {
+            width: 610px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            float: right;
+            height: 200px;
+            width: 100%;
+            left: 565px;
+            border: 2px red dashed;
+            background-color: rgb(97, 78, 201);
+            position: relative;
+        }
+
+        #steam {
+            height: 200px;
+            width: 400px;
+            border: 2px red dashed;
+        }
+    </style>
+    <!-- TODO: Missing CoffeeScript 2 -->
+
+    <script type="text/javascript">
+
+
+        $(window).load(function () {
+
+            $(function () {
+                var expanded = false;
+                $('#sidebar').click(function () {
+                    if (!expanded) {
+                        $(this).animate({ 'left': '100px' }, { duration: 400 });
+                        expanded = true;
+                    }
+                    else {
+                        $(this).animate({ 'left': '565px' }, { duration: 400 });
+                        expanded = false;
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="sidebar" class="sidebar"></div>
+        <div id="steam"></div>
+    </div>
+
+    <script>
+        // tell the embed parent frame the height of the content
+    </script>
+</body>
+
+</html>

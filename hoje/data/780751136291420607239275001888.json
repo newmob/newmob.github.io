@@ -1,0 +1,55 @@
+﻿{
+   "versao": "2.023.0.00.001R2",
+   "payload":    {
+      "situacao":       {
+         "valor": 100,
+         "descricao": "Premiada"
+      },
+      "locaisParaRecebimento":       [
+                  {
+            "id": 9660,
+            "descricao": "Unidade Lotérica",
+            "canal": "SISPL"
+         },
+                  {
+            "id": 9770,
+            "descricao": "Agência",
+            "canal": "SIGEL"
+         }
+      ],
+      "premio":       {
+         "valorBruto": 1500.00,
+         "valorLiquido": 1500.00,
+         "concursos": [         {
+            "concurso":             {
+               "numero": 2691,
+               "naoInicializado": false,
+               "aberto": false
+            },
+            "valorBruto": 6.34,
+            "valorLiquido": 6.34,
+            "valorIRRF": 0,
+            "faixas":             [
+                              {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "QUATORZE",
+                  "valorLiquido": 10.49
+               },
+                              {
+                  "numero": 2,
+                  "sorteio": 1,
+                  "nome": "TREZE",
+                  "valorLiquido": 2.2
+               }
+            ]
+         }],
+         "localPagamento": "Indisponível"
+      },
+      "modalidade":       {
+         "valor": 19,
+         "descricao": "Loteca",
+         "descricaoEspecial": ""
+      }
+   }
+}

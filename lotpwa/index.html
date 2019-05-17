@@ -1,6 +1,36 @@
+<!--
+ Caixa - CEDESSP
+ Prototipo Loterias PWA 2019
+-->
+<html>
+
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>Loterias</title>
+    <meta name="description" content="Loterias Caixa" />
+    <meta charset="utf-8">
+    <meta name='author' content='Caixa Economica Federal'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
+    <!-- <link rel="canonical" href=""> -->
+    <link rel='apple-touch-icon' href='img/icon-180x180.png'>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+
+    <!--CSS--->
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/sliding.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <!--Plugins--->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/itemslide.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+
+    <!--Scripts--->
+    <script src="js/sliding.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+
     <script>
         $(function () {
             $("#inc_mega_sena_normal").load("html/mega_sena_normal.html");
@@ -12,13 +42,26 @@
 <html>
 
 <body>
-    <p>teste mega_sena_normal.html</p>
-    <div id="inc_mega_sena_normal"></div>
-    <p>teste2</p>
-    <div id="inc_dupla_sena_normal"></div>
-    <p>teste3</p>
-
-
+    <main>
+        <section>
+            <div id="scrolling">
+                <!--Slider--->
+                <ul>
+                    <li>
+                        <div id="inc_mega_sena_normal"></div> 
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <a class="barcode" href="lerbilhete.html">Conferir bilhete</a>
+            </div>
+            <div>
+                <p class="prototipo">Protótipo</p>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
