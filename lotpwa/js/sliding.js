@@ -1,3 +1,26 @@
+var modalidade = {
+    MEGA_SENA_NORMAL:       0,
+    MEGA_SENA_ESPECIAL:     1,
+    LOTOFACIL_NORMAL:       2,
+    LOTOFACIL_ESPECIAL:     3,
+    QUINA_NORMAL:           4,
+    QUINA_ESPECIAL:         5,
+    LOTOMANIA_NORMAL:       6,
+    LOTOMANIA_ESPECIAL:     7,
+    TIMEMANIA_NORMAL:       8,
+    TIMEMANIA_ESPECIAL:     9,
+    DUPLA_SENA_NORMAL:      10,
+    DUPLA_SENA_ESPECIAL:    11,
+    LOTOGOL_NORMAL:         12,
+    LOTOGOL_ESPECIAL:       13,
+    LOTECA_NORMAL:          14,
+    LOTECA_ESPECIAL:        15,
+    FEDERAL_NORMAL:         16,
+    FEDERAL_ESPECIAL:       17,
+    DIA_DE_SORTE_NORMAL:    18,
+    DIA_DE_SORTE_ESPECIAL:  19
+};
+
 var carousel;
 $(document).ready(function () {
 
@@ -51,9 +74,6 @@ function apostasEncerram(dt) {
         d = Math.floor(h / 24);
         h = h % 24;
 
-        d = 4;
-        h = 12;
-
         if (d > 0) {
             retStr = d + (d > 1 ? " dias " : " dia ");
         }
@@ -65,3 +85,20 @@ function apostasEncerram(dt) {
 
     return retStr;
 }
+
+function dataSorteio(dt) {
+    var weekday = new Array(7);
+    weekday[0] = "Domingo";
+    weekday[1] = "Segunda-feira";
+    weekday[2] = "Terça-feira";
+    weekday[3] = "Quarta-feira";
+    weekday[4] = "Quinta-feira";
+    weekday[5] = "Sexta-feira";
+    weekday[6] = "Sábado";
+    var wd = weekday[dt.getDay()];
+    var months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    var d = dt.getDate();
+    var m = months[dt.getMonth()];
+
+    return wd + ', ' + (d <= 9 ? '0' + d : d) + ' de ' + m;
+  }

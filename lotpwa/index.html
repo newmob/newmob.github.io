@@ -29,9 +29,13 @@
 
     <!--Scripts--->
     <script src="js/sliding.js"></script>
+    <script src="js/w3-include-HTML.js"></script>
     <!-- <script src="js/app.js"></script> -->
 
     <script>
+        var arrDataSorteio = [];
+        var arrValorAposta = [];
+
         $(function () {
             $("#inc_mega_sena_normal").load("html/mega_sena_normal.html");
             $("#inc_dupla_sena_normal").load("html/dupla_sena_normal.html");
@@ -48,7 +52,10 @@
                 <!--Slider--->
                 <ul>
                     <li>
-                        <div id="inc_mega_sena_normal"></div> 
+                        <div id="inc_mega_sena_normal"></div>
+                    </li>
+                    <li>
+                        <div w3-include-HTML="apis.txt">My HTML include will go here.</div>
                     </li>
                 </ul>
             </div>
@@ -63,5 +70,33 @@
         </section>
     </main>
 </body>
+
+<script>
+    window.addEventListener("load", function (event) {
+        setTimeout(atualizaDados, 2000);
+    });
+
+    function atualizaDados() {
+        arrDataSorteio.forEach(atualizaDataSorteio);
+        atualizaValorAposta();
+        setTimeout(atualizaDados, 60000);   // atualiza os dados uma vez por minuto
+    }
+
+    function atualizaDataSorteio(value, index, array) {
+        console.log("setDataSorteio: " + value + " / " + index + " / " + array);
+        var dt = dataSorteio(value);
+        var ap = apostasEncerram(value);
+        if (dt != null) {
+            document.getElementById("dataHoraSorteio_" + index).textContent = dt;
+        }
+        if (ap != null) {
+            document.getElementById("apostasEncerram_" + index).textContent = ap;
+        }
+    }
+
+    function atualizaValorAposta() {
+
+    }
+</script>
 
 </html>

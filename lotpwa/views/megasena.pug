@@ -31,4 +31,9 @@
       footer
         hr
         p Sorteio
-        h3#dataHoraSorteio #{dataHoraSorteio}
+        h3#dataHoraSorteio_0 
+        p Apostas se encerram em
+        h3#apostasEncerram_0
+  script.
+    arrDataSorteio[modalidade.MEGA_SENA_NORMAL] = new Date("#{dataHoraSorteio}");
+    arrValorAposta[modalidade.MEGA_SENA_NORMAL] = "#{valorApostaMinima}";
