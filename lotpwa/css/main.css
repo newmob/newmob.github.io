@@ -3,30 +3,60 @@ body {
     font: 100% verdana, arial, geneva, tahoma, sans-serif;
 }
 
-p, h1, h3, h4{
+p,
+h1,
+h3,
+h4 {
     font: 100% verdana, arial, geneva, tahoma, sans-serif;
     font-size: 12px;
-    text-align : center;
+    text-align: center;
 }
 
 footer {
     width: 100%;
     height: 100px;
     position: absolute;
-    bottom: 80px;
+    bottom: 30px;
     left: 0;
 }
 
+footer hr {
+    border: 1px solid #e0ebeb;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 div.sorteio {
-    display: flex; 
+    display: flex;
     padding-left: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 div.sorteio.icon {
-    flex: 10%; 
+    background-size: 30px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-flow: row wrap;
+    flex: 10%;
     align-content: center;
+    height: 20;
 }
+
+div.sorteio.icon.calendar {
+    background-image: url(../img/calendar.svg);
+}
+
+div.sorteio.icon.clock {
+    background-image: url(../img/clock.svg);
+}
+
+div.sorteio.dados {
+    display: inline;
+    flex: 90%;
+    text-align: left;
+    padding-left: 2px
+}
+
 
 .circle {
     margin: 2px;
@@ -34,12 +64,12 @@ div.sorteio.icon {
     display: inline-block;
     height: 40px;
     width: 40px;
-    border: 1px solid white;  
+    border: 1px solid white;
     font-size: 20px;
     line-height: 40px;
     text-align: center;
-    vertical-align: top;    
-}    
+    vertical-align: top;
+}
 
 .container {
     width: 100%;
@@ -73,7 +103,7 @@ div.sorteio.icon {
 
 .titulo-destaque {
     width: 100%;
-    height: 75px;
+    height: 60px;
     top: 0;
     position: absolute;
 }
@@ -85,20 +115,20 @@ div.sorteio.icon {
     text-transform: lowercase;
     text-align: left;
     margin-left: 100px;
-    margin-top: 27px;
+    margin-top: 20px;
 }
 
 .titulo-resultado h2 {
     color: #FFFFFF;
     font-size: 16px;
-    font-weight: normal; 
+    font-weight: normal;
     text-align: left;
     margin-left: 95px;
     margin-top: 5px;
 }
 
 .titulo-destaque div {
-    top: 20px;
+    top: 15px;
     left: 25px;
     height: 32px;
     width: 32px;
@@ -110,115 +140,122 @@ div.sorteio.icon {
 }
 
 /* imagem de fundo do destaque */
-.MEGA_SENA > div > div[class$="titulo-destaque"] {
+.MEGA_SENA>div>div[class$="titulo-destaque"] {
     background-color: #00AB67;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
 }
 
-.LOTOFACIL > div > div[class$="titulo-destaque"] {
+.LOTOFACIL>div>div[class$="titulo-destaque"] {
     background-color: #BD3E96;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23BD3E96;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23A53384;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23BD3E96;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23A53384;stroke-width:0"/></svg>') no-repeat;
 }
 
-.QUINA > div > div[class$="titulo-destaque"] {
+.QUINA>div>div[class$="titulo-destaque"] {
     background-color: #803594;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23803594;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23702A82;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23803594;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23702A82;stroke-width:0"/></svg>') no-repeat;
 }
 
-.LOTOMANIA > div > div[class$="titulo-destaque"] {
+.LOTOMANIA>div>div[class$="titulo-destaque"] {
     background-color: #FF9A2F;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23FF9A2F;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23DD8628;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23FF9A2F;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23DD8628;stroke-width:0"/></svg>') no-repeat;
 }
 
-.TIMEMANIA > div > div[class$="titulo-destaque"] {
+.TIMEMANIA>div>div[class$="titulo-destaque"] {
     background-color: #A8CD4A;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A8CD4A;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2392B240;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A8CD4A;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2392B240;stroke-width:0"/></svg>') no-repeat;
 }
 
-.DUPLA_SENA > div > div[class$="titulo-destaque"] {
+.DUPLA_SENA>div>div[class$="titulo-destaque"] {
     background-color: #A62A52;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A62A52;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2390214A;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A62A52;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2390214A;stroke-width:0"/></svg>') no-repeat;
 }
 
-.LOTECA > div > div[class$="titulo-destaque"] {
+.LOTECA>div>div[class$="titulo-destaque"] {
     background-color: #F30025;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23F30025;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23D30220;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23F30025;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23D30220;stroke-width:0"/></svg>') no-repeat;
 }
 
-.LOTOGOL > div > div[class$="titulo-destaque"] {
+.LOTOGOL>div>div[class$="titulo-destaque"] {
     background-color: #00B7E3;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300B7E3;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009FC5;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300B7E3;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009FC5;stroke-width:0"/></svg>') no-repeat;
 }
 
-.DIA_DE_SORTE > div > div[class$="titulo-destaque"] {
+.DIA_DE_SORTE>div>div[class$="titulo-destaque"] {
     background-color: #00AB67;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>')  no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
 }
 
 /* logotipos */
-.MEGA_SENA > div > div > div {
+.MEGA_SENA>div>div>div {
     background-image: url(../img/icon-megasena.png)
 }
 
-.LOTOFACIL > div > div > div {
+.LOTOFACIL>div>div>div {
     background-image: url(../img/icon-lotofacil.png)
 }
 
-.QUINA > div > div > div {
+.QUINA>div>div>div {
     background-image: url(../img/icon-quina.png)
 }
 
-.LOTOMANIA > div > div > div {
+.LOTOMANIA>div>div>div {
     background-image: url(../img/icon-lotomania.png)
 }
 
-.TIMEMANIA > div > div > div {
+.TIMEMANIA>div>div>div {
     background-image: url(../img/icon-timemania.png)
 }
 
-.DUPLA_SENA > div > div > div {
+.DUPLA_SENA>div>div>div {
     background-image: url(../img/icon-duplasena.png)
 }
 
-.LOTECA > div > div > div {
+.LOTECA>div>div>div {
     background-image: url(../img/icon-loteca.png)
 }
 
-.LOTOGOL > div > div > div {
+.LOTOGOL>div>div>div {
     background-image: url(../img/icon-lotogol.png)
 }
 
-.DIA_DE_SORTE > div > div > div {
+.DIA_DE_SORTE>div>div>div {
     background-image: url(../img/icon-diadesorte.png)
 }
 
 /* cor da barra de titulo do resultado */
-.MEGA_SENA > div[class$="resultado"] {
+.MEGA_SENA>div[class$="resultado"] {
     background-color: #008F5B;
 }
 
-.LOTOFACIL > div[class$="resultado"] {
+.LOTOFACIL>div[class$="resultado"] {
     background-color: #9B2B7A;
 }
-.QUINA > div[class$="resultado"] {
+
+.QUINA>div[class$="resultado"] {
     background-color: #642475;
 }
-.LOTOMANIA > div[class$="resultado"] {
+
+.LOTOMANIA>div[class$="resultado"] {
     background-color: #DD8628;
 }
-.TIMEMANIA > div[class$="resultado"] {
+
+.TIMEMANIA>div[class$="resultado"] {
     background-color: #92B240;
 }
-.DUPLA_SENA > div[class$="resultado"] {
+
+.DUPLA_SENA>div[class$="resultado"] {
     background-color: #7D1A3F;
 }
-.LOTECA > div[class$="resultado"] {
+
+.LOTECA>div[class$="resultado"] {
     background-color: #D30220;
 }
-.LOTOGOL > div[class$="resultado"] {
+
+.LOTOGOL>div[class$="resultado"] {
     background-color: #009FC5;
 }
-.DIA_DE_SORTE > div[class$="resultado"] {
+
+.DIA_DE_SORTE>div[class$="resultado"] {
     background-color: #008F5B;
 }
 
@@ -231,7 +268,7 @@ div.sorteio.icon {
 }
 
 .estimativa_0 {
-    color: #00AB67; 
+    color: #00AB67;
 }
 
 .estimativa_1 {
@@ -252,7 +289,7 @@ div.sorteio.icon {
 
 .estimativa_5 {
     color: #00AB67;
- }
+}
 
 .estimativa_6 {
     color: #BD3E96;
@@ -328,10 +365,12 @@ p.sorteio {
     font-size: 0.4em;
     font-weight: normal;
     text-align: left;
+    display: block;
 }
 
 p.sorteio.conteudo {
     font-weight: bold;
+    display: block;
 }
 
 p.valor {
@@ -356,7 +395,7 @@ p.valor {
     background-size: 56px 56px;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color:none;
+    background-color: none;
     border: none;
     position: absolute;
     height: 34px;
