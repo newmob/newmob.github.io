@@ -26,6 +26,16 @@ footer hr {
     margin-top: 5px;
 }
 
+p.observacao {
+    clear: both;
+    display: block;
+    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 div.sorteio {
     display: flex;
     padding-left: 5px;
