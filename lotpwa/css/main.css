@@ -27,9 +27,8 @@ footer hr {
 }
 
 p.observacao {
-    clear: both;
     display: block;
-    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font: verdana, arial, geneva, tahoma, sans-serif;
     font-size: 12px;
     text-align: center;
     margin-bottom: 10px;
@@ -324,7 +323,7 @@ div.sorteio.dados {
     color: #FFFFFF;
     align-content: left;
     align-self: left;
-    font-size: 1em;
+    font-size: 14px;
     font-weight: normal;
     top: 40px;
     left: 8px;
@@ -342,27 +341,27 @@ div.sorteio.dados {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 0.5em;
+    font-size: 14px;
 }
 
 .conteudo-resultado h3 {
     margin-top: 15px;
     text-align: left;
     font-weight: bold;
-    font-size: 0.5em;
+    font-size: 14px;
 }
 
 .conteudo-resultado h4 {
     margin-top: 10px;
     text-align: left;
     font-weight: bold;
-    font-size: 0.4em;
+    font-size: 12px;
 }
 
 p.acumulou {
     font-family: Verdana, Geneva, sans-serif;
     color: rgb(44, 43, 43);
-    font-size: 0.8em;
+    font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
     text-align: center;
@@ -372,7 +371,7 @@ p.acumulou {
 p.sorteio {
     font-family: Verdana, Geneva, sans-serif;
     color: rgb(44, 43, 43);
-    font-size: 0.4em;
+    font-size: 11px;
     font-weight: normal;
     text-align: left;
     display: block;
@@ -386,7 +385,7 @@ p.sorteio.conteudo {
 p.valor {
     font-family: Verdana, Geneva, sans-serif;
     color: #00AB67;
-    font-size: 0.9em;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -396,7 +395,7 @@ p.valor {
 .barcode {
     font-family: Arial, Verdana, Geneva, sans-serif;
     color: rgb(39, 56, 155);
-    font-size: 0.9em;
+    font-size: 14px;
     font-weight: normal;
     text-align: center;
     text-decoration: none;

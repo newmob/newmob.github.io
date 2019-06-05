@@ -306,8 +306,8 @@
         "titulo": "Mega-Sena",
         "concursoUltimo": 2150,
         "concursoProximo": 2151,
-        "acumulado": false,
-        "valorAcumulado": "",
+        "acumulado": true,
+        "valorAcumulado": "R$ 5.000.000,00",
         "valorEstimativa": "R$ 3.000.000,00",
         "dataUltimo": "11 mai 2019",
         "resultado": [
