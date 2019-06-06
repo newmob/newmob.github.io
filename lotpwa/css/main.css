@@ -1,13 +1,13 @@
 body {
     color: #333333;
-    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 p,
 h1,
 h3,
 h4 {
-    font: 100% verdana, arial, geneva, tahoma, sans-serif;
+    font: verdana, arial, geneva, tahoma, sans-serif;
     font-size: 12px;
     text-align: center;
 }
@@ -118,6 +118,7 @@ div.sorteio.dados {
 }
 
 .titulo-destaque h2 {
+    font-family: Verdana, Geneva, sans-serif;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
