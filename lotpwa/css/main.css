@@ -119,8 +119,8 @@ div.sorteio.dados {
 
 .titulo-destaque h2 {
     font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
     color: #FFFFFF;
-    font-size: 16px;
     font-weight: bold;
     text-transform: lowercase;
     text-align: left;
@@ -129,8 +129,9 @@ div.sorteio.dados {
 }
 
 .titulo-resultado h2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
     color: #FFFFFF;
-    font-size: 16px;
     font-weight: normal;
     text-align: left;
     margin-left: 95px;
@@ -339,10 +340,11 @@ div.sorteio.dados {
 }
 
 .conteudo-resultado h2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .conteudo-resultado h3 {
