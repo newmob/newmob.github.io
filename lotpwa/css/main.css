@@ -30,7 +30,7 @@ footer hr {
 p.observacao {
     display: block;
     font: verdana, arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 4vw;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -156,47 +156,47 @@ div.sorteio.dados {
 /* imagem de fundo do destaque */
 .MEGA_SENA>div>div[class$="titulo-destaque"] {
     background-color: #00AB67;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
 }
 
 .LOTOFACIL>div>div[class$="titulo-destaque"] {
     background-color: #BD3E96;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23BD3E96;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23A53384;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23BD3E96;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23A53384;stroke-width:0"/></svg>') no-repeat;
 }
 
 .QUINA>div>div[class$="titulo-destaque"] {
     background-color: #803594;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23803594;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23702A82;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23803594;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23702A82;stroke-width:0"/></svg>') no-repeat;
 }
 
 .LOTOMANIA>div>div[class$="titulo-destaque"] {
     background-color: #FF9A2F;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23FF9A2F;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23DD8628;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23FF9A2F;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23DD8628;stroke-width:0"/></svg>') no-repeat;
 }
 
 .TIMEMANIA>div>div[class$="titulo-destaque"] {
     background-color: #A8CD4A;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A8CD4A;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2392B240;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23A8CD4A;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2392B240;stroke-width:0"/></svg>') no-repeat;
 }
 
 .DUPLA_SENA>div>div[class$="titulo-destaque"] {
     background-color: #A62A52;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23A62A52;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2390214A;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23A62A52;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2390214A;stroke-width:0"/></svg>') no-repeat;
 }
 
 .LOTECA>div>div[class$="titulo-destaque"] {
     background-color: #F30025;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%23F30025;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23D30220;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23F30025;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23D30220;stroke-width:0"/></svg>') no-repeat;
 }
 
 .LOTOGOL>div>div[class$="titulo-destaque"] {
     background-color: #00B7E3;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300B7E3;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009FC5;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%2300B7E3;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009FC5;stroke-width:0"/></svg>') no-repeat;
 }
 
 .DIA_DE_SORTE>div>div[class$="titulo-destaque"] {
     background-color: #00AB67;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 500,0 500,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
 }
 
 /* logotipos */
