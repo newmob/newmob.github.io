@@ -7,7 +7,7 @@ p,
 h1,
 h3,
 h4 {
-    font: verdana, arial, Helvetica, sans-serif;
+    font: Arial, Verdana, Helvetica, sans-serif;
     font-size: 12px;
     text-align: center;
 }
@@ -340,7 +340,7 @@ div.sorteio.dados {
 }
 
 .conteudo-resultado h2 {
-    font-family: Verdana, Helvetica, sans-serif;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
     font-size: 13px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -348,6 +348,7 @@ div.sorteio.dados {
 }
 
 .conteudo-resultado h3 {
+    font-family: Arial Narrow, Verdana, Helvetica, sans-serif;
     margin-top: 5px;
     text-align: left;
     font-weight: normal;
@@ -355,6 +356,7 @@ div.sorteio.dados {
 }
 
 .conteudo-resultado h4 {
+    font-family: Arial Narrow, Verdana, Helvetica, sans-serif;
     margin-top: 5px;
     text-align: left;
     font-weight: normal;
