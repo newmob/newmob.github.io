@@ -114,13 +114,13 @@ div.sorteio.dados {
 .titulo-destaque {
     width: 100%;
     height: 60px;
-    top: 0;
     position: absolute;
+    vertical-align: middle;
 }
 
 .titulo-destaque h2 {
     font-family: Verdana, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 4vw;
     text-size-adjust: none;
     color: #FFFFFF;
     font-weight: bold;
@@ -128,6 +128,7 @@ div.sorteio.dados {
     text-align: left;
     margin-left: 100px;
     margin-top: 20px;
+    vertical-align: middle;
 }
 
 .titulo-resultado h2 {
@@ -277,7 +278,7 @@ div.sorteio.dados {
 .estimativa {
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: large;
+    font-size: 4.5vw;
     font-weight: bold;
 }
 
@@ -309,11 +310,16 @@ div.sorteio.dados {
     color: #BD3E96;
 }
 
+.estimativa-texto {
+    font-size: 3vw;
+    font-weight: normal;
+}
+
 .conteudo-destaque {
     color: #000000;
     align-content: center;
     align-self: center;
-    top: 80px;
+    top: 60px;
     left: 8px;
     width: 95%;
     bottom: 0;
@@ -373,7 +379,7 @@ p.acumulou {
     font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     color: rgb(44, 43, 43);
-    font-size: 20px;
+    font-size: 4vw;
     font-weight: bold;
     text-transform: capitalize;
     text-align: center;
