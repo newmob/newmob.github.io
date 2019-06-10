@@ -1,6 +1,7 @@
 body {
     color: #333333;
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
 }
 
 p,
@@ -120,6 +121,7 @@ div.sorteio.dados {
 .titulo-destaque h2 {
     font-family: Verdana, Helvetica, sans-serif;
     font-size: 14px;
+    text-size-adjust: none;
     color: #FFFFFF;
     font-weight: bold;
     text-transform: lowercase;
@@ -131,6 +133,7 @@ div.sorteio.dados {
 .titulo-resultado h2 {
     font-family: Verdana, Helvetica, sans-serif;
     font-size: 13px;
+    text-size-adjust: none;
     color: #FFFFFF;
     font-weight: normal;
     text-align: left;
@@ -342,6 +345,7 @@ div.sorteio.dados {
 .conteudo-resultado h2 {
     font-family: Arial, Verdana, Helvetica, sans-serif;
     font-size: 13px;
+    text-size-adjust: none;
     margin-top: 5px;
     margin-bottom: 10px;
     font-weight: normal;
@@ -349,6 +353,7 @@ div.sorteio.dados {
 
 .conteudo-resultado h3 {
     font-family: Arial Narrow, Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     margin-top: 5px;
     text-align: left;
     font-weight: normal;
@@ -357,6 +362,7 @@ div.sorteio.dados {
 
 .conteudo-resultado h4 {
     font-family: Arial Narrow, Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     margin-top: 5px;
     text-align: left;
     font-weight: normal;
@@ -365,6 +371,7 @@ div.sorteio.dados {
 
 p.acumulou {
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     color: rgb(44, 43, 43);
     font-size: 20px;
     font-weight: bold;
@@ -375,6 +382,7 @@ p.acumulou {
 
 p.sorteio {
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     font-size: 14px;
     color: rgb(44, 43, 43);
     font-weight: normal;
@@ -389,6 +397,7 @@ p.sorteio.conteudo {
 
 p.valor {
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     color: #00AB67;
     font-size: 12px;
     font-weight: bold;
@@ -399,6 +408,7 @@ p.valor {
 
 .barcode {
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     color: rgb(39, 56, 155);
     font-size: 14px;
     font-weight: normal;
@@ -423,6 +433,7 @@ p.valor {
 
 .prototipo {
     font-family: Verdana, Helvetica, sans-serif;
+    text-size-adjust: none;
     color: rgb(207, 51, 12);
     font-size: 1.2em;
     font-weight: bold;
