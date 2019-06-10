@@ -1,13 +1,13 @@
 body {
     color: #333333;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
 }
 
 p,
 h1,
 h3,
 h4 {
-    font: verdana, arial, geneva, tahoma, sans-serif;
+    font: verdana, arial, Helvetica, sans-serif;
     font-size: 12px;
     text-align: center;
 }
@@ -28,7 +28,7 @@ footer hr {
 
 p.observacao {
     display: block;
-    font: verdana, arial, geneva, tahoma, sans-serif;
+    font: verdana, arial, Helvetica, sans-serif;
     font-size: 10px;
     text-align: center;
     margin-bottom: 10px;
@@ -118,7 +118,7 @@ div.sorteio.dados {
 }
 
 .titulo-destaque h2 {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     font-weight: bold;
@@ -129,7 +129,7 @@ div.sorteio.dados {
 }
 
 .titulo-resultado h2 {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     font-size: 13px;
     color: #FFFFFF;
     font-weight: normal;
@@ -340,7 +340,7 @@ div.sorteio.dados {
 }
 
 .conteudo-resultado h2 {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -362,7 +362,7 @@ div.sorteio.dados {
 }
 
 p.acumulou {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     color: rgb(44, 43, 43);
     font-size: 20px;
     font-weight: bold;
@@ -372,7 +372,7 @@ p.acumulou {
 }
 
 p.sorteio {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     font-size: 14px;
     color: rgb(44, 43, 43);
     font-weight: normal;
@@ -386,7 +386,7 @@ p.sorteio.conteudo {
 }
 
 p.valor {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     color: #00AB67;
     font-size: 12px;
     font-weight: bold;
@@ -396,7 +396,7 @@ p.valor {
 }
 
 .barcode {
-    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     color: rgb(39, 56, 155);
     font-size: 14px;
     font-weight: normal;
@@ -420,7 +420,7 @@ p.valor {
 }
 
 .prototipo {
-    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     color: rgb(207, 51, 12);
     font-size: 1.2em;
     font-weight: bold;
