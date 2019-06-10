@@ -29,7 +29,7 @@ footer hr {
 p.observacao {
     display: block;
     font: verdana, arial, geneva, tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -130,7 +130,7 @@ div.sorteio.dados {
 
 .titulo-resultado h2 {
     font-family: Verdana, Geneva, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: #FFFFFF;
     font-weight: normal;
     text-align: left;
@@ -351,14 +351,14 @@ div.sorteio.dados {
     margin-top: 15px;
     text-align: left;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .conteudo-resultado h4 {
     margin-top: 10px;
     text-align: left;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 p.acumulou {
@@ -373,8 +373,8 @@ p.acumulou {
 
 p.sorteio {
     font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
     color: rgb(44, 43, 43);
-    font-size: 11px;
     font-weight: normal;
     text-align: left;
     display: block;
