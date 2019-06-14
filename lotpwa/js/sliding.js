@@ -101,4 +101,4 @@ function dataSorteio(dt) {
     var m = months[dt.getMonth()];
 
     return wd + ', ' + (d <= 9 ? '0' + d : d) + ' de ' + m;
-  }
+}

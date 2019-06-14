@@ -237,6 +237,10 @@ div.sorteio.dados {
     background-image: url(../img/icon-diadesorte.png)
 }
 
+.FEDERAL>div>div>div {
+    background-image: url(../img/icon-federal.png)
+}
+
 /* cor da barra de titulo do resultado */
 .MEGA_SENA>div[class$="resultado"] {
     background-color: #008F5B;
@@ -271,7 +275,11 @@ div.sorteio.dados {
 }
 
 .DIA_DE_SORTE>div[class$="resultado"] {
-    background-color: #008F5B;
+    background-color: #E8C31E;
+}
+
+.FEDERAL>div[class$="resultado"] {
+    background-color: #0A3496;
 }
 
 /* Cor do valor estimado */
@@ -291,23 +299,75 @@ div.sorteio.dados {
 }
 
 .estimativa_2 {
-    color: #803594;
+    color: #BD3E96;
 }
 
 .estimativa_3 {
-    color: #FF9A2F;
+    color: #BD3E96;
 }
 
 .estimativa_4 {
-    color: #A8CD4A;
+    color: #803594;
 }
 
 .estimativa_5 {
-    color: #00AB67;
+    color: #803594;
 }
 
 .estimativa_6 {
-    color: #BD3E96;
+    color: #FF9A2F;
+}
+
+.estimativa_7 {
+    color: #FF9A2F;
+}
+
+.estimativa_8 {
+    color: #A8CD4A;
+}
+
+.estimativa_9 {
+    color: #A8CD4A;
+}
+
+.estimativa_10 {
+    color: #7D1A3F;
+}
+
+.estimativa_11 {
+    color: #7D1A3F;
+}
+
+.estimativa_12 {
+    color: #009FC5;
+}
+
+.estimativa_13 {
+    color: #009FC5;
+}
+
+.estimativa_14 {
+    color: #D30220;
+}
+
+.estimativa_15 {
+    color: #D30220;
+}
+
+.estimativa_16 {
+    color: #0A3496;
+}
+
+.estimativa_17 {
+    color: #0A3496;
+}
+
+.estimativa_18 {
+    color: #E8C31E;
+}
+
+.estimativa_19 {
+    color: #E8C31E;
 }
 
 .estimativa-texto {
@@ -361,10 +421,10 @@ div.sorteio.dados {
 .conteudo-resultado h3 {
     font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
-    margin-top: 5px;
+    margin-top: 8px;
     text-align: left;
-    font-weight: normal;
-    font-size: 4vw;
+    font-weight: bold;
+    font-size: 3.5vw;
 }
 
 .conteudo-resultado h4 {
@@ -372,8 +432,8 @@ div.sorteio.dados {
     text-size-adjust: none;
     margin-top: 8px;
     text-align: left;
-    font-weight: normal;
-    font-size: 3.5vw;;
+    font-weight: bold;
+    font-size: 3vw;;
 }
 
 p.acumulou {
