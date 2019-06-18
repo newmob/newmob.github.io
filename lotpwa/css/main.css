@@ -68,6 +68,36 @@ div.sorteio.dados {
 }
 
 
+div.coracao {
+    display: block;
+    width: 70%;
+    align-items: center;
+    padding-bottom: 5px;
+    background-image: none !important;
+}
+
+div.coracao.icon {
+    background-size: 30px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-flow: row wrap;
+    flex: 10%;
+    align-content: center;
+    height: 20;
+    background-image: url(../img/icon-coracao.png) !important;
+}
+
+div.coracao.dados {
+    display: inline;
+    flex: 90%;
+    text-align: left;
+    padding-left: 2px
+}
+
+
+
+
+
 .circle {
     margin: 2px;
     border-radius: 50%;
@@ -176,8 +206,8 @@ div.sorteio.dados {
 }
 
 .TIMEMANIA>div>div[class$="titulo-destaque"] {
-    background-color: #A8CD4A;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23A8CD4A;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%2392B240;stroke-width:0"/></svg>') no-repeat;
+    background-color: #C0C13F;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23E1DD48;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23C0C13F;stroke-width:0"/></svg>') no-repeat;
 }
 
 .DUPLA_SENA>div>div[class$="titulo-destaque"] {
@@ -259,7 +289,7 @@ div.sorteio.dados {
 }
 
 .TIMEMANIA>div[class$="resultado"] {
-    background-color: #92B240;
+    background-color: #C0C13F;
 }
 
 .DUPLA_SENA>div[class$="resultado"] {
@@ -323,11 +353,11 @@ div.sorteio.dados {
 }
 
 .estimativa_8 {
-    color: #A8CD4A;
+    color: #E1DD48
 }
 
 .estimativa_9 {
-    color: #A8CD4A;
+    color: #E1DD48;
 }
 
 .estimativa_10 {
@@ -458,6 +488,11 @@ p.sorteio {
 }
 
 p.sorteio.conteudo {
+    font-weight: bold;
+    display: block;
+}
+
+p.coracao.conteudo {
     font-weight: bold;
     display: block;
 }

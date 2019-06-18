@@ -41,6 +41,7 @@
             $("#inc_lotofacil_normal").load("html/lotofacil_normal.html");
             $("#inc_quina_normal").load("html/quina_normal.html");
             $("#inc_lotomania_normal").load("html/lotomania_normal.html");
+            $("#inc_timemania_normal").load("html/timemania_normal.html");
         });
     </script>
 </head>
@@ -56,17 +57,17 @@
                     <li>
                         <div id="inc_mega_sena_normal"></div>
                     </li>
-                    <li style="display:none"><div>dummy</div></li>
                     <li>
                         <div id="inc_lotofacil_normal"></div>
                     </li>
-                    <li style="display:none"><div>dummy</div></li>
                     <li>
                         <div id="inc_quina_normal"></div>
                     </li>
-                    <li style="display:none"><div>dummy</div></li>
                     <li>
                         <div id="inc_lotomania_normal"></div>
+                    </li>
+                    <li>
+                        <div id="inc_timemania_normal"></div>
                     </li>
                 </ul>
             </div>
@@ -94,7 +95,7 @@
     }
 
     function atualizaDataSorteio(value, index, array) {
-        console.log("setDataSorteio: " + value + " / " + index + " / " + array);
+        //console.log("setDataSorteio: " + value + " / " + index + " / " + array);
         var dt = dataSorteio(value);
         var ap = apostasEncerram(value);
         if (dt != null) {
