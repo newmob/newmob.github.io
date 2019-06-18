@@ -36,7 +36,7 @@ $(document).ready(function () {
     }); //Recalculate width and center positions and sizes when window is resized
 });
 
-var slides = 10;
+var slides = Object.keys(modalidade).length;
 var exp = [];
 exp.length = slides;
 for (i=0; i < exp.length; i++) {
@@ -45,15 +45,17 @@ for (i=0; i < exp.length; i++) {
 
 function expDiv() {
     var n = carousel.getActiveIndex();
-console.log($("#destaque_"+n));
+    idDestaque  = "#" + document.getElementsByTagName("LI")[n].getElementsByClassName("destaque")[0].id;
+    idResultado = "#" + document.getElementsByTagName("LI")[n].getElementsByClassName("resultado")[0].id;
+
     if (!exp[n]) {
-        $("#destaque_"+n).animate({ 'top': '35px' }, { duration: 400 });
-        $("#resultado_"+n).animate({ 'width': '85%' }, { duration: 400 });
+        $(idDestaque).animate({ 'top': '35px' }, { duration: 400 });
+        $(idResultado).animate({ 'width': '85%' }, { duration: 400 });
         exp[n] = true;
     }
     else {
-        $("#destaque_"+n).animate({ 'top': '87%' }, { duration: 400 });
-        $("#resultado_"+n).animate({ 'width': '100%' }, { duration: 400 });
+        $(idDestaque).animate({ 'top': '87%' }, { duration: 400 });
+        $(idResultado).animate({ 'width': '100%' }, { duration: 400 });
         exp[n] = false;
     }
 }

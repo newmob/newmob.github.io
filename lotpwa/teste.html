@@ -1,10 +1,104 @@
-<!DOCTYPE html>
-<html>
-<body>
+<html><head>
+    <title>Loterias</title>
+    <meta name="description" content="Loterias Caixa">
+    <meta charset="utf-8">
+    <meta name="author" content="Caixa Economica Federal">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <!-- <link rel="canonical" href=""> -->
+    <link rel="apple-touch-icon" href="img/icon-180x180.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
 
-<div w3-include-html="apis.txt"></div>
+    <!--CSS--->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/sliding.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
-<script src="js/w3-include-HTML.js"></script>
+    <!--Plugins--->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/itemslide.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
 
-</body>
-</html>
+    <!--Scripts--->
+    <script src="js/sliding.js"></script>
+    <script src="js/w3-include-HTML.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+
+    <script>
+        var arrDataSorteio = [];
+        var arrValorAposta = [];
+
+        $(function () {
+            $("#inc_mega_sena_normal").load("html/mega_sena_normal.html");
+            $("#inc_lotofacil_normal").load("html/lotofacil_normal.html");
+            $("#inc_quina_normal").load("html/quina_normal.html");
+            $("#inc_lotomania_normal").load("html/lotomania_normal.html");
+        });
+    </script>
+</head>
+
+
+
+<body style="">
+    <main>
+        <section>
+            <div id="scrolling">
+                <!--Slider--->
+                <ul>
+                    <li>
+                        <div id="inc_mega_sena_normal"><div class="container MEGA_SENA"><div class="resultado" id="resultado_0"><div class="titulo-resultado" onclick="expDiv()"><h2>Resultados</h2></div><div class="conteudo-resultado"><h2>Nº 2150 | 11 mai 2019</h2><label><div class="circle">23</div><div class="circle">24</div><div class="circle">26</div><br><div class="circle">38</div><div class="circle">42</div><div class="circle">49</div><br></label><p class="observacao">Esse resultado foi apurado usando a media de bayer-hayes </p><hr><h3>Premiados</h3><h4>Sena - 6 números acertados</h4><p>1 aposta ganhadora, R$&nbsp;289.420.865,00</p><h4>Quina - 5 números acertados</h4><p>838 apostas ganhadoras, R$&nbsp;30.450,20</p><h4>Quadra - 4 números acertados</h4><p>56994 apostas ganhadoras, R$&nbsp;639,59</p><h3>Arrecadação total</h3><p>R$&nbsp;442.589.014,00</p></div></div><div class="destaque" id="destaque_0"><div class="titulo-destaque" onclick="expDiv()"><h2 id="modalidade">Mega-Sena</h2><div>logotipo</div></div><div class="conteudo-destaque"><p class="acumulou" id="acumulou">Acumulou!</p><p class="estimativa estimativa_0">R$&nbsp;3.000.000,00</p><p class="estimativa-texto">Prêmio estimado para o concurso <b>2151</b></p><footer><hr><div class="sorteio"><div class="sorteio icon calendar"></div><div class="sorteio dados"><p class="sorteio">Sorteio</p><p class="sorteio conteudo" id="dataHoraSorteio_0">Sábado, 15 de junho</p></div></div><div class="sorteio"><div class="sorteio icon clock"></div><div class="sorteio dados"><p class="sorteio">Apostas se encerram em</p><p class="sorteio conteudo" id="apostasEncerram_0"></p></div></div></footer></div></div><script>arrDataSorteio[modalidade.MEGA_SENA_NORMAL] = new Date("2019-06-15T21:00:00.759Z");arrValorAposta[modalidade.MEGA_SENA_NORMAL] = "R$ 3,50";</script></div></div>
+                    </li>
+                    <li>
+                        <div id="inc_lotofacil_normal"><div class="container LOTOFACIL"><div class="resultado" id="resultado_2"><div class="titulo-resultado" onclick="expDiv()"><h2>Resultados</h2></div><div class="conteudo-resultado"><h2>Nº 1813 | 13 mai 2019</h2><label><div class="circle">01</div><div class="circle">02</div><div class="circle">04</div><div class="circle">05</div><br><div class="circle">07</div><div class="circle">08</div><div class="circle">11</div><div class="circle">13</div><br><div class="circle">14</div><div class="circle">15</div><div class="circle">16</div><div class="circle">17</div><br><div class="circle">20</div><div class="circle">23</div><div class="circle">25</div></label><p class="observacao"> </p><hr><h3>Premiados</h3><h4>15 acertos</h4><p>2 apostas ganhadoras, R$&nbsp;950.813,31</p><h4>14 acertos</h4><p>500 apostas ganhadoras, R$&nbsp;1.671,75</p><h4>13 acertos</h4><p>18416 apostas ganhadoras</p><h4>12 acertos</h4><p>225736 apostas ganhadoras</p><h4>11 acertos</h4><p>1173635 apostas ganhadoras</p><h3>Arrecadação total</h3><p>R$&nbsp;25.486.344,00</p></div></div><div class="destaque" id="destaque_2"><div class="titulo-destaque" onclick="expDiv()"><h2 id="modalidade">Lotofácil</h2><div>logotipo</div></div><div class="conteudo-destaque"><p class="estimativa estimativa_2">R$&nbsp;2.000.000,00</p><p class="estimativa-texto">Prêmio estimado para o concurso <b>1814</b></p><footer><hr><div class="sorteio"><div class="sorteio icon calendar"></div><div class="sorteio dados"><p class="sorteio">Sorteio</p><p class="sorteio conteudo" id="dataHoraSorteio_2">Sábado, 15 de junho</p></div></div><div class="sorteio"><div class="sorteio icon clock"></div><div class="sorteio dados"><p class="sorteio">Apostas se encerram em</p><p class="sorteio conteudo" id="apostasEncerram_2"></p></div></div></footer></div></div><script>arrDataSorteio[modalidade.LOTOFACIL_NORMAL] = new Date("2019-06-15T21:00:00.759Z");arrValorAposta[modalidade.LOTOFACIL_NORMAL] = "R$ 2,00";</script></div></div>
+                    </li>
+                    <li>
+                        <div id="inc_quina_normal"><div class="container QUINA"><div class="resultado" id="resultado_4"><div class="titulo-resultado" onclick="expDiv()"><h2>Resultados</h2></div><div class="conteudo-resultado"><h2>Nº 4973 | 13 mai 2019</h2><label><div class="circle">17</div><div class="circle">46</div><div class="circle">48</div><br><div class="circle">55</div><div class="circle">79</div></label><p class="observacao"> </p><hr><h3>Premiados</h3><h4>Quina - 5 números acertados</h4><p>Não houve acertador</p><h4>Quadra - 4 números acertados</h4><p>55 apostas ganhadoras, R$&nbsp;6.321,31</p><h4>Terno - 3 números acertados</h4><p>4213 apostas ganhadoras, R$&nbsp;124,09</p><h4>Duque - 2 números acertados</h4><p>107263 apostas ganhadoras, R$&nbsp;2,68</p><h3>Arrecadação total</h3><p>R$&nbsp;6.030.262,50</p></div></div><div class="destaque" id="destaque_4"><div class="titulo-destaque" onclick="expDiv()"><h2 id="modalidade">Quina</h2><div>logotipo</div></div><div class="conteudo-destaque"><p class="acumulou" id="acumulou">Acumulou!</p><p class="estimativa estimativa_4">R$&nbsp;1.350.000,00</p><p class="estimativa-texto">Prêmio estimado para o concurso <b>4974</b></p><footer><hr><div class="sorteio"><div class="sorteio icon calendar"></div><div class="sorteio dados"><p class="sorteio">Sorteio</p><p class="sorteio conteudo" id="dataHoraSorteio_4">Sábado, 15 de junho</p></div></div><div class="sorteio"><div class="sorteio icon clock"></div><div class="sorteio dados"><p class="sorteio">Apostas se encerram em</p><p class="sorteio conteudo" id="apostasEncerram_4"></p></div></div></footer></div></div><script>arrDataSorteio[modalidade.QUINA_NORMAL] = new Date("2019-06-15T21:00:00.759Z");arrValorAposta[modalidade.QUINA_NORMAL] = "R$ 1,50";</script></div></div>
+                    </li>
+                    <li>
+                        <div id="inc_lotomania_normal"><div class="container LOTOMANIA"><div class="resultado" id="resultado_6"><div class="titulo-resultado" onclick="expDiv()"><h2>Resultados</h2></div><div class="conteudo-resultado"><h2>Nº 1968 | 10 mai 2019</h2><label><div class="circle">02</div><div class="circle">04</div><div class="circle">08</div><br><div class="circle">12</div><div class="circle">13</div><div class="circle">17</div><br><div class="circle">21</div><div class="circle">22</div><div class="circle">31</div><br><div class="circle">53</div><div class="circle">54</div><div class="circle">56</div><br><div class="circle">68</div><div class="circle">69</div><div class="circle">82</div><br><div class="circle">86</div><div class="circle">93</div><div class="circle">94</div><br><div class="circle">97</div><div class="circle">98</div></label><p class="observacao"> </p><hr><h3>Premiados</h3><h4>20 números acertados</h4><p>Não houve acertador</p><h4>19 números acertados</h4><p>6 apostas ganhadoras, R$&nbsp;34.113,49</p><h4>18 números acertados</h4><p>110 apostas ganhadoras, R$&nbsp;1.661,37</p><h4>17 números acertados</h4><p>916 apostas ganhadoras, R$&nbsp;139,65</p><h4>16 números acertados</h4><p>5118 apostas ganhadoras, R$&nbsp;24,99</p><h4>15 números acertados</h4><p>22577 apostas ganhadoras, R$&nbsp;5,66</p><h4>0 acertos</h4><p>Não houve acertador</p><h3>Arrecadação total</h3><p>R$&nbsp;4.215.775,50</p></div></div><div class="destaque" id="destaque_6"><div class="titulo-destaque" onclick="expDiv()"><h2 id="modalidade">Lotomania</h2><div>logotipo</div></div><div class="conteudo-destaque"><p class="acumulou" id="acumulou">Acumulou!</p><p class="estimativa estimativa_6">R$&nbsp;1.300.000,00</p><p class="estimativa-texto">Prêmio estimado para o concurso <b>1969</b></p><footer><hr><div class="sorteio"><div class="sorteio icon calendar"></div><div class="sorteio dados"><p class="sorteio">Sorteio</p><p class="sorteio conteudo" id="dataHoraSorteio_6">Sábado, 15 de junho</p></div></div><div class="sorteio"><div class="sorteio icon clock"></div><div class="sorteio dados"><p class="sorteio">Apostas se encerram em</p><p class="sorteio conteudo" id="apostasEncerram_6"></p></div></div></footer></div></div><script>arrDataSorteio[modalidade.LOTOMANIA_NORMAL] = new Date("2019-06-15T21:00:00.759Z");arrValorAposta[modalidade.LOTOMANIA_NORMAL] = "R$ 1,50";</script></div></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <a class="barcode" href="lerbilhete.html">Conferir bilhete</a>
+            </div>
+            <div>
+                <p class="prototipo">Protótipo</p>
+            </div>
+        </section>
+    </main>
+
+
+<script>
+    window.addEventListener("load", function (event) {
+        setTimeout(atualizaDados, 2000);
+    });
+
+    function atualizaDados() {
+        arrDataSorteio.forEach(atualizaDataSorteio);
+        atualizaValorAposta();
+        setTimeout(atualizaDados, 60000);   // atualiza os dados uma vez por minuto
+    }
+
+    function atualizaDataSorteio(value, index, array) {
+        console.log("setDataSorteio: " + value + " / " + index + " / " + array);
+        var dt = dataSorteio(value);
+        var ap = apostasEncerram(value);
+        if (dt != null) {
+            document.getElementById("dataHoraSorteio_" + index).textContent = dt;
+        }
+        if (ap != null) {
+            document.getElementById("apostasEncerram_" + index).textContent = ap;
+        }
+    }
+
+    function atualizaValorAposta() {
+
+    }
+</script>
+
+</body></html>
