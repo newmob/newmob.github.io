@@ -1,11 +1,8 @@
 html {
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
-}
-
-body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #333333;
-    /*font-family: Verdana, Helvetica, sans-serif;*/
-    /*text-size-adjust: none;*/
 }
 
 p,
@@ -33,7 +30,6 @@ footer hr {
 
 p.observacao {
     display: block;
-    font: verdana, arial, Helvetica, sans-serif;
     font-size: 4vw;
     text-align: center;
     margin-bottom: 10px;
@@ -154,7 +150,6 @@ div.coracao.dados {
 }
 
 .titulo-destaque h2 {
-    font-family: Verdana, Helvetica, sans-serif;
     font-size: 4vw;
     text-size-adjust: none;
     color: #FFFFFF;
@@ -167,7 +162,6 @@ div.coracao.dados {
 }
 
 .titulo-resultado h2 {
-    font-family: Verdana, Helvetica, sans-serif;
     font-size: 4vw;
     text-size-adjust: none;
     color: #FFFFFF;
@@ -444,7 +438,6 @@ div.coracao.dados {
 }
 
 .conteudo-resultado h2 {
-    font-family: Arial, Verdana, Helvetica, sans-serif;
     font-size: 13px;
     text-size-adjust: none;
     margin-top: 5px;
@@ -453,7 +446,6 @@ div.coracao.dados {
 }
 
 .conteudo-resultado h3 {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     margin-top: 8px;
     text-align: left;
@@ -462,7 +454,6 @@ div.coracao.dados {
 }
 
 .conteudo-resultado h4 {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     margin-top: 8px;
     text-align: left;
@@ -471,7 +462,6 @@ div.coracao.dados {
 }
 
 p.acumulou {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     color: rgb(44, 43, 43);
     font-size: 4vw;
@@ -482,7 +472,6 @@ p.acumulou {
 }
 
 p.sorteio {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     font-size: 14px;
     color: rgb(44, 43, 43);
@@ -502,7 +491,6 @@ p.coracao.conteudo {
 }
 
 p.valor {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     color: #00AB67;
     font-size: 12px;
@@ -513,7 +501,6 @@ p.valor {
 }
 
 .barcode {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     color: rgb(39, 56, 155);
     font-size: 14px;
@@ -538,7 +525,6 @@ p.valor {
 }
 
 .prototipo {
-    font-family: Verdana, Helvetica, sans-serif;
     text-size-adjust: none;
     color: rgb(207, 51, 12);
     font-size: 1.2em;
