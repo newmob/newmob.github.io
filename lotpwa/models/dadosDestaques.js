@@ -38,18 +38,20 @@ module.exports = {
         // ----------------------------------------------------------------------------------------------
 
         var dados = await criaDados();
-        const resultados = await complementaResultados(dados);
+        if (dados.length > 0) {
+            const resultados = await complementaResultados(dados);
 
-        //for (i = 0; i < resultados.length; i++) {
-        //    console.log(resultados[i].modalidade + " : " + resultados[i].resultado);
-        //}
-        //console.log(resultados);
-        try {
-            fs.writeFileSync(config.jsonDestaques, JSON.stringify(resultados));
-            logger.log('info', "criaJsonDestaques arquivo Json gravado com sucesso: '" + config.jsonDestaques + "'");
-        } catch (err) {
-            logger.log('error', "criaJsonDestaques erro na gravacao do arquivo jSON '" + config.jsonDestaques + "': " + err);
-            return false;
+            //for (i = 0; i < resultados.length; i++) {
+            //    console.log(resultados[i].modalidade + " : " + resultados[i].resultado);
+            //}
+            //console.log(resultados);
+            try {
+                fs.writeFileSync(config.jsonDestaques, JSON.stringify(resultados));
+                logger.log('info', "criaJsonDestaques arquivo Json gravado com sucesso: '" + config.jsonDestaques + "'");
+            } catch (err) {
+                logger.log('error', "criaJsonDestaques erro na gravacao do arquivo jSON '" + config.jsonDestaques + "': " + err);
+                return false;
+            }
         }
 
         return true;
@@ -408,6 +410,9 @@ async function criaDados() {
         if (json == "") {
             logger.log('error', 'criaJsonDestaques erro ao acessar API destaques')
         }
+        if (!json.payload) {
+            logger.log('error', 'criaJsonDestaques erro ao acessar API destaques')
+        }
     } catch (err) {
         if (err.message) {
             logger.log('error', 'criaJsonDestaques abortado, erro na chamada da API de destaques: ' + err.message)
@@ -417,7 +422,7 @@ async function criaDados() {
         }
     }
 
-    if (json != "") {
+    if (json.payload) {
         for (i = 0; i < json.payload.length; i++) {
             var dados = {};
             dados.modalidade = json.payload[i].modalidade;
@@ -454,11 +459,14 @@ async function pegaDestaques() {
 Object.prototype.formatMoney = function () {
     number = this.valueOf();
 
-    if ((isNaN(number) == false) && (number != "")) {   // se for um número válido
+    if ((isNaN(number) == false) && (number != "")) { // se for um número válido
         number = parseFloat(number);
 
         if (number != 0) {
-            retStr = number.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            retStr = number.toLocaleString('pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            });
             const p_colon = retStr.indexOf(",");
             const p_period = retStr.indexOf(".");
 
