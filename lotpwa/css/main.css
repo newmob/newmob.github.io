@@ -1,15 +1,15 @@
 body {
     color: #333333;
-    font-family: Verdana, Helvetica, sans-serif;
-    text-size-adjust: none;
+    /*font-family: Verdana, Helvetica, sans-serif;*/
+    /*text-size-adjust: none;*/
 }
 
 p,
 h1,
 h3,
 h4 {
-    font: Arial, Verdana, Helvetica, sans-serif;
-    font-size: 12px;
+    /*font: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;*/
     text-align: center;
 }
 
