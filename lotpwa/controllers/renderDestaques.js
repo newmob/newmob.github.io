@@ -36,9 +36,13 @@ async function procTemplates(jsonDestaques) {
         const modalidade = jsonDestaques[i].modalidade;
         const dados = jsonDestaques[i];
         const template = config.templates[modalidade];
-        const template_fname = global.dir_views + "\\" + template;
+        // checar se esse barra / ou dupla // funciona no Windows
+        // no Linux/MacOs está funcionando
+        const template_fname = global.dir_views + "/" + template;
         const tipoConcurso = (dados.concursoEspecial ? "especial" : "normal");
-        const html_fname = global.dir_html + "\\" + dados.modalidade.toLowerCase() + "_" + tipoConcurso + ".html";
+        // checar se esse barra / ou dupla // funciona no Windows
+        // no Linux/MacOs está funcionando
+        const html_fname = global.dir_html + "/" + dados.modalidade.toLowerCase() + "_" + tipoConcurso + ".html";
 
         if (template) {
             try {

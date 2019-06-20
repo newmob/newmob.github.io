@@ -42,6 +42,10 @@
             $("#inc_quina_normal").load("html/quina_normal.html");
             $("#inc_lotomania_normal").load("html/lotomania_normal.html");
             $("#inc_timemania_normal").load("html/timemania_normal.html");
+            $("#inc_dupla_sena_normal").load("html/dupla_sena_normal.html");
+            $("#inc_loteca_normal").load("html/loteca_normal.html");
+            $("#inc_lotogol_normal").load("html/lotogol_normal.html");
+            $("#inc_dia_de_sorte_normal").load("html/dia_de_sorte_normal.html");
         });
     </script>
 </head>
@@ -68,6 +72,18 @@
                     </li>
                     <li>
                         <div id="inc_timemania_normal"></div>
+                    </li>
+                    <li>
+                        <div id="inc_dupla_sena_normal"></div>
+                    </li>
+                    <li>
+                        <div id="inc_loteca_normal"></div>
+                    </li>
+                    <li>
+                        <div id="inc_lotogol_normal"></div>
+                    </li>
+                    <li>
+                        <div id="inc_dia_de_sorte_normal"></div>
                     </li>
                 </ul>
             </div>
@@ -96,13 +112,15 @@
 
     function atualizaDataSorteio(value, index, array) {
         //console.log("setDataSorteio: " + value + " / " + index + " / " + array);
-        var dt = dataSorteio(value);
-        var ap = apostasEncerram(value);
-        if (dt != null) {
-            document.getElementById("dataHoraSorteio_" + index).textContent = dt;
-        }
-        if (ap != null) {
-            document.getElementById("apostasEncerram_" + index).textContent = ap;
+        if ((value != null) && (value != "Invalid Date")) {
+            var dt = dataSorteio(value);
+            var ap = apostasEncerram(value);
+            if (dt != null) {
+                document.getElementById("dataHoraSorteio_" + index).textContent = dt;
+            }
+            if (ap != null) {
+                document.getElementById("apostasEncerram_" + index).textContent = ap;
+            }
         }
     }
 

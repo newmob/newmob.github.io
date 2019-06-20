@@ -1,1 +1,63 @@
- p Sorteio
+.container.DUPLA_SENA
+  #resultado_10.resultado
+    .titulo-resultado(onclick='expDiv()')
+      h2 Resultados
+    .conteudo-resultado
+      h2 N&ordm; #{concursoUltimo} | #{dataUltimo}
+      h5 1&ordm; sorteio
+      label
+        - var count = 0;
+          for dezena in resultado
+            .circle= dezena
+            - count++;
+            if count >= 3
+              - count = 0
+              <br>
+      h5 2&ordm; sorteio
+      label
+        - var count = 0;
+          for dezena in resultado2
+            .circle= dezena
+            - count++;
+            if count >= 3
+              - count = 0
+              <br>
+      p.observacao #{observacao} 
+      hr
+      h3 Premiados 1&ordm; sorteio
+      for faixa in ganhadores
+        h4 #{faixa[0]}
+        p #{faixa[1]}
+      br
+      h3 Premiados 2&ordm; sorteio
+      for faixa in ganhadores2
+        h4 #{faixa[0]}
+        p #{faixa[1]}
+      h3 Arrecadação total
+      p !{valorArrecadado}
+  #destaque_10.destaque
+    .titulo-destaque(onclick='expDiv()')
+      h2#modalidade #{titulo}
+      div logotipo
+    .conteudo-destaque
+      if acumulado===true
+        p#acumulou.acumulou Acumulou!
+      else
+        p#acumulou.acumulou &nbsp;
+      p.estimativa.estimativa_10 !{valorEstimativa}
+      p.estimativa-texto !{descEstimativa}
+      footer
+        hr
+        .sorteio
+          .sorteio.icon.calendar
+          .sorteio.dados
+            p.sorteio Sorteio
+            p#dataHoraSorteio_10.sorteio.conteudo
+        .sorteio
+          .sorteio.icon.clock
+          .sorteio.dados
+            p.sorteio Apostas se encerram em
+            p#apostasEncerram_10.sorteio.conteudo
+  script.
+    arrDataSorteio[modalidade.DUPLA_SENA_NORMAL] = new Date("#{dataHoraSorteio}");
+    arrValorAposta[modalidade.DUPLA_SENA_NORMAL] = "#{valorApostaMinima}";

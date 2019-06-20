@@ -102,7 +102,9 @@ if (!config.templates) config.errors.push("templates HTML nao configurados");
 
 for (var key in config.templates) {
     const value = config.templates[key];
-    const fname = global.dir_views + "\\" + value;
+    // checar se esse barra / ou dupla // funciona no Windows
+    // no Linux/MacOs está funcionando
+    const fname = global.dir_views + "/" + value;
     if (!fileExists(fname)) {
         config.errors.push("template " + key + ": arquivo nao encontrado '" + value + "'");
     }

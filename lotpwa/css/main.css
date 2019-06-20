@@ -8,7 +8,9 @@ html {
 p,
 h1,
 h3,
-h4 {
+h4,
+h5,
+h6 {
     /*font: Arial, Verdana, Helvetica, sans-serif;
     font-size: 12px;*/
     text-align: center;
@@ -97,10 +99,6 @@ div.coracao.dados {
     flex: 80%;
     margin: 0px !important;
 }
-
-
-
-
 
 .circle {
     margin: 2px;
@@ -228,8 +226,8 @@ div.coracao.dados {
 }
 
 .DIA_DE_SORTE>div>div[class$="titulo-destaque"] {
-    background-color: #00AB67;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%2300AB67;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23009B63;stroke-width:0"/></svg>') no-repeat;
+    background-color: #BC9D11;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23E8C31E;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23BC9D11;stroke-width:0"/></svg>') no-repeat;
 }
 
 /* logotipos */
@@ -307,7 +305,7 @@ div.coracao.dados {
 }
 
 .DIA_DE_SORTE>div[class$="resultado"] {
-    background-color: #E8C31E;
+    background-color: #BC9D11;
 }
 
 .FEDERAL>div[class$="resultado"] {
@@ -395,11 +393,11 @@ div.coracao.dados {
 }
 
 .estimativa_18 {
-    color: #E8C31E;
+    color: #BC9D11;
 }
 
 .estimativa_19 {
-    color: #E8C31E;
+    color: #BC9D11;
 }
 
 .estimativa-texto {
@@ -461,6 +459,24 @@ div.coracao.dados {
     text-size-adjust: none;
     margin-top: 8px;
     text-align: left;
+    font-weight: bold;
+    font-size: 3vw;;
+}
+
+.conteudo-resultado h5 {
+    text-size-adjust: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vw;;
+}
+
+.conteudo-resultado h6 {
+    text-size-adjust: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
     font-weight: bold;
     font-size: 3vw;;
 }
