@@ -21,7 +21,11 @@
     var link = document.createElement('link');
     link.id = 'id2';
     link.rel = 'manifest';
-    link.href = 'manifest.json';
+    if (getOS()=="iOS") {
+       link.href = 'manifest_ios.json';
+    } else {
+       link.href = 'manifest.json';
+    }
     document.head.appendChild(link);
 </script>
 
