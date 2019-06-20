@@ -15,7 +15,15 @@
     <link rel='apple-touch-icon' href='img/icon-180x180.png'>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
+    <!-- link rel="manifest" href="manifest.json" -->
+
+ <script>   
+    var link = document.createElement('link');
+    link.id = 'id2';
+    link.rel = 'manifest';
+    link.href = 'manifest.json';
+    document.head.appendChild(link);
+</script>
 
     <!--CSS--->
     <link href="css/reset.css" rel="stylesheet" />
@@ -109,7 +117,6 @@
     window.addEventListener("load", function (event) {
         setTimeout(atualizaAposta, 2000);
         setTimeout(atualizaDados, 2000);
-        alert(getMobileOperatingSystem());
     });
 
     function atualizaDados() {
@@ -131,7 +138,7 @@
         }
     }
 
-    function getMobileOperatingSystem() {
+    function getOS() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
         if (/windows phone/i.test(userAgent)) {
