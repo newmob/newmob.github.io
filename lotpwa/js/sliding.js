@@ -29,11 +29,15 @@ $(document).ready(function () {
     carousel.itemslide({
         duration: 1800,
         swipe_sensitivity: 50 
-    }); //initialize itemslide
+    }); 
 
     $(window).resize(function () {
         carousel.reload();
-    }); //Recalculate width and center positions and sizes when window is resized
+    }); 
+
+    carousel.on('changeActiveIndex', function(event) {
+        atualizaAposta();
+    });
 });
 
 var slides = Object.keys(modalidade).length;
@@ -47,7 +51,6 @@ function expDiv() {
     var n = carousel.getActiveIndex();
     idDestaque  = "#" + document.getElementsByTagName("LI")[n].getElementsByClassName("destaque")[0].id;
     idResultado = "#" + document.getElementsByTagName("LI")[n].getElementsByClassName("resultado")[0].id;
-
     if (!exp[n]) {
         $(idDestaque).animate({ 'top': '35px' }, { duration: 400 });
         $(idResultado).animate({ 'width': '85%' }, { duration: 400 });
@@ -103,4 +106,21 @@ function dataSorteio(dt) {
     var m = months[dt.getMonth()];
 
     return wd + ', ' + (d <= 9 ? '0' + d : d) + ' de ' + m;
+}
+
+function atualizaAposta() {
+    // muda a cor da div "aposte"
+    var bgColor = getComputedStyle(document.querySelector('li.itemslide-active').querySelector("div.conteudo-destaque").querySelector("p.estimativa")).color;
+    var div = document.getElementById("aposte");
+    div.style.backgroundColor = bgColor;
+
+    // muda o valor minimo da aposta
+    indModalidade = -1;
+    var div_id = document.querySelector('li.itemslide-active').querySelector(".destaque").id;
+    var i = div_id.indexOf("_");
+    if (i > 0) {
+        var strIndex = div_id.substr(i+1);
+        indModalidade = parseInt(strIndex);
+        document.getElementById("valorAposta").innerHTML = arrValorAposta[indModalidade];
+    }
 }

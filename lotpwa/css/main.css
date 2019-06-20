@@ -5,6 +5,10 @@ html {
     color: #333333;
 }
 
+body {
+    overflow: hidden;
+}
+
 p,
 h1,
 h3,
@@ -36,6 +40,19 @@ p.observacao {
     text-align: center !important;
     margin-bottom: 3px;
     margin-top: 3px;
+}
+
+div.aposte {
+    position: absolute; 
+    width:50vw; 
+    height:20vw;
+    left: 50%;
+    top: 80%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    background-color:#00AB67;
+    transition: background 1s;
+    -webkit-transition: background 1s;   
 }
 
 div.sorteio {
@@ -94,7 +111,6 @@ div.coracao.icon {
 
 div.coracao.dados {
     display: inline;
-    margin-inline: 0px;
     padding-left: 2px !important;
     flex: 80%;
     margin: 0px !important;
@@ -104,11 +120,11 @@ div.coracao.dados {
     margin: 2px;
     border-radius: 50%;
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 8vw;
+    width: 8vw;
     border: 1px solid white;
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 4vw;
+    line-height: 8vw;
     text-align: center;
     vertical-align: top;
 }
@@ -153,7 +169,6 @@ div.coracao.dados {
 
 .titulo-destaque h2 {
     font-size: 4vw;
-    text-size-adjust: none;
     color: #FFFFFF;
     font-weight: bold;
     text-transform: lowercase;
@@ -163,9 +178,25 @@ div.coracao.dados {
     vertical-align: middle;
 }
 
+.aposte h2 {
+    font-size: 3.5vw;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 1vw;
+}
+
+.aposte h3 {
+    font-size: 4vw;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
 .titulo-resultado h2 {
     font-size: 4vw;
-    text-size-adjust: none;
     color: #FFFFFF;
     font-weight: normal;
     text-align: center;
@@ -191,7 +222,8 @@ div.coracao.dados {
 }
 
 .LOTOFACIL>div>div[class$="titulo-destaque"] {
-    background-color: #BD3E96;
+    /*background-color: #BD3E96;*/
+    background-color: blue;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 75"><polygon points="0,0 1200,0 1200,75 0,75" style="fill:%23BD3E96;stroke-width:0"/><polygon points="0,0 100,0 70,75 0,75" style="fill:%23A53384;stroke-width:0"/></svg>') no-repeat;
 }
 
@@ -440,7 +472,7 @@ div.coracao.dados {
 }
 
 .conteudo-resultado h2 {
-    font-size: 13px;
+    font-size: 3vw;
     text-size-adjust: none;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -527,22 +559,24 @@ p.valor {
 .barcode {
     text-size-adjust: none;
     color: rgb(39, 56, 155);
-    font-size: 14px;
+    font-size: 3vw;
     font-weight: normal;
     text-align: center;
     text-decoration: none;
-    padding-top: 58px;
+    padding-top: 12vw;
     background-image: url(../img/icon-barcode.png);
-    background-size: 56px 56px;
+    background-size: 12vw 12vw;
     background-repeat: no-repeat;
     background-position: top center;
     background-color: none;
-    border: none;
+    border-width: 0px;
+    border-style: solid;
+    border-color:black;
     position: absolute;
-    height: 34px;
-    width: 64px;
-    left: 10px;
-    bottom: 0px;
+    height: 7vw;
+    width: 14vw;
+    left: 1vw;
+    bottom: 1vw;
     background-color: Transparent;
     background-repeat: no-repeat;
     z-index: 1;
