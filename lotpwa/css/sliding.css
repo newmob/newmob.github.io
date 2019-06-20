@@ -22,7 +22,7 @@ ul {
     position: absolute;
     /*top:10%;*/
     margin-top:5px;
-    height: 85vh;  /* 80% */
+    height: 85%;  /* 80% / 85vh */
 
     list-style-type: none;
 
