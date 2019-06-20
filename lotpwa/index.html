@@ -90,7 +90,7 @@
         </section>
         <section>
             <div id="aposte" class="aposte">
-                <h2>Aposta mínima</h2> 
+                <h2>Aposta mínima</h2>
                 <h3><span id="valorAposta"></span></h3>
             </div>
             <div>
@@ -109,6 +109,7 @@
     window.addEventListener("load", function (event) {
         setTimeout(atualizaAposta, 2000);
         setTimeout(atualizaDados, 2000);
+        alert(getMobileOperatingSystem());
     });
 
     function atualizaDados() {
@@ -128,6 +129,24 @@
                 document.getElementById("apostasEncerram_" + index).textContent = ap;
             }
         }
+    }
+
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent)) {
+            return "Windows Phone";
+        }
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+
+        return "unknown";
     }
 </script>
 
