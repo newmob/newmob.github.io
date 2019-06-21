@@ -17,17 +17,18 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- link rel="manifest" href="manifest.json" -->
 
- <script>   
-    var link = document.createElement('link');
-    link.id = 'id2';
-    link.rel = 'manifest';
-    if (getOS()=="iOS") {
-       link.href = 'manifest_ios.json';
-    } else {
-       link.href = 'manifest.json';
-    }
-    document.head.appendChild(link);
-</script>
+    <script>
+        var link = document.createElement('link');
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        link.id = 'idManifest';
+        link.rel = 'manifest';
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            link.href = 'manifest_ios.json';
+        } else {
+            link.href = 'manifest.json';
+        }
+        document.head.appendChild(link);
+    </script>
 
     <!--CSS--->
     <link href="css/reset.css" rel="stylesheet" />
