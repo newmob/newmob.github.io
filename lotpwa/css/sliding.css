@@ -21,8 +21,8 @@ ul {
     padding: 0;
     position: absolute;
     /*top:10%;*/
-    margin-top:5px;
-    height: 85%;  /* 80% / 85vh */
+    margin-top:10px;
+    height: 84%;  /* 80% / 85vh */
 
     list-style-type: none;
 
