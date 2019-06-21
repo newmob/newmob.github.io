@@ -1,5 +1,5 @@
-var dataCacheName = 'lotxData-v1';
-var cacheName = 'lotxPWA-final-1';
+var dataCacheName = 'lotpwa';
+var cacheName = 'lotpwa';
 var filesToCache = [
   'index.html',
   'lerbilhete.html',
@@ -7,7 +7,6 @@ var filesToCache = [
   'manifest.json',
   'js/adapter-latest.js',
   'js/app.js',
-  'js/extract.js',
   'js/itemslide.min.js',
   'js/jquery-1.11.0.min.js',
   'js/jquery-3.3.1.js',
