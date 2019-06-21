@@ -9,7 +9,7 @@
     }
   ],
   "start_url": "/lotpwa/index.html?launcher=true",
-  "display": "fullscreen",
+  "display": "minimal-ui",
   "orientation": "portrait",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2"
