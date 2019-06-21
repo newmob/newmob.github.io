@@ -1,4 +1,4 @@
-const staticCacheName = 'lotpwa-1.0.0';
+const staticCacheName = 'lotpwa-1.0.1';
 
 var filesToCache = [
   'index.html',
