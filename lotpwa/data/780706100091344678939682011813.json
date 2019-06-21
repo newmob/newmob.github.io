@@ -1,0 +1,97 @@
+﻿{
+   "versao": "2.023.0.00.001R2",
+   "payload":    {
+      "situacao":       {
+         "valor": 100,
+         "descricao": "Premiada"
+      },
+      "locaisParaRecebimento":       [
+                  {
+            "id": 9660,
+            "descricao": "Unidade Lotérica",
+            "canal": "SISPL"
+         },
+                  {
+            "id": 9770,
+            "descricao": "Agência",
+            "canal": "SIGEL"
+         }
+      ],
+      "premio":       {
+         "valorBruto": 500.00,
+         "valorLiquido": 500.00,
+         "concursos":          [
+                        {
+               "concurso":                {
+                  "numero": 3634,
+                  "naoInicializado": false,
+                  "aberto": false
+               },
+               "valorBruto": 0.77,
+               "valorLiquido": 0.77,
+               "valorIRRF": 0,
+               "faixas": [               {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "VINTE",
+                  "valorLiquido": 0.77
+               }]
+            },
+                        {
+               "concurso":                {
+                  "numero": 3635,
+                  "naoInicializado": false,
+                  "aberto": false
+               },
+               "valorBruto": 0.78,
+               "valorLiquido": 0.78,
+               "valorIRRF": 0,
+               "faixas": [               {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "VINTE",
+                  "valorLiquido": 0.78
+               }]
+            },
+                        {
+               "concurso":                {
+                  "numero": 3636,
+                  "naoInicializado": false,
+                  "aberto": false
+               },
+               "valorBruto": 0.79,
+               "valorLiquido": 0.79,
+               "valorIRRF": 0,
+               "faixas": [               {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "VINTE",
+                  "valorLiquido": 0.79
+               }]
+            },
+                        {
+               "concurso":                {
+                  "numero": 3637,
+                  "naoInicializado": false,
+                  "aberto": false
+               },
+               "valorBruto": 0.71,
+               "valorLiquido": 0.71,
+               "valorIRRF": 0,
+               "faixas": [               {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "VINTE",
+                  "valorLiquido": 0.71
+               }]
+            }
+         ],
+         "localPagamento": "Indisponível"
+      },
+      "modalidade":       {
+         "valor": 16,
+         "descricao": "Lotomania",
+         "descricaoEspecial": "Lotomania de Páscoa"
+      }
+   }
+}

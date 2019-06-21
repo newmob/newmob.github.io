@@ -1,0 +1,47 @@
+﻿{
+   "versao": "2.023.0.00.001R2",
+   "payload":    {
+      "situacao":       {
+         "valor": 100,
+         "descricao": "Premiada"
+      },
+      "locaisParaRecebimento":       [
+                  {
+            "id": 9660,
+            "descricao": "Unidade Lotérica",
+            "canal": "SISPL"
+         },
+                  {
+            "id": 9770,
+            "descricao": "Agência",
+            "canal": "SIGEL"
+         }
+      ],
+      "premio":       {
+         "valorBruto": 780.00,
+         "valorLiquido": 780.00,
+         "concursos": [         {
+            "concurso":             {
+               "numero": 2707,
+               "naoInicializado": false,
+               "aberto": false
+            },
+            "valorBruto": 0.6,
+            "valorLiquido": 0.6,
+            "valorIRRF": 0,
+            "faixas": [            {
+               "numero": 2,
+               "sorteio": 1,
+               "nome": "QUATRO",
+               "valorLiquido": 0.6
+            }]
+         }],
+         "localPagamento": "Indisponível"
+      },
+      "modalidade":       {
+         "valor": 14,
+         "descricao": "Lotogol",
+         "descricaoEspecial": ""
+      }
+   }
+}

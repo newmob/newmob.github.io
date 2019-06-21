@@ -1,0 +1,85 @@
+﻿{
+   "versao": "2.023.0.00.001R2",
+   "payload":    {
+      "situacao":       {
+         "valor": 100,
+         "descricao": "Premiada"
+      },
+      "locaisParaRecebimento":       [
+                  {
+            "id": 9660,
+            "descricao": "Unidade Lotérica",
+            "canal": "SISPL"
+         },
+                  {
+            "id": 9770,
+            "descricao": "Agência",
+            "canal": "SIGEL"
+         }
+      ],
+      "premio":       {
+         "valorBruto": 1896.29,
+         "valorLiquido": 1896.29,
+         "concursos": [         {
+            "concurso":             {
+               "numero": 3950,
+               "naoInicializado": false,
+               "aberto": false
+            },
+            "valorBruto": 1896.29,
+            "valorLiquido": 1896.29,
+            "valorIRRF": 0,
+            "faixas":             [
+                              {
+                  "numero": 1,
+                  "sorteio": 1,
+                  "nome": "SENA",
+                  "valorLiquido": 957.18
+               },
+                              {
+                  "numero": 2,
+                  "sorteio": 1,
+                  "nome": "QUINA",
+                  "valorLiquido": 300.24
+               },
+                              {
+                  "numero": 3,
+                  "sorteio": 1,
+                  "nome": "QUADRA",
+                  "valorLiquido": 130.05
+               },
+                              {
+                  "numero": 4,
+                  "sorteio": 1,
+                  "nome": "TERNO",
+                  "valorLiquido": 13.8
+               },
+                              {
+                  "numero": 6,
+                  "sorteio": 2,
+                  "nome": "QUINA",
+                  "valorLiquido": 287.12
+               },
+                              {
+                  "numero": 7,
+                  "sorteio": 2,
+                  "nome": "QUADRA",
+                  "valorLiquido": 171.9
+               },
+                              {
+                  "numero": 8,
+                  "sorteio": 2,
+                  "nome": "TERNO",
+                  "valorLiquido": 36
+               }
+            ]
+         }],
+         "localPagamento": "Indisponível"
+      },
+      "modalidade":       {
+         "valor": 18,
+         "descricao": "Dupla Sena",
+         "descricaoEspecial": "Dupla de Páscoa"
+      }
+   }
+}
