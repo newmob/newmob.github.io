@@ -39,13 +39,25 @@ var filesToCache = [
   'img/icon-quina.png',
   'img/icon-resultado.png',
   'img/icon-timemania.png',
+  'img/icon-federal.png',
+  'img/icon-coracao.png',
+  'img/calendar.svg',
+  'img/clock.svg',
   'data/780706100091344678939682011813.json',
   'data/780709341265343281301447000802.json',
   'data/780719712414062252264406014098.json',
   'data/780732693343505383339387011583.json',
   'data/780748153025420691160273017346.json',
   'data/780751136291420607239275001888.json',
-  'data/destaque.json'  
+  'html/dia_de_sorte_normal.html',
+  'html/dupla_sena_normal.html',
+  'html/loteca_normal.html',
+  'html/lotofacil_normal.html',
+  'html/lotogol_normal.html',
+  'html/lotomania_normal.html',
+  'html/mega_sena_normal.html',
+  'html/quina_normal.html',
+  'html/timemania_normal.html'
 ];
 
 self.addEventListener('install', function(e) {
