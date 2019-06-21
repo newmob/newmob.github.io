@@ -1,5 +1,5 @@
-var dataCacheName = 'lotpwa';
-var cacheName = 'lotpwa';
+const staticCacheName = 'lotpwa-1.0.0';
+
 var filesToCache = [
   'index.html',
   'lerbilhete.html',
@@ -59,28 +59,41 @@ var filesToCache = [
   'html/timemania_normal.html'
 ];
 
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
+// Cache on install
+this.addEventListener("install", event => {
+  this.skipWaiting();
+
+  event.waitUntil(
+    caches.open(staticCacheName)
+      .then(cache => {
+        return cache.addAll(filesToCache);
+    })
+  )
+});
+
+// Clear cache on activate
+this.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames
+          .filter(cacheName => (cacheName.startsWith('lotpwa-')))
+          .filter(cacheName => (cacheName !== staticCacheName))
+          .map(cacheName => caches.delete(cacheName))
+      );
     })
   );
 });
 
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-  e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName && key !== dataCacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
-
-  return self.clients.claim();
+// Serve from Cache
+this.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        return response || fetch(event.request);
+      })
+      .catch(() => {
+        return caches.match('offline.html');
+      })
+  )
 });
