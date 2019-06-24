@@ -59,7 +59,7 @@ var filesToCache = [
   'html/timemania_normal.html'
 ];
 
-// Cache on install
+// faz o cache dos arquivos na instalação
 this.addEventListener("install", event => {
   this.skipWaiting();
 
@@ -71,7 +71,7 @@ this.addEventListener("install", event => {
   )
 });
 
-// Clear cache on activate
+// limpa o cache na ativação
 this.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -85,7 +85,7 @@ this.addEventListener('activate', event => {
   );
 });
 
-// Serve from Cache
+// pega os arquivos do cache
 this.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
