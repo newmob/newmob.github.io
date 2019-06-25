@@ -1,8 +1,9 @@
-const staticCacheName = 'lotpwa-1.0.1';
+const staticCacheName = 'lotpwa-1.0.2';
 
 var filesToCache = [
   'index.html',
   'lerbilhete.html',
+  'offline.html',
   'service-worker.js',
   'manifest.json',
   'js/adapter-latest.js',
@@ -85,7 +86,16 @@ this.addEventListener('activate', event => {
   );
 });
 
-// pega os arquivos do cache
+// tenta na rede se não conseguir pega os arquivos do cache
+this.addEventListener('fetch', function(event) {
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match(event.request);
+    })
+  );
+});
+
+/* 
 this.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
@@ -97,3 +107,4 @@ this.addEventListener("fetch", event => {
       })
   )
 });
+*/
