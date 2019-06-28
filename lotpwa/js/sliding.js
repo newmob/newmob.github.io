@@ -27,8 +27,8 @@ $(document).ready(function () {
     carousel = $("ul");
 
     carousel.itemslide({
-        duration: 1800,
-        swipe_sensitivity: 50 
+        duration: 1500,
+        swipe_sensitivity: 70 
     }); 
 
     $(window).resize(function () {
