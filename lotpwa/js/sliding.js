@@ -114,7 +114,7 @@ function atualizaAposta() {
     var div = document.getElementById("aposte");
     div.style.backgroundColor = bgColor;
 
-    // muda o valor minimo da aposta
+    // muda o valor minimo da aposta e a urlVolante
     indModalidade = -1;
     var div_id = document.querySelector('li.itemslide-active').querySelector(".destaque").id;
     var i = div_id.indexOf("_");
@@ -122,5 +122,6 @@ function atualizaAposta() {
         var strIndex = div_id.substr(i+1);
         indModalidade = parseInt(strIndex);
         document.getElementById("valorAposta").innerHTML = arrValorAposta[indModalidade];
+        document.getElementById("urlVolante").href = arrUrlVolante[indModalidade];
     }
 }

@@ -46,6 +46,7 @@
     <script>
         var arrDataSorteio = [];
         var arrValorAposta = [];
+        var arrUrlVolante = [];
 
         $(function () {
             $("#inc_mega_sena_normal").load("html/mega_sena_normal.html");
@@ -100,15 +101,17 @@
             </div>
         </section>
         <section>
-            <a href="https://www.loteriasonline.caixa.gov.br/silce-web/#/mega-sena#container-volante">
+            <a id="urlVolante" href="https://www.loteriasonline.caixa.gov.br/silce-web/#/mega-sena#container-volante">
                 <div id="aposte" class="aposte">
                     <h2>Aposte</h2>
                     <h3>por <span id="valorAposta"></span></h3>
                 </div>
             </a>
+            <!--
             <div>
                 <a class="barcode" href="lerbilhete.html">Conferir bilhete</a>
             </div>
+            -->
             <!--
             <div>
                 <p class="prototipo">Protótipo</p>
