@@ -1,4 +1,4 @@
-const staticCacheName = 'lotpwa-1.0.2';
+const staticCacheName = 'lotpwa-1.0.3';
 
 var filesToCache = [
   'index.html',
@@ -27,6 +27,8 @@ var filesToCache = [
   'css/styles.css',
   'img/favicon.ico',
   'img/icon-180x180.png',
+  'img/icon-192x192.png',
+  'img/icon-512x512.png',
   'img/icon-barcode.png',
   'img/icon-close.png',
   'img/icon-diadesorte.png',
