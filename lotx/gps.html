@@ -3,14 +3,14 @@
 
 <body>
 
-    <p>Click the button to get your coordinates.</p>
-
-    <button onclick="getLocation()">Try It</button>
+    <p>Coordenadas GPS</p>
 
     <p id="demo"></p>
 
     <script>
         var x = document.getElementById("demo");
+
+        window.setInterval(getLocation, 5000);
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -29,3 +29,4 @@
 </body>
 
 </html>
+
