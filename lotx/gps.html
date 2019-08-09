@@ -29,6 +29,7 @@
             var dist = distance(lat1,long1,lat2,long2, 'M');
             x.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude +
+                "<br>Accuracy: " + position.coords.accuracy +
                 "<br>Distance:" + dist;
         }
 
