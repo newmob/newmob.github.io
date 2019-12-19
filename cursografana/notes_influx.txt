@@ -1,0 +1,9 @@
+cd ~
+cd downloads/influxdb-1.7.9-1
+influxd
+influx
+> show databases
+> create database mydb
+> use mydb
+> INSERT cpu,host=serverA,region=us_west value=0.64
+> select * from cpu
