@@ -7,3 +7,4 @@ influx
 > use mydb
 > INSERT cpu,host=serverA,region=us_west value=0.64
 > select * from cpu
+> show tag values from cpu with key=host
