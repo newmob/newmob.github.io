@@ -1,0 +1,19 @@
+{
+  "name": "loteria",
+  "version": "1.0.0",
+  "description": "App Teste",
+  "main": "fonotest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node fonotest.js",
+    "post": "./post_test.sh"
+  },
+  "keywords": [
+    "fonotest"
+  ],
+  "author": "Marcelo Maximiano",
+  "license": "ISC",
+  "dependencies": {
+    "fonoapi-nodejs": "^0.1.1"
+  }
+}
