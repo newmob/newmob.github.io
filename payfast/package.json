@@ -16,9 +16,9 @@
   "author": "Marcelo Maximiano",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "consign": "^0.1.6",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "nodemon": "^1.18.8"
   }
 }
